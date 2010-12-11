@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @calendar.id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @calendar.user_id %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @calendar.event %>
+</p>
+
+<p>
+  <b>Where:</b>
+  <%= @calendar.where %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%= @calendar.when %>
+</p>
+
+
+<%= link_to 'Edit', edit_calendar_path(@calendar) %> |
+<%= link_to 'Back', calendars_path %>
