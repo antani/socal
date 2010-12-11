@@ -54,3 +54,30 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+
+
+#calendar_submit {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #888888;
+  font-size: 150%;
+  font-weight: bold;
+  border: none;
+/*  padding: 20px;*/
+  text-shadow: 0 1px #777777;
+  padding: 5px 30px;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+  box-shadow: 0 1px 10px rgba(0,0,0,.1);
+ }
+#calendar_submit:hover
+{
+      text-shadow: 0 4px #666666;
+}
+

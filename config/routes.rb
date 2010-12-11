@@ -1,5 +1,6 @@
 Socal::Application.routes.draw do
-  resources :calendars
+  resources :calendars, :only => [:create, :destroy]
+
 
   devise_for :users, :path_names => { :sign_up => "register" }
 

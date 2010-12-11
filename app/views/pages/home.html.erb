@@ -2,23 +2,12 @@
    <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="micropost">What's up?</h1>
         <%= render 'shared/calendar_form' %>
         <%= render 'shared/feed' %>
-
-      </td>
-      <td class="sidebar round">
-      </td>
+     </td>
     </tr>
   </table>
-
-
-
-
-
-
-
-   <% else %>
+  <% else %>
      <%= link_to "Sign up", new_user_registration_path %> or
      <%= link_to "Sign in", new_user_session_path %>
    <% end %>
