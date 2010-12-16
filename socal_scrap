@@ -1,0 +1,24 @@
+ <div id="pageinfo" class="flickr_pagination">
+            <%= sanitize(page_entries_info @feed_items)%>
+            <div >
+                <%= will_paginate @feed_items, :container => false %>
+            </div>
+          </div>
+
+
+          <div id="pageinfo" class="flickr_pagination">
+            <%= sanitize(page_entries_info @feed_items_future)%>
+            <div >
+                <%= will_paginate @feed_items_future, :container => false %>
+            </div>
+          </div>
+
+
+
+           <div id="pageinfo" class="flickr_pagination">
+            <%= sanitize(page_entries_info @feed_items_last_week)%>
+            <div >
+                <%= will_paginate @feed_items_last_week, :container => false %>
+            </div>
+          </div>
+

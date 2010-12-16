@@ -1,10 +1,12 @@
 <%= form_for @calendar do |f| %>
 
-  <div>
-    <%= f.text_field :event %>
+  <div class="calendar_event">
+    <%= f.text_field :event%>
   </div>
   <div>
     <%= f.submit "     Submit     " %>
   </div>
+
+
 <% end %>
 

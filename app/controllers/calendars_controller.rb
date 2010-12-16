@@ -13,7 +13,7 @@ class CalendarsController < ApplicationController
   # GET /calendars/1
   # GET /calendars/1.xml
   def show
-    @calendar = Calendar.find(params[:id])
+    @calendar = Calendar.find(params[:id], :order => '"calendars.when"')
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,6 +35,7 @@ class CalendarsController < ApplicationController
   # GET /calendars/1/edit
   def edit
     @calendar = Calendar.find(params[:id])
+
   end
 
   def create
@@ -43,15 +44,17 @@ class CalendarsController < ApplicationController
     eventStr =  params['calendar']['event']
     logger.debug eventStr
     logger.debug '..............'
-
-    @calendar  = current_user.calendars.build(:event=>eventStr, :where=>'New York', :when => Time.now)
-    if @calendar
-      if @calendar.save
-        flash[:success] = "Calendar created!"
-        redirect_to root_path
-      else
-       #@feed_items = []
-        render 'pages/home'
+    if eventStr
+      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>'New York', :when => Time.now+(60*60*24))
+      if @calendar
+        if @calendar.save
+          flash[:success] = "Calendar created!"
+          redirect_to root_path
+        else
+        @feed_items = []
+          #render 'pages/home'
+          redirect_to root_path
+        end
       end
     end
   end
@@ -60,28 +63,37 @@ class CalendarsController < ApplicationController
     logger.debug 'Inside delete method'
     @calendar = Calendar.find(params[:id])
     @calendar.destroy
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js
+    end
     #        render 'pages/home'
-    redirect_to root_path
+
 
     #redirect_back_or root_path
   end
 
   # PUT /calendars/1
   # PUT /calendars/1.xml
-#  def update
-#    @calendar = Calendar.find(params[:id])
+  def update
+    @calendar = Calendar.find(params[:id])
 
- #   respond_to do |format|
- #     if @calendar.update_attributes(params[:calendar])
- #       format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
- #       format.xml  { head :ok }
- #     else
-
-#       format.html { render :action => "edit" }
-#        format.xml  { render :xml => @calendar.errors, :status => :unprocessable_entity }
-#      end
- #   end
- # end
+   respond_to do |format|
+     if @calendar.update_attributes(params[:calendar])
+      #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
+      format.html {
+        flash[:success] = "Calendar created!"
+        redirect_to root_path
+      }
+      format.js
+      format.xml  { head :ok }
+     else
+      format.html { render :action => "edit" }
+      format.xml  { render :xml => @calendar.errors, :status => :unprocessable_entity }
+     end
+   end
+ end
 
 
 end

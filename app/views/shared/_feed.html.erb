@@ -1,9 +1,32 @@
 <!--<% if @feed_items %> -->
   <% unless @feed_items.empty? %>
-    <table class="calendar-list" summary="User microposts">
-      <%= render :partial => 'shared/feed_item', :collection => @feed_items %>
-    </table>
-    <%= will_paginate @feed_items %>
+    <div>
+    Today
+      <table summary="User microposts">
+            <%= render :partial => 'shared/feed_item', :collection => @feed_items_today %>
+      </table>
+    </div>
+    <div>
+    all
+      <table summary="User microposts">
+            <%= render :partial => 'shared/feed_item', :collection => @feed_items %>
+      </table>
+    </div>
+
+    <div>
+      future
+      <table summary="User microposts">
+        <%= render :partial => 'shared/feed_item', :collection => @feed_items_future %>
+      </table>
+    </div>
+
+    <div>
+  past
+      <table summary="User microposts">
+        <%= render :partial => 'shared/feed_item', :collection => @feed_items_last_week %>
+      </table>
+    </div>
+
   <% end %>
 <!--<%end %> -->
 

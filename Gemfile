@@ -12,6 +12,9 @@ gem 'nifty-generators'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'faker'
+gem 'populator'
+gem 'jquery-rails', '>= 0.2.6'
+
 
 
 # Use unicorn as the web server

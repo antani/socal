@@ -30,7 +30,7 @@ $(document).ready(function() {
         $('input[type="submit"]', this).replaceWith('<p><strong>Sending...</strong></p>'); // optional: change "Sending..." to something else
     });
 
-//    $('#edit-form').dialog();
+
 
 });
 

@@ -1,12 +1,14 @@
+
   <% if user_signed_in? %>
-   <table class="front" summary="For signed-in users">
+   <table summary="For signed-in users">
     <tr>
-      <td class="main">
+      <td >
         <%= render 'shared/calendar_form' %>
         <%= render 'shared/feed' %>
      </td>
     </tr>
   </table>
+
   <% else %>
      <%= link_to "Sign up", new_user_registration_path %> or
      <%= link_to "Sign in", new_user_session_path %>

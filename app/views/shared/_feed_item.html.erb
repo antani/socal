@@ -1,22 +1,32 @@
 
 <tr>
-<!--  <td class="gravatar">
-    <%= link_to feed_item.user.email %>
-  </td> -->
 
-  <td class="calendar-list">
-    <span><%= feed_item.event %></span>
-    <span class="timestamp">
+  <td>
+    <span>
+          <%=link_to feed_item.event, :controller => :calendars, :action=>:edit, :id=>feed_item.id %>
+    </span>
+   <!-- <span class="timestamp">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+    </span> -->
+     <span class="timestamp">
+
+      <% if feed_item.when != nil %>
+                 Scheduled at around <span class="when"><%= feed_item.when.strftime("%I:%M %p") %></span>&nbsp;on
+                 <span class="when-date"><%= feed_item.when.strftime("%x") %></span>
+      and at
+      <% end %>
+      <% if feed_item.where != nil %>
+      <span class="where"><%=feed_item.where %>.</span>
+      <%end%>
     </span>
   </td>
   <% if current_user == feed_item.user %>
   <td>
-    <%= link_to image_tag("delete.png"),   feed_item,    :method => :delete,
-                                     :confirm => "You sure?",
-                                     :title => feed_item.event %>
+    <%= link_to image_tag("delete.png"),
+                                      feed_item,
+                                     :method => :delete,
+                                     :title => feed_item.event, :remote=> true, :class=>"delete-icon" %>
   </td>
-
   <% end %>
 </tr>
 
