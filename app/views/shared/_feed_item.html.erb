@@ -3,7 +3,9 @@
 
   <td>
     <span>
-          <%=link_to feed_item.event, :controller => :calendars, :action=>:edit, :id=>feed_item.id %>
+<!--    :controller => :calendars, :action=>:edit, :id=>feed_item.id -->
+          <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :popup => true %>
+
     </span>
    <!-- <span class="timestamp">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago.

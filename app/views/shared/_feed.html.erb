@@ -1,31 +1,40 @@
 <!--<% if @feed_items %> -->
   <% unless @feed_items.empty? %>
+    <% if @feed_items_today.count > 0 %>
     <div>
     Today
-      <table summary="User microposts">
+      <table id="feed_item_today" class="round" summary="User microposts">
             <%= render :partial => 'shared/feed_item', :collection => @feed_items_today %>
       </table>
     </div>
+    <div id="profile-bevel"><hr></div>
+    <% end %>
+    <% if @feed_items_tomorrow.count > 0 %>
     <div>
-    all
-      <table summary="User microposts">
-            <%= render :partial => 'shared/feed_item', :collection => @feed_items %>
+    Tomorrow
+      <table id="feed_item_tomorrow" summary="User microposts">
+            <%= render :partial => 'shared/feed_item', :collection => @feed_items_tomorrow %>
       </table>
     </div>
-
+    <div id="profile-bevel"><hr></div>
+    <% end %>
+     <% if @feed_items_future.count > 0 %>
     <div>
-      future
-      <table summary="User microposts">
+      Near Future
+      <table id="feed_item_future" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_future %>
       </table>
     </div>
-
+    <div id="profile-bevel"><hr></div>
+    <%end %>
+    <% if @feed_items_last_week.count > 0 %>
     <div>
-  past
-      <table summary="User microposts">
+      Past
+      <table id="feed_item_past" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_last_week %>
       </table>
     </div>
+    <% end %>
 
   <% end %>
 <!--<%end %> -->

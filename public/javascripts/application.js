@@ -3,6 +3,8 @@
 
 $(document).ready(function() {
 
+
+
     function showDeletePost()
     {
         humanMsg.displayMsg("Calendar Event Deleted");
@@ -30,7 +32,45 @@ $(document).ready(function() {
         $('input[type="submit"]', this).replaceWith('<p><strong>Sending...</strong></p>'); // optional: change "Sending..." to something else
     });
 
-//    $('#edit-form').dialog();
+    //Hide the error messages automatically
+    setTimeout(hideFlashMessages, 10000);
+    function hideFlashMessages() {
+      $('#flash_alert,#flash_success').fadeOut(2000)
+    }
+
+    //Add jqueryUI dialog on edit calendar form
+    $( "#editcal" ).dialog({
+            autoOpen: false,
+			height: 300,
+			width: 350,
+			modal: true,
+			buttons: {
+				"Ok": function() {},
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+			},
+			close: function() {
+				allFields.val( "" ).removeClass( "ui-state-error" );
+			}});
+
+    $("select").styleSelect();
+
+/*    $( "#feed_items_all a" ).click(function(){
+        alert("opening");
+        $( "#editcal" ).dialog( "open" );
+        //event.preventDefault;
+        return false;
+    });*/
+
+
+//   $( "#feed_items_all a" )
+//			.click(function()
+//			    alert("opening");
+//				$( "#editcal" ).dialog( "open" );
+//				return false;
+//            }
+			//});
 
 });
 

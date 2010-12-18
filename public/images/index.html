@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>styleSelect | DEMO</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<script type="text/javascript" src="jscrollpane/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="jscrollpane/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="jquery.styleSelect.js"></script>
+<link rel="stylesheet" href="jscrollpane/jquery.jscrollpane.css" type="text/css" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<!--[if lte IE 6]>
+	<link rel="stylesheet" href="main_ie6.css" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var options = {
+						styleClass: "selectDark",
+						jScrollPane: 1
+						}
+	
+		$(".mySelect").styleSelect(options);
+		
+	});
+</script>
+<form method="get" action="">
+	<div class="select">
+		<select name="animals[]" class="mySelect">
+				<option value="">Animals</option>
+				<option value="hippopotamus">Hippopotamus</option>
+				<option value="aligator">Aligator</option>
+				<option value="aligator">Fox</option>
+				<option value="aligator">Lion</option>
+				<option value="giraf">Giraf</option>				
+				<option value="ant">Ant</option>				
+				<option value="anteater">Anteater</option>				
+				<option value="antelope">Antelope</option>				
+				<option value="bat">Bat</option>				
+				<option value="bear">Bear</option>				
+				<option value="beaver">Beaver</option>				
+				<option value="butterfly">Butterfly</option>				
+				<option value="cheetah">Cheetah</option>				
+				<option value="chicken">Chicken</option>				
+				<option value="chimpanzee">Chimpanzee</option>				
+				<option value="crane">Crane</option>				
+				<option selected="selected" value="gazelle">Gazelle</option>				
+				<option value="guanaco">Guanaco</option>				
+				<option value="hedgehog">Hedgehog</option>				
+				<option value="cockroach">Cockroach</option>				
+				<option value="komodo_dragon">Komodo dragon</option>				
+		</select>
+	</div>
+	<div class="select">
+		<select name="animals2[]" class="mySelect">
+				<option value="">Animals</option>
+				<option value="hippopotamus">Hippopotamus</option>
+				<option value="aligator">Aligator</option>
+				<option value="aligator">Fox</option>
+				<option value="aligator">Lion</option>
+				<option value="giraf">Giraf</option>	
+				<option value="guanaco">Guanaco</option>							
+		</select>
+	</div>
+	<div class="select">
+		<button type="submit" value="TEST">TEST</button>
+	</div>
+</form>
+</body>
+</html>

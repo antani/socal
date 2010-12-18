@@ -1,4 +1,9 @@
 class CalendarsController < ApplicationController
+
+  Time.zone = "UTC"
+  Chronic.time_class = Time.zone
+  #Chronic.time_class = current_user.timezone
+
   # GET /calendars
   # GET /calendars.xml
   def index
@@ -39,13 +44,24 @@ class CalendarsController < ApplicationController
   end
 
   def create
-    logger.debug 'Inside create....................................................'
-    logger.debug '..............'
     eventStr =  params['calendar']['event']
+    if eventStr != nil
+      guessed_when = Chronic.parse(eventStr)
+    else
+      guessed_when = Time.now
+    end
+
+    logger.debug 'Inside create....................................................'
+    logger.debug guessed_when
+    logger.debug '.................................................................'
+
+
+
+
     logger.debug eventStr
     logger.debug '..............'
     if eventStr
-      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>'New York', :when => Time.now+(60*60*24))
+      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>'New York', :when => guessed_when, :whendate => guessed_when.to_date)
       if @calendar
         if @calendar.save
           flash[:success] = "Calendar created!"
@@ -81,6 +97,8 @@ class CalendarsController < ApplicationController
 
    respond_to do |format|
      if @calendar.update_attributes(params[:calendar])
+      when_date = @calendar.when.to_date
+      @calendar.update_attributes(:whendate => when_date)
       #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
       format.html {
         flash[:success] = "Calendar created!"

@@ -1,4 +1,4 @@
- <div id="pageinfo" class="flickr_pagination">
+          <div id="pageinfo" class="flickr_pagination">
             <%= sanitize(page_entries_info @feed_items)%>
             <div >
                 <%= will_paginate @feed_items, :container => false %>
@@ -21,4 +21,20 @@
                 <%= will_paginate @feed_items_last_week, :container => false %>
             </div>
           </div>
+
+
+
+    <div>
+    all
+      <table id="feed_items_all" summary="User microposts">
+            <%= render :partial => 'shared/feed_item', :collection => @feed_items %>
+      </table>
+    </div>
+    <hr/>
+
+
+
+ Time Now - <%= Time.now %>
+     Time Now Midnight- <%= Time.now.midnight %>
+     Current time zone: <%= Time.zone.name %>
 

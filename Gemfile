@@ -14,8 +14,10 @@ gem 'will_paginate'
 gem 'faker'
 gem 'populator'
 gem 'jquery-rails', '>= 0.2.6'
-
-
+#gem "aaronh-chronic", "0.3.9"
+gem 'chronic'
+#gem 'chronic', '0.3.9', :git => 'git://github.com/AaronH/chronic'
+#gem "aaronh-chronic", "0.3.9", :git => 'https://github.com/AaronH/chronic.git' # for ruby 1.9 compatibility
 
 # Use unicorn as the web server
 # gem 'unicorn'
