@@ -12,7 +12,7 @@
     <% if @feed_items_tomorrow.count > 0 %>
     <div>
     Tomorrow
-      <table id="feed_item_tomorrow" summary="User microposts">
+      <table id="feed_item_tomorrow" class="round" summary="User microposts">
             <%= render :partial => 'shared/feed_item', :collection => @feed_items_tomorrow %>
       </table>
     </div>
@@ -21,7 +21,7 @@
      <% if @feed_items_future.count > 0 %>
     <div>
       Near Future
-      <table id="feed_item_future" summary="User microposts">
+      <table id="feed_item_future" class="round" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_future %>
       </table>
     </div>
@@ -30,7 +30,7 @@
     <% if @feed_items_last_week.count > 0 %>
     <div>
       Past
-      <table id="feed_item_past" summary="User microposts">
+      <table id="feed_item_past" class="round" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_last_week %>
       </table>
     </div>

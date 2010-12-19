@@ -72,5 +72,51 @@ $(document).ready(function() {
 //            }
 			//});
 
+     //Populating all the event notifiers and their timestamps
+
+     //Opening relevant notification popups
+     setInterval(function()
+     {
+         var d = new Date();
+         var ds = new String(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes()));
+         //alert(ds);
+         ds = ds.substring(0,10);
+         //var allInputs = $(":input");
+         /*for(i=0;i<allInputs.length; i++)
+         {
+            elem = allInputs[i];
+            //alert($(elem).val());
+            //alert(ds);
+            elemVal = $(elem).val();
+            if(elemVal == ds)
+            {
+                humanMsg.displayMsg("Reminder : " + $(elem).attr('name'));
+
+            }
+         }*/
+//         1292764500
+//         129276462
+//         1292764620
+         //$("#error").html();
+         //alert(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes() ));
+         //Check if the milisecond matches with stamped values
+           $(":input").each( function() {
+            elemVal = $(this).val();
+
+            if(elemVal == ds)
+            {
+                humanMsg.displayMsg("Reminder : " + $(this).attr('name'));
+                //do not consider this element again.
+
+            }
+         });
+
+
+
+
+
+     }, 10000);
+
+
 });
 

@@ -259,23 +259,11 @@ footer nav {
     color: #ff5c00;
 }
 
-#feed_item_today
+#feed_item_today, #feed_item_future, #feed_item_tomorrow, #feed_item_past
 {
    /*background: rgba(0, 0, 0, 0.757812);*/
    background: rgba(0, 0, 0, 0.2);
   text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
-}
-#feed_item_tomorrow
-{
-   /*background: rgba(0, 0, 0, 0.757812);*/
-   background: rgba(0, 0, 0, 0.2);
-   text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
-}
-#feed_item_future
-{
-   /*background: rgba(0, 0, 0, 0.757812);*/
-   background: rgba(0, 0, 0, 0.2);
-       text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
 }
 .calendar-list
 {
@@ -581,5 +569,10 @@ input[type="submit"]
     text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.3);
     text-align: center;
 
+}
+.example
+{
+    padding: 0px;
+    font-size: 10px;
 }
 

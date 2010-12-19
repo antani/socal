@@ -45,13 +45,23 @@ class CalendarsController < ApplicationController
 
   def create
     eventStr =  params['calendar']['event']
+    # Due to the bug in Chronic- words 'on' or 'at' dont work well
+    # we need to remove those words from events before we parse in chronic
+    trimmedEventStr = eventStr.downcase
+    trimmedEventStr = trimmedEventStr.gsub('on','')
+    trimmedEventStr = trimmedEventStr.gsub('at','')
+    #eventStr = eventStr.downcase
+    #eventStr = eventStr.gsub('on', ' ' )
+    #eventStr = eventStr.gsub('at', ' ' )
+
     if eventStr != nil
-      guessed_when = Chronic.parse(eventStr)
+      guessed_when = Chronic.parse(trimmedEventStr)
     else
       guessed_when = Time.now
     end
 
     logger.debug 'Inside create....................................................'
+    logger.debug trimmedEventStr
     logger.debug guessed_when
     logger.debug '.................................................................'
 
@@ -66,7 +76,7 @@ class CalendarsController < ApplicationController
         if @calendar.save
           flash[:success] = "Calendar created!"
           redirect_to root_path
-        else
+      else
         @feed_items = []
           #render 'pages/home'
           redirect_to root_path
