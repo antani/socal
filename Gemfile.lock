@@ -148,4 +148,3 @@ DEPENDENCIES
   rails (= 3.0.1)
   sqlite3-ruby
   will_paginate
-

@@ -54,7 +54,7 @@ $(document).ready(function() {
 				allFields.val( "" ).removeClass( "ui-state-error" );
 			}});
 
-    $("select").styleSelect();
+//    $("select").styleSelect();
 
 /*    $( "#feed_items_all a" ).click(function(){
         alert("opening");

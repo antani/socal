@@ -1,6 +1,6 @@
 class CalendarsController < ApplicationController
-
-  Time.zone = "UTC"
+  #-----------------------------Nasty Bug !
+  #Time.zone = "UTC"
   Chronic.time_class = Time.zone
   #Chronic.time_class = current_user.timezone
 
