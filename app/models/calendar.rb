@@ -6,6 +6,6 @@ class Calendar < ActiveRecord::Base
 
 
    # Default sort order
-  default_scope :order => '"calendars.when desc"'
+  #default_scope :order => '"calendars.when desc"'
 end
 
