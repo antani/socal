@@ -149,5 +149,3 @@ DEPENDENCIES
   sqlite3-ruby
   will_paginate
 
-METADATA
-  version: 1.0.6
