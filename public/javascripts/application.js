@@ -78,9 +78,10 @@ $(document).ready(function() {
      setInterval(function()
      {
          var d = new Date();
-         var ds = new String(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes()));
+//         var ds = new String(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes()));
+         var ds = d.getTime();
          //alert(ds);
-         ds = ds.substring(0,10);
+         var sds = ds.toString().substring(0,10);
          //var allInputs = $(":input");
          /*for(i=0;i<allInputs.length; i++)
          {
@@ -97,13 +98,14 @@ $(document).ready(function() {
 //         1292764500
 //         129276462
 //         1292764620
-         //$("#error").html();
+           $("#error").html(sds);
          //alert(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes() ));
          //Check if the milisecond matches with stamped values
-           $(":input").each( function() {
-            elemVal = $(this).val();
-
-            if(elemVal == ds)
+           $("#feed_item_today :input").each( function() {
+           $("#error").html(sds);
+           elemVal = $(this).val();
+           //alert(ds);
+            if(elemVal == sds)
             {
                 humanMsg.displayMsg("Reminder : " + $(this).attr('name'));
                 //do not consider this element again.
@@ -115,7 +117,7 @@ $(document).ready(function() {
 
 
 
-     }, 10000);
+     }, 1000); //Bug - run Every second to make sure miliseconds are in sync
 
 
 });

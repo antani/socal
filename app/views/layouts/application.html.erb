@@ -13,7 +13,11 @@
   </head>
   <body>
    <div class="container">
-      <%= Time.zone %>
+      Current user: <%= @current_user.email if @current_user %> |
+      Current time zone: <%= Time.zone %> |
+      Current time: <%= Time.zone.now%> |
+
+<hr />
       <%= render 'layouts/header' %>
       <div id="error">
         <% flash.each do |name, msg| %>
