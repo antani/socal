@@ -1,11 +1,17 @@
 Socal::Application.routes.draw do
+  resources :authentications
+
   resources :calendars
   #, :only => [:create, :destroy, :edit, :update]
   #, :only => [:create, :destroy, :edit]
 
 
-  devise_for :users, :path_names => { :sign_up => "register" }
+  #devise_for :users, :path_names => { :sign_up => "register" }
+  devise_for :users, :controllers => {:registrations => 'registrations'}
 
+
+
+  match '/auth/:provider/callback' => 'authentications#create'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'

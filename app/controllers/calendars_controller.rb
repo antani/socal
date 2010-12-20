@@ -1,7 +1,7 @@
 class CalendarsController < ApplicationController
   #-----------------------------Nasty Bug !
   #Time.zone = "UTC"
-  #Chronic.time_class = Time.zone
+  Chronic.time_class = Time.zone
   #Chronic.time_class = current_user.timezone
 
   # GET /calendars
@@ -57,7 +57,7 @@ class CalendarsController < ApplicationController
     if eventStr != nil
       guessed_when = Chronic.parse(trimmedEventStr)
     else
-      guessed_when = Time.now
+      guessed_when = Time.zone.now
     end
 
     logger.debug 'Inside create....................................................'
