@@ -45,12 +45,14 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  color: rgba(144, 178, 71);
+  /*color: #09c;*/
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+/*  color: #069;*/
+  color: rgba(144, 178, 71);
   text-decoration: underline;
 }
 
@@ -521,7 +523,7 @@ margin-left: auto;
 	float: left;
 	width: 75%;
 	margin-bottom: 1px;
-	font: 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 15px 'Lato',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	clear: both;
 	background-color: rgba(255,255,255,.25);
 	border: 1px solid #607c90;
@@ -560,7 +562,7 @@ input[type="submit"]
     padding: 3px 18px;
     margin: 5px 10px 5px 10px;
     -webkit-background-clip: padding-box;
-    font: italic 18px/23px Georgia, "Times New Roman", Times, serif;
+    font: italic 18px/23px 'Lato',Georgia, "Times New Roman", Times, serif;
     color: #ffffff;
     text-decoration: none;
     -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
@@ -582,5 +584,11 @@ color: #2daebf;
 .important-event
 {
 	background-color: rgba(255,0,0,.2);
+}
+.login-using a
+{
+    padding: 1px;
+    margin: 1px;
+    text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.3);
 }
 

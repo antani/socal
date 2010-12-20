@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     function showDeletePost()
     {
-        humanMsg.displayMsg("Calendar Event Deleted");
+        //humanMsg.displayMsg("Calendar Event Deleted");
 
         $('#pageinfo').load("/ #pageinfo");
         return false;
