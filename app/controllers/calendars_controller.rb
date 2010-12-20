@@ -70,11 +70,15 @@ class CalendarsController < ApplicationController
 
     logger.debug eventStr
     logger.debug '..............'
+
     if eventStr
-      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>'New York', :when => guessed_when, :whendate => guessed_when.to_date)
+      #Automatically flag an event important
+      importantEvent = trimmedEventStr.include? 'important'
+
+      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>'New York', :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent)
       if @calendar
         if @calendar.save
-          flash[:success] = "Calendar created!"
+          flash[:success] = "Calendar created"
           redirect_to root_path
       else
         @feed_items = []
@@ -111,7 +115,7 @@ class CalendarsController < ApplicationController
       @calendar.update_attributes(:whendate => when_date)
       #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
       format.html {
-        flash[:success] = "Calendar created!"
+        flash[:success] = "Calendar updated"
         redirect_to root_path
       }
       format.js

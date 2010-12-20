@@ -19,11 +19,11 @@ body {
   background-repeat: repeat-x;
   background-position: center top;
   color: #cddfe7;
-
+  font-family: 'Lato';
 }
 
 header {
-  padding-top: 20px;
+  padding: 2px;
 }
 
 header img {
@@ -34,7 +34,7 @@ header img {
 section {
   margin-top: 1em;
   font-size: 120%;
-  padding: 10px;
+  padding: 2px;
 
 }
 
@@ -230,16 +230,17 @@ footer nav {
 
 #signin
 {
-    font-family: league, Helvetica, Verdana, Sans-Serif;
+    font-family: 'Josefin Slab','Lato',league, Helvetica, Verdana, Sans-Serif;
     font-size: 24px;
     color: #888;
 /*    text-shadow: 1px 1px 1px rgba(0,0,0,.4);*/
 }
 .signin-h2
 {
-    padding-left:5px;
-    font-family: league, Helvetica, Verdana, Sans-Serif;
-    color:rgba(0,255,255,.5);
+    padding:5px;
+    font-family: 'Josefin Slab','Lato',league, Helvetica, Verdana, Sans-Serif;
+    font-weight:bold;
+    color:rgba(0,255,255,.3);
     text-shadow: 1px 1px 1px rgba(192,192,192,.3);
     background: rgba(0, 0, 0, 0.2);
 }
@@ -290,7 +291,7 @@ footer nav {
 
 .calendar-list td
 {
-    font-family: Helvetica, Verdana, Sans-Serif;
+    font-family: 'Lato',Helvetica, Verdana, Sans-Serif;
     text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
     border-bottom: 1px solid rgba(0,0,0,0.25);
     background: #fff;
@@ -310,7 +311,7 @@ footer nav {
    color: #777777;
 }
 .when {
-color: #a9014b;
+color: #ffb515;
 }
 .when-date
 {color: #2daebf;}
@@ -414,7 +415,7 @@ margin-left: auto;
     padding: 3px 18px;
     margin: 5px 10px 5px 10px;
     -webkit-background-clip: padding-box;
-    font: italic 18px/23px Georgia, "Times New Roman", Times, serif;
+    font: italic 18px/23px 'Lato',Georgia, "Times New Roman", Times, serif;
     color: #ffffff;
     text-decoration: none;
     -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
@@ -443,7 +444,7 @@ margin-left: auto;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: white;
    font-size: 22px;
-   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   font-family: 'Lato','Lucida Grande', Helvetica, Arial, Sans-Serif;
    text-decoration: none;
    vertical-align: middle;
    }
@@ -459,7 +460,6 @@ margin-left: auto;
 .signin-notice
 {
     text-shadow: rgba(0,0,0,.4) 0 1px 0;
-    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
     font-size: 12px;
 }
 .selected-input
@@ -520,7 +520,7 @@ margin-left: auto;
 	color: #a3c3d6;
 	float: left;
 	width: 75%;
-	margin-bottom: 20px;
+	margin-bottom: 1px;
 	font: 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	clear: both;
 	background-color: rgba(255,255,255,.25);
@@ -578,5 +578,9 @@ input[type="submit"]
 .provider
 {
 color: #2daebf;
+}
+.important-event
+{
+	background-color: rgba(255,0,0,.2);
 }
 

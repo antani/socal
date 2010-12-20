@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
 
     $('form').submit(function () { // optional: replace "form" with whatever CSS selector you want (ex: ID or class)
-        $('input[type="submit"]', this).replaceWith('<p><strong>Sending...</strong></p>'); // optional: change "Sending..." to something else
+        $('input[type="submit"]', this).replaceWith('<p><strong>Please wait...</strong></p>'); // optional: change "Sending..." to something else
     });
 
     //Hide the error messages automatically
@@ -98,11 +98,11 @@ $(document).ready(function() {
 //         1292764500
 //         129276462
 //         1292764620
-           $("#error").html(sds);
+//           $("#error").html(sds);
          //alert(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes() ));
          //Check if the milisecond matches with stamped values
            $("#feed_item_today :input").each( function() {
-           $("#error").html(sds);
+  //         $("#error").html(sds);
            elemVal = $(this).val();
            //alert(ds);
             if(elemVal == sds)

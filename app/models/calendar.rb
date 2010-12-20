@@ -1,6 +1,6 @@
 class Calendar < ActiveRecord::Base
   belongs_to :user
-  attr_accessible :event, :where, :when, :whendate
+  attr_accessible :event, :where, :when, :whendate, :important
   #Validation
   validates :event, :presence => true, :length => {:maximum => 140}
 

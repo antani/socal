@@ -14,7 +14,7 @@ namespace :db do
 
     Calendar.populate 1..10 do |cal|
       cal.user_id =1
-      cal.event = Populator.words(2..5)
+      cal.event = Populator.words(2..5) || ' today'
       cal.where = Populator.words(1..6).titleize
       #cal.when = Time.now..Time.now + 3.days
       cal.when = Time.now-7.days..Time.now

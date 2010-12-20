@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101220094158) do
+ActiveRecord::Schema.define(:version => 20101220134855) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20101220094158) do
     t.datetime "updated_at"
     t.datetime "when"
     t.date     "whendate"
+    t.boolean  "important",  :default => false
   end
 
   create_table "users", :force => true do |t|
