@@ -6,6 +6,10 @@
       <table id="feed_item_today" class="round" summary="User microposts">
             <%= render :partial => 'shared/feed_item', :collection => @feed_items_today %>
       </table>
+      <div class="apple_pagination" id="pageinfo">
+            <!--<%= sanitize(page_entries_info @feed_items_today)%> -->
+            <%= will_paginate @feed_items_today, :container => false %>
+      </div>
     </div>
     <div id="profile-bevel"><hr></div>
     <% end %>
@@ -15,6 +19,10 @@
       <table id="feed_item_tomorrow" class="round" summary="User microposts">
             <%= render :partial => 'shared/feed_item', :collection => @feed_items_tomorrow %>
       </table>
+      <div class="apple_pagination" id="pageinfo">
+            <!--<%= sanitize(page_entries_info @feed_items_tomorrow)%> -->
+            <%= will_paginate @feed_items_tomorrow, :container => false %>
+      </div>
     </div>
     <div id="profile-bevel"><hr></div>
     <% end %>
@@ -24,6 +32,11 @@
       <table id="feed_item_future" class="round" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_future %>
       </table>
+      <div class="apple_pagination" id="pageinfo">
+            <!--<%= sanitize(page_entries_info @feed_items_future)%> -->
+            <%= will_paginate @feed_items_future, :container => false %>
+      </div>
+
     </div>
     <div id="profile-bevel"><hr></div>
     <%end %>
@@ -33,6 +46,11 @@
       <table id="feed_item_past" class="round" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_last_week %>
       </table>
+      <div class="apple_pagination" id="pageinfo">
+            <!--<%= sanitize(page_entries_info @feed_items_last_week)%> -->
+            <%= will_paginate @feed_items_last_week, :container => false %>
+      </div>
+
     </div>
     <% end %>
 

@@ -1,0 +1,805 @@
+Script started on Tuesday 21 December 2010 05:30:18 PM IST
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rake gems:install
+(in /home/antani/rails_projects/socal)
+rake aborted!
+Don't know how to build task 'gems:install'
+
+(See full trace by running task with --trace)
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ gem install rails
+^CERROR:  Interrupted
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ bundle update
+Fetching git://github.com/andre/geokit-rails.git
+remote: Counting objects: 454, done.[K
+remote: Compressing objects:   0% (1/173)   [Kremote: Compressing objects:   1% (2/173)   [Kremote: Compressing objects:   2% (4/173)   [Kremote: Compressing objects:   3% (6/173)   [Kremote: Compressing objects:   4% (7/173)   [Kremote: Compressing objects:   5% (9/173)   [Kremote: Compressing objects:   6% (11/173)   [Kremote: Compressing objects:   7% (13/173)   [Kremote: Compressing objects:   8% (14/173)   [Kremote: Compressing objects:   9% (16/173)   [Kremote: Compressing objects:  10% (18/173)   [Kremote: Compressing objects:  11% (20/173)   [Kremote: Compressing objects:  12% (21/173)   [Kremote: Compressing objects:  13% (23/173)   [Kremote: Compressing objects:  14% (25/173)   [Kremote: Compressing objects:  15% (26/173)   [Kremote: Compressing objects:  16% (28/173)   [Kremote: Compressing objects:  17% (30/173)   [Kremote: Compressing objects:  18% (32/173)   [Kremote: Compressing objects:  19% (33/173)   [Kremote: Compressing objects:  20% (35/173)   [Kremote: Compressing objects:  21% (37/173)   [Kremote: Compressing objects:  22% (39/173)   [Kremote: Compressing objects:  23% (40/173)   [Kremote: Compressing objects:  24% (42/173)   [Kremote: Compressing objects:  25% (44/173)   [Kremote: Compressing objects:  26% (45/173)   [Kremote: Compressing objects:  27% (47/173)   [Kremote: Compressing objects:  28% (49/173)   [Kremote: Compressing objects:  29% (51/173)   [Kremote: Compressing objects:  30% (52/173)   [Kremote: Compressing objects:  31% (54/173)   [Kremote: Compressing objects:  32% (56/173)   [Kremote: Compressing objects:  33% (58/173)   [Kremote: Compressing objects:  34% (59/173)   [Kremote: Compressing objects:  35% (61/173)   [Kremote: Compressing objects:  36% (63/173)   [Kremote: Compressing objects:  37% (65/173)   [Kremote: Compressing objects:  38% (66/173)   [Kremote: Compressing objects:  39% (68/173)   [Kremote: Compressing objects:  40% (70/173)   [Kremote: Compressing objects:  41% (71/173)   [Kremote: Compressing objects:  42% (73/173)   [Kremote: Compressing objects:  43% (75/173)   [Kremote: Compressing objects:  44% (77/173)   [Kremote: Compressing objects:  45% (78/173)   [Kremote: Compressing objects:  46% (80/173)   [Kremote: Compressing objects:  47% (82/173)   [Kremote: Compressing objects:  48% (84/173)   [Kremote: Compressing objects:  49% (85/173)   [Kremote: Compressing objects:  50% (87/173)   [Kremote: Compressing objects:  51% (89/173)   [Kremote: Compressing objects:  52% (90/173)   [Kremote: Compressing objects:  53% (92/173)   [Kremote: Compressing objects:  54% (94/173)   [Kremote: Compressing objects:  55% (96/173)   [Kremote: Compressing objects:  56% (97/173)   [Kremote: Compressing objects:  57% (99/173)   [Kremote: Compressing objects:  58% (101/173)   [Kremote: Compressing objects:  59% (103/173)   [Kremote: Compressing objects:  60% (104/173)   [Kremote: Compressing objects:  61% (106/173)   [Kremote: Compressing objects:  62% (108/173)   [Kremote: Compressing objects:  63% (109/173)   [Kremote: Compressing objects:  64% (111/173)   [Kremote: Compressing objects:  65% (113/173)   [Kremote: Compressing objects:  66% (115/173)   [Kremote: Compressing objects:  67% (116/173)   [Kremote: Compressing objects:  68% (118/173)   [Kremote: Compressing objects:  69% (120/173)   [Kremote: Compressing objects:  70% (122/173)   [Kremote: Compressing objects:  71% (123/173)   [Kremote: Compressing objects:  72% (125/173)   [Kremote: Compressing objects:  73% (127/173)   [Kremote: Compressing objects:  74% (129/173)   [Kremote: Compressing objects:  75% (130/173)   [Kremote: Compressing objects:  76% (132/173)   [Kremote: Compressing objects:  77% (134/173)   [Kremote: Compressing objects:  78% (135/173)   [Kremote: Compressing objects:  79% (137/173)   [Kremote: Compressing objects:  80% (139/173)   [Kremote: Compressing objects:  81% (141/173)   [Kremote: Compressing objects:  82% (142/173)   [Kremote: Compressing objects:  83% (144/173)   [Kremote: Compressing objects:  84% (146/173)   [Kremote: Compressing objects:  85% (148/173)   [Kremote: Compressing objects:  86% (149/173)   [Kremote: Compressing objects:  87% (151/173)   [Kremote: Compressing objects:  88% (153/173)   [Kremote: Compressing objects:  89% (154/173)   [Kremote: Compressing objects:  90% (156/173)   [Kremote: Compressing objects:  91% (158/173)   [Kremote: Compressing objects:  92% (160/173)   [Kremote: Compressing objects:  93% (161/173)   [Kremote: Compressing objects:  94% (163/173)   [Kremote: Compressing objects:  95% (165/173)   [Kremote: Compressing objects:  96% (167/173)   [Kremote: Compressing objects:  97% (168/173)   [Kremote: Compressing objects:  98% (170/173)   [Kremote: Compressing objects:  99% (172/173)   [Kremote: Compressing objects: 100% (173/173)   [Kremote: Compressing objects: 100% (173/173), done.[K
+Receiving objects:   0% (1/454)   Receiving objects:   1% (5/454)   Receiving objects:   2% (10/454)   Receiving objects:   3% (14/454)   Receiving objects:   4% (19/454)   Receiving objects:   5% (23/454)   Receiving objects:   6% (28/454)   Receiving objects:   7% (32/454)   Receiving objects:   8% (37/454)   Receiving objects:   9% (41/454), 12.00 KiB | 7 KiB/s   Receiving objects:  10% (46/454), 12.00 KiB | 7 KiB/s   Receiving objects:  11% (50/454), 12.00 KiB | 7 KiB/s   Receiving objects:  12% (55/454), 12.00 KiB | 7 KiB/s   Receiving objects:  13% (60/454), 12.00 KiB | 7 KiB/s   Receiving objects:  14% (64/454), 12.00 KiB | 7 KiB/s   Receiving objects:  15% (69/454), 12.00 KiB | 7 KiB/s   Receiving objects:  16% (73/454), 12.00 KiB | 7 KiB/s   Receiving objects:  17% (78/454), 12.00 KiB | 7 KiB/s   Receiving objects:  18% (82/454), 12.00 KiB | 7 KiB/s   Receiving objects:  18% (84/454), 20.00 KiB | 11 KiB/s   Receiving objects:  19% (87/454), 20.00 KiB | 11 KiB/s   Receiving objects:  20% (91/454), 20.00 KiB | 11 KiB/s   Receiving objects:  21% (96/454), 20.00 KiB | 11 KiB/s   Receiving objects:  22% (100/454), 20.00 KiB | 11 KiB/s   Receiving objects:  23% (105/454), 20.00 KiB | 11 KiB/s   Receiving objects:  23% (106/454), 36.00 KiB | 9 KiB/s   Receiving objects:  24% (109/454), 36.00 KiB | 9 KiB/s   Receiving objects:  25% (114/454), 36.00 KiB | 9 KiB/s   Receiving objects:  25% (118/454), 44.00 KiB | 10 KiB/s   Receiving objects:  26% (119/454), 44.00 KiB | 10 KiB/s   Receiving objects:  27% (123/454), 44.00 KiB | 10 KiB/s   Receiving objects:  28% (128/454), 44.00 KiB | 10 KiB/s   Receiving objects:  29% (132/454), 44.00 KiB | 10 KiB/s   Receiving objects:  30% (137/454), 44.00 KiB | 10 KiB/s   Receiving objects:  31% (141/454), 44.00 KiB | 10 KiB/s   Receiving objects:  32% (146/454), 44.00 KiB | 10 KiB/s   Receiving objects:  33% (150/454), 44.00 KiB | 10 KiB/s   Receiving objects:  34% (155/454), 44.00 KiB | 10 KiB/s   Receiving objects:  35% (159/454), 44.00 KiB | 10 KiB/s   Receiving objects:  36% (164/454), 44.00 KiB | 10 KiB/s   Receiving objects:  37% (168/454), 44.00 KiB | 10 KiB/s   Receiving objects:  38% (173/454), 44.00 KiB | 10 KiB/s   Receiving objects:  39% (178/454), 44.00 KiB | 10 KiB/s   Receiving objects:  40% (182/454), 60.00 KiB | 13 KiB/s   Receiving objects:  41% (187/454), 60.00 KiB | 13 KiB/s   Receiving objects:  42% (191/454), 76.00 KiB | 15 KiB/s   Receiving objects:  43% (196/454), 76.00 KiB | 15 KiB/s   Receiving objects:  44% (200/454), 76.00 KiB | 15 KiB/s   Receiving objects:  45% (205/454), 76.00 KiB | 15 KiB/s   Receiving objects:  46% (209/454), 76.00 KiB | 15 KiB/s   Receiving objects:  47% (214/454), 76.00 KiB | 15 KiB/s   Receiving objects:  48% (218/454), 76.00 KiB | 15 KiB/s   Receiving objects:  49% (223/454), 76.00 KiB | 15 KiB/s   Receiving objects:  50% (227/454), 76.00 KiB | 15 KiB/s   Receiving objects:  51% (232/454), 76.00 KiB | 15 KiB/s   Receiving objects:  52% (237/454), 76.00 KiB | 15 KiB/s   Receiving objects:  53% (241/454), 76.00 KiB | 15 KiB/s   Receiving objects:  54% (246/454), 76.00 KiB | 15 KiB/s   Receiving objects:  55% (250/454), 76.00 KiB | 15 KiB/s   Receiving objects:  56% (255/454), 76.00 KiB | 15 KiB/s   Receiving objects:  57% (259/454), 76.00 KiB | 15 KiB/s   Receiving objects:  58% (264/454), 76.00 KiB | 15 KiB/s   Receiving objects:  59% (268/454), 76.00 KiB | 15 KiB/s   Receiving objects:  60% (273/454), 76.00 KiB | 15 KiB/s   Receiving objects:  61% (277/454), 76.00 KiB | 15 KiB/s   Receiving objects:  62% (282/454), 76.00 KiB | 15 KiB/s   Receiving objects:  63% (287/454), 76.00 KiB | 15 KiB/s   Receiving objects:  64% (291/454), 76.00 KiB | 15 KiB/s   Receiving objects:  65% (296/454), 76.00 KiB | 15 KiB/s   Receiving objects:  66% (300/454), 76.00 KiB | 15 KiB/s   Receiving objects:  67% (305/454), 76.00 KiB | 15 KiB/s   Receiving objects:  68% (309/454), 76.00 KiB | 15 KiB/s   Receiving objects:  69% (314/454), 76.00 KiB | 15 KiB/s   Receiving objects:  70% (318/454), 76.00 KiB | 15 KiB/s   Receiving objects:  71% (323/454), 76.00 KiB | 15 KiB/s   Receiving objects:  72% (327/454), 76.00 KiB | 15 KiB/s   Receiving objects:  73% (332/454), 76.00 KiB | 15 KiB/s   Receiving objects:  74% (336/454), 76.00 KiB | 15 KiB/s   Receiving objects:  75% (341/454), 76.00 KiB | 15 KiB/s   Receiving objects:  76% (346/454), 76.00 KiB | 15 KiB/s   Receiving objects:  77% (350/454), 76.00 KiB | 15 KiB/s   Receiving objects:  78% (355/454), 76.00 KiB | 15 KiB/s   Receiving objects:  79% (359/454), 76.00 KiB | 15 KiB/s   Receiving objects:  80% (364/454), 76.00 KiB | 15 KiB/s   Receiving objects:  81% (368/454), 76.00 KiB | 15 KiB/s   Receiving objects:  82% (373/454), 76.00 KiB | 15 KiB/s   Receiving objects:  83% (377/454), 76.00 KiB | 15 KiB/s   Receiving objects:  84% (382/454), 76.00 KiB | 15 KiB/s   Receiving objects:  85% (386/454), 92.00 KiB | 17 KiB/s   Receiving objects:  86% (391/454), 92.00 KiB | 17 KiB/s   Receiving objects:  87% (395/454), 92.00 KiB | 17 KiB/s   Receiving objects:  88% (400/454), 92.00 KiB | 17 KiB/s   Receiving objects:  89% (405/454), 92.00 KiB | 17 KiB/s   Receiving objects:  90% (409/454), 92.00 KiB | 17 KiB/s   Receiving objects:  91% (414/454), 92.00 KiB | 17 KiB/s   Receiving objects:  92% (418/454), 92.00 KiB | 17 KiB/s   Receiving objects:  93% (423/454), 92.00 KiB | 17 KiB/s   Receiving objects:  94% (427/454), 92.00 KiB | 17 KiB/s   remote: Total 454 (delta 252), reused 432 (delta 246)[K
+Receiving objects:  94% (431/454), 92.00 KiB | 17 KiB/s   Receiving objects:  95% (432/454), 92.00 KiB | 17 KiB/s   Receiving objects:  96% (436/454), 92.00 KiB | 17 KiB/s   Receiving objects:  97% (441/454), 92.00 KiB | 17 KiB/s   Receiving objects:  98% (445/454), 92.00 KiB | 17 KiB/s   Receiving objects:  99% (450/454), 92.00 KiB | 17 KiB/s   Receiving objects: 100% (454/454), 92.00 KiB | 17 KiB/s   Receiving objects: 100% (454/454), 100.72 KiB | 17 KiB/s, done.
+Resolving deltas:   0% (0/252)   Resolving deltas:   1% (3/252)   Resolving deltas:  11% (29/252)   Resolving deltas:  13% (35/252)   Resolving deltas:  21% (53/252)   Resolving deltas:  22% (56/252)   Resolving deltas:  24% (61/252)   Resolving deltas:  27% (70/252)   Resolving deltas:  29% (74/252)   Resolving deltas:  31% (80/252)   Resolving deltas:  32% (81/252)   Resolving deltas:  42% (107/252)   Resolving deltas:  43% (109/252)   Resolving deltas:  44% (111/252)   Resolving deltas:  46% (116/252)   Resolving deltas:  47% (120/252)   Resolving deltas:  51% (130/252)   Resolving deltas:  52% (132/252)   Resolving deltas:  53% (135/252)   Resolving deltas:  54% (137/252)   Resolving deltas:  56% (142/252)   Resolving deltas:  57% (145/252)   Resolving deltas:  65% (166/252)   Resolving deltas:  66% (167/252)   Resolving deltas:  69% (175/252)   Resolving deltas:  70% (177/252)   Resolving deltas:  80% (204/252)   Resolving deltas:  85% (215/252)   Resolving deltas:  97% (245/252)   Resolving deltas:  98% (247/252)   Resolving deltas:  99% (250/252)   Resolving deltas: 100% (252/252)   Resolving deltas: 100% (252/252), done.
+Fetching source index for http://rubygems.org/
+[31mCould not find gem 'geokit-rails (>= 0, runtime)' in git://github.com/andre/geokit-rails.git (at master).
+Source does not contain any versions of 'geokit-rails (>= 0, runtime)'[0m
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ clear
+[H[2J]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ ruby
+^Cruby: Interrupt
+
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rbu[K[Kuby script/plugin install git://github.com/andre/geokit-rails.git
+ruby: No such file or directory -- script/plugin (LoadError)
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ ruby script/plugin install git://github.com/andre/geokit-rails.git[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P
+ruby: Is a directory - script (Errno::EISDIR)
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ ruby script install git://github.com/andre/geokit-rails.git[1P[1P[1P[1P[1P[1P[1@p[1@l[1@u[1@g[1@i[1@n
+ruby: No such file or directory -- plugin (LoadError)
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ ruby plugin install git://github.com/andre/geokit-rails.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscript[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@/plugin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+ruby: No such file or directory -- script/plugin (LoadError)
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ bundle install
+Fetching source index for http://rubygems.org/
+Using rake (0.8.7) 
+Using abstract (1.0.0) 
+Using activesupport (3.0.1) 
+Using builder (2.1.2) 
+Using i18n (0.4.2) 
+Using activemodel (3.0.1) 
+Using erubis (2.6.6) 
+Using rack (1.2.1) 
+Using rack-mount (0.6.13) 
+Using rack-test (0.5.6) 
+Using tzinfo (0.3.23) 
+Using actionpack (3.0.1) 
+Using mime-types (1.16) 
+Using polyglot (0.3.1) 
+Using treetop (1.4.9) 
+Using mail (2.2.12) 
+Using actionmailer (3.0.1) 
+Using arel (1.0.1) 
+Using activerecord (3.0.1) 
+Using activeresource (3.0.1) 
+Using addressable (2.2.2) 
+Using bcrypt-ruby (2.1.2) 
+Using bundler (1.0.7) 
+Using chronic (0.3.0) 
+Using warden (1.0.3) 
+Using devise (1.1.5) 
+Using faker (0.3.1) 
+Using multipart-post (1.0.1) 
+Using faraday (0.5.3) 
+Using gravatar_image_tag (0.1.0) 
+Using thor (0.14.6) 
+Using railties (3.0.1) 
+Using rails (3.0.1) 
+Using jquery-rails (0.2.6) 
+Using mocha (0.9.10) 
+Using multi_json (0.0.5) 
+Using net-ldap (0.1.1) 
+Using nifty-generators (0.4.2) 
+Using nokogiri (1.4.4) 
+Using oa-core (0.1.6) 
+Using rest-client (1.6.1) 
+Using oa-basic (0.1.6) 
+Using pyu-ruby-sasl (0.0.3.2) 
+Using rubyntlm (0.1.1) 
+Using oa-enterprise (0.1.6) 
+Using oauth (0.4.4) 
+Using oauth2 (0.1.0) 
+Using oa-oauth (0.1.6) 
+Using ruby-openid (2.1.8) 
+Using rack-openid (1.2.0) 
+Using ruby-openid-apps-discovery (1.2.0) 
+Using oa-openid (0.1.6) 
+Using omniauth (0.1.6) 
+Using populator (0.2.5) 
+Installing rails-geocoder (0.9.5) 
+Using sqlite3-ruby (1.3.2) 
+Using will_paginate (2.3.15) 
+[32mYour bundle is complete! It was installed into /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial[0m
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rails s
+=> Booting WEBrick
+=> Rails 3.0.1 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-12-21 17:46:47] INFO  WEBrick 1.3.1
+[2010-12-21 17:46:47] INFO  ruby 1.9.2 (2010-08-18) [i686-linux]
+[2010-12-21 17:46:47] INFO  WEBrick::HTTPServer#start: pid=31517 port=3000
+
+
+Started GET "/?page=1" for 127.0.0.1 at 2010-12-21 17:46:51 +0530
+  Processing by PagesController#home as HTML
+  Parameters: {"page"=>"1"}
+User timezone-----
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (1.4ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (0.1ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:16:51.937465' AND '2011-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (1.1ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')
+Rendered shared/_calendar_form.html.erb (8.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (48.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (3.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (10.4ms)
+Rendered shared/_feed.html.erb (147.2ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (165.1ms)
+Completed 200 OK in 377ms (Views: 168.9ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-21 17:47:23 +0530
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"788QRFjn30S5xLG8igTXfP3C8D3HiRsOdO4m11vF/Ts=", "calendar"=>{"event"=>"Some good event today", "where"=>"New York"}}
+User timezone-----
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Inside create....................................................
+some good event today
+2010-12-21 18:30:00 UTC
+Some good event today
+.................................................................
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "calendars" ("created_at", "event", "important", "updated_at", "user_id", "when", "whendate", "where") VALUES ('2010-12-21 12:17:24.414076', 'Some good event today', 'f', '2010-12-21 12:17:24.414076', 5, '2010-12-21 18:30:00.000000', '2010-12-21', 'New York')[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 872ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 17:47:24 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (2.0ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (0.1ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:17:24.637973' AND '2011-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (1.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')
+Rendered shared/_calendar_form.html.erb (7.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (51.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (10.1ms)
+Rendered shared/_feed.html.erb (69.6ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (85.7ms)
+Completed 200 OK in 200ms (Views: 89.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 17:49:28 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (1.5ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)
+  [1m[36mCalendar Load (0.5ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:19:29.114171' AND '2011-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (1.3ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')
+Rendered shared/_calendar_form.html.erb (7.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (52.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (10.8ms)
+Rendered shared/_feed.html.erb (70.8ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (86.6ms)
+Completed 200 OK in 206ms (Views: 90.0ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-21 17:49:38 +0530
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"788QRFjn30S5xLG8igTXfP3C8D3HiRsOdO4m11vF/Ts=", "calendar"=>{"event"=>"some great event today", "where"=>"New York"}}
+User timezone-----
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Completed   in 790ms
+
+NoMethodError (undefined method `latitude' for Geocoder:Module):
+  app/controllers/calendars_controller.rb:54:in `create'
+
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (175.4ms)
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (182.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 17:53:05 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCalendar Load (1.6ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (0.1ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:23:05.504220' AND '2011-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (1.1ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')[0m
+Rendered shared/_calendar_form.html.erb (6.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (49.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (3.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (10.9ms)
+Rendered shared/_feed.html.erb (67.9ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered pages/home.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 200ms (Views: 86.8ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-21 17:53:14 +0530
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"788QRFjn30S5xLG8igTXfP3C8D3HiRsOdO4m11vF/Ts=", "calendar"=>{"event"=>"Some great event today", "where"=>"NY"}}
+User timezone-----
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+42.700124
+-74.922749
+Inside create....................................................
+some gre event today
+2010-12-21 18:30:00 UTC
+Some great event today
+.................................................................
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "calendars" ("created_at", "event", "important", "updated_at", "user_id", "when", "whendate", "where") VALUES ('2010-12-21 12:23:15.555386', 'Some great event today', 'f', '2010-12-21 12:23:15.555386', 5, '2010-12-21 18:30:00.000000', '2010-12-21', 'NY')
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 812ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 17:53:15 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCalendar Load (1.3ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:23:15.713481' AND '2011-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (1.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')[0m
+Rendered shared/_calendar_form.html.erb (6.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (55.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (15.4ms)
+Rendered shared/_feed.html.erb (80.5ms)
+Rendered layouts/_stylesheets.html.erb (44.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered pages/home.html.erb within layouts/application (139.6ms)
+Completed 200 OK in 245ms (Views: 143.2ms | ActiveRecord: 7.5ms)
+^C[2010-12-21 17:53:48] INFO  going to shutdown ...
+[2010-12-21 17:53:48] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rails generate migration AddLongLatToCalendars longi[K[K[K[Katitute:float, longitude:float
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20101221122420_add_long_lat_to_calendars.rb
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rake db:migrate
+(in /home/antani/rails_projects/socal)
+rake aborted!
+/home/antani/rails_projects/socal/db/migrate/20101221122420_add_long_lat_to_calendars.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    add_column :calendars, :longitude, :float
+                ^
+
+(See full trace by running task with --trace)
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ gedit db/migrate/20101221122420_add_long_lat_to_calendars.rb
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ gedit db/migrate/20101221122420_add_long_lat_to_calendars.rb[1P[1P[1P[1P[1P db/migrate/20101221122420_add_long_lat_to_calendars.rbr db/migrate/20101221122420_add_long_lat_to_calendars.rbm db/migrate/20101221122420_add_long_lat_to_calendars.rb
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rm db/migrate/20101221122420_add_long_lat_to_calendars.rb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3@gedit[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crake db:migrate[Kils generate migration AddLongLatToCalendars latitute:float, longitude:float[C[C[1P longitude:float
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20101221122525_add_long_lat_to_calendars.rb
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rake db:migrate
+(in /home/antani/rails_projects/socal)
+==  AddLongLatToCalendars: migrating ==========================================
+-- add_column(:calendars, :latitute, :float)
+   -> 0.0007s
+-- add_column(:calendars, :longitude, :float)
+   -> 0.0003s
+==  AddLongLatToCalendars: migrated (0.0012s) =================================
+
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rails s
+=> Booting WEBrick
+=> Rails 3.0.1 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-12-21 17:56:56] INFO  WEBrick 1.3.1
+[2010-12-21 17:56:56] INFO  ruby 1.9.2 (2010-08-18) [i686-linux]
+[2010-12-21 17:56:56] INFO  WEBrick::HTTPServer#start: pid=31720 port=3000
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2010-12-21 17:57:07 +0530
+  Processing by PagesController#home as HTML
+  Parameters: {"page"=>"2"}
+User timezone-----
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (13.6ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)
+  [1m[36mCalendar Load (2.0ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:27:07.497607' AND '2011-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (46.5ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"[0m
+  [1m[35mCalendar Load (0.6ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')
+Rendered shared/_calendar_form.html.erb (8.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (22.9ms)
+Rendered shared/_feed.html.erb (114.8ms)
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered pages/home.html.erb within layouts/application (134.1ms)
+Completed 200 OK in 388ms (Views: 138.1ms | ActiveRecord: 64.2ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-21 17:57:30 +0530
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SiiHm52MnWWrQYOh336tn3mwF7tY7Qz8RUuHiKPwJmA=", "calendar"=>{"event"=>"Some important event today", "where"=>"Trinity Meadows, Bellandur Bangalore india"}}
+User timezone-----
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+12.9232248
+77.6750744
+Inside create....................................................
+some important event today
+2010-12-21 18:30:00 UTC
+Some important event today
+.................................................................
+WARNING: Can't mass-assign protected attributes: latitude, langitude
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "calendars" ("created_at", "event", "important", "latitute", "longitude", "updated_at", "user_id", "when", "whendate", "where") VALUES ('2010-12-21 12:27:30.865053', 'Some important event today', 't', NULL, NULL, '2010-12-21 12:27:30.865053', 5, '2010-12-21 18:30:00.000000', '2010-12-21', 'Trinity Meadows, Bellandur Bangalore india')[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 806ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 17:57:30 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (12.1ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)
+  [1m[36mCalendar Load (1.7ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (0.1ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:27:31.086516' AND '2011-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (40.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"[0m
+  [1m[35mCalendar Load (0.7ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')
+Rendered shared/_calendar_form.html.erb (7.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (46.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (2.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (9.8ms)
+Rendered shared/_feed.html.erb (63.5ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 239ms (Views: 83.3ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 17:59:03 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (47.5ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)
+  [1m[36mCalendar Load (1.6ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (0.1ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:29:04.016774' AND '2011-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (42.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"[0m
+  [1m[35mCalendar Load (0.8ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')
+Rendered shared/_calendar_form.html.erb (7.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (46.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (2.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (10.0ms)
+Rendered shared/_feed.html.erb (64.1ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (80.3ms)
+Completed 200 OK in 237ms (Views: 83.8ms | ActiveRecord: 92.8ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-21 17:59:42 +0530
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SiiHm52MnWWrQYOh336tn3mwF7tY7Qz8RUuHiKPwJmA=", "calendar"=>{"event"=>"Some Great Event today", "where"=>"Trinity Meadows, Bellandur Bangalore india"}}
+User timezone-----
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+12.9232248
+77.6750744
+Inside create....................................................
+some gre event today
+2010-12-21 18:30:00 UTC
+Some Great Event today
+.................................................................
+WARNING: Can't mass-assign protected attributes: langitude
+Completed   in 635ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: latitude):
+  app/controllers/calendars_controller.rb:82:in `create'
+
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (151.6ms)
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (156.7ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-21 18:00:23 +0530
+  Processing by CalendarsController#index as HTML
+User timezone-----
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (18.9ms)[0m  SELECT "calendars".* FROM "calendars"
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered calendars/index.html.erb within layouts/application (132.8ms)
+Completed 200 OK in 236ms (Views: 136.8ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 18:00:26 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCalendar Load (53.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)[0m
+  [1m[35mCalendar Load (1.8ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:30:27.052586' AND '2011-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (10.1ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"
+  [1m[36mCalendar Load (0.5ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')[0m
+Rendered shared/_calendar_form.html.erb (45.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (49.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Rendered shared/_feed_item.html.erb (10.1ms)
+Rendered shared/_feed.html.erb (66.7ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (121.3ms)
+Completed 200 OK in 255ms (Views: 125.1ms | ActiveRecord: 66.5ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-21 18:00:38 +0530
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SiiHm52MnWWrQYOh336tn3mwF7tY7Qz8RUuHiKPwJmA=", "calendar"=>{"event"=>"Another great event tomorrow", "where"=>"Trinity Meadows, Bellandur Bangalore india"}}
+User timezone-----
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+12.9232248
+77.6750744
+Inside create....................................................
+another gre event tomorrow
+2010-12-22 12:00:00 UTC
+Another great event tomorrow
+.................................................................
+Completed   in 841ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: latitude):
+  app/controllers/calendars_controller.rb:82:in `create'
+
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (171.2ms)
+Rendered /home/antani/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (176.9ms)
+^C[2010-12-21 18:01:53] INFO  going to shutdown ...
+[2010-12-21 18:01:53] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rails ske db:migrateils generate migration AddLongLatToCalendars latitute:float longitude:float[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cke db:migrate[Kils generate migration AddLongLatToCalendars latitute:float longitude:float[1P[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@R[1@e[1@n[1@a[1@m[1@e[C[1@C[1@l[1P[1@o[1@l[1@u[1@m[1@n^C
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rails ske db:migrateils generate migration AddLongLatToCalendars latitute:float longitude:float[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[20Pm db/migrate/20101221122420_add_long_lat_to_calendars.rb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cails generate migration AddLongLatToCalendars latitute:float longitude:float[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cke db:migrate[K[8Pils sgedit [1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[Cdb/migrate/20101221122525_add_long_lat_to_calendars.rb
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rakd[Ke db:migrate
+(in /home/antani/rails_projects/socal)
+]0;antani@antani: ~/rails_projects/socalantani@antani:~/rails_projects/socal$ rails s
+=> Booting WEBrick
+=> Rails 3.0.1 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-12-21 18:04:42] INFO  WEBrick 1.3.1
+[2010-12-21 18:04:42] INFO  ruby 1.9.2 (2010-08-18) [i686-linux]
+[2010-12-21 18:04:42] INFO  WEBrick::HTTPServer#start: pid=31852 port=3000
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-21 18:04:47 +0530
+  Processing by PagesController#home as HTML
+User timezone-----
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCalendar Load (12.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5)
+  [1m[36mCalendar Load (1.7ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-13 18:30:00.000000' AND '2010-12-20 18:30:00.000000')[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."when" BETWEEN '2010-12-23 12:34:48.073939' AND '2011-12-20 18:30:00.000000')
+  [1m[36mCalendar Load (42.5ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-21') ORDER BY "when desc"[0m
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars".user_id = 5) AND ("calendars"."whendate" = '2010-12-22')
+Rendered shared/_calendar_form.html.erb (8.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[

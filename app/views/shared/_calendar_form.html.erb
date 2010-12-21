@@ -1,9 +1,11 @@
 <%= form_for @calendar do |f| %>
 
-  <div>
+  <div class="input-form">
     <%= f.text_field :event%>
-    <p class="example">e.g. : Haircut tomorrow, Meeting with Boss next Wednesday, Extremely urgent meeting today </p>
+    <%= f.text_field :where%>
   </div>
+  <br/>
+  <br/>
   <div>
     <%= f.submit "     Submit     " %>
   </div>

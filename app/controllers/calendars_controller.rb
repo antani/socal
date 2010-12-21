@@ -45,6 +45,14 @@ class CalendarsController < ApplicationController
 
   def create
     eventStr =  params['calendar']['event']
+    whereStr =  params['calendar']['where']
+    #geocoder = Graticule.service(:google).new "ABQIAAAAO1AbdOVt9zN5lJwJyNcDuhTX2XchcwgyHzp4Xo0DHRAzt2aLjhRSFPmH2rpNoXYunPWQ2jCi3aZflA"
+    #location = geocoder.locate whereStr
+    # look up coordinates of some location (like searching Google Maps)
+    co_ords=Geocoder.fetch_coordinates(whereStr)
+    logger.debug co_ords[0]
+    logger.debug co_ords[1]
+
     # Due to the bug in Chronic- words 'on' or 'at' dont work well
     # we need to remove those words from events before we parse in chronic
     trimmedEventStr = eventStr.downcase
@@ -63,19 +71,15 @@ class CalendarsController < ApplicationController
     logger.debug 'Inside create....................................................'
     logger.debug trimmedEventStr
     logger.debug guessed_when
-    logger.debug '.................................................................'
-
-
-
-
+    #logger.debug location
     logger.debug eventStr
-    logger.debug '..............'
+    logger.debug '.................................................................'
 
     if eventStr
       #Automatically flag an event important
       importantEvent = trimmedEventStr.include? 'important'
 
-      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>'New York', :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent)
+      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>whereStr, :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => co_ords[0], :longitude => co_ords[1])
       if @calendar
         if @calendar.save
           flash[:success] = "Calendar created"

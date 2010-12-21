@@ -9,9 +9,10 @@
     </tr>
   </table>
   <% else %>
-
-     <%= link_to "Sign up", new_user_registration_path %> or
-     <%= link_to "Sign in", new_user_session_path %> or signin using
+     <div id="sign-up">
+        <%= link_to "Sign up", new_user_registration_path %> or
+        <%= link_to "Sign in", new_user_session_path %> or signin using...
+     </div>
      <div class="login-using">
       <a href="/auth/twitter" class="auth_provider"><%= image_tag "social/twitter.png", :size => "32x32",:alt => "Twitter" %></a>
       <a href="/auth/facebook" class="auth_provider"><%= image_tag "social/facebook.png", :size => "32x32", :alt => "Facebook" %></a>

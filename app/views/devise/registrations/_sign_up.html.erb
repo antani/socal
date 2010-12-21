@@ -1,6 +1,4 @@
-<h2 class="signin-h2 round">Sign up</h2>
 <%= set_focus_to_id 'user_email' %>
-
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -17,6 +15,4 @@
 
   <p><%= f.submit "Sign up" %></p>
 <% end %>
-
-<%= render :partial => "devise/shared/links" %>
 

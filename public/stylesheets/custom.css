@@ -15,7 +15,7 @@ html
 body {
   /*background: #fff;*/
   /*background: #421d10 url(../images/bg_gradient.jpg) fixed left top;*/
-  background-image: url(/images/circles.png);
+  /*background-image: url(/images/circles.png);*/
   background-repeat: repeat-x;
   background-position: center top;
   color: #cddfe7;
@@ -57,7 +57,7 @@ a:hover {
 }
 
 a:visited {
-  color: #069;
+  /*color: #069;*/
 }
 /* Navigation */
 
@@ -105,7 +105,7 @@ nav ul li a:hover {
   /*font-family: Helvetica, Verdana, Sans-Serif;*/
   color: #fff;
   height: 35px;
-  width:810px;
+  width:510px;
   text-shadow: 1px 1px 1px rgba(0,0,0,.4);
   padding:0px;
   margin: -2px;
@@ -267,7 +267,15 @@ footer nav {
    /*background: rgba(0, 0, 0, 0.757812);*/
    background: rgba(0, 0, 0, 0.2);
   text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+  padding:1px;
 }
+#feed_item_today a, #feed_item_future a, #feed_item_tomorrow a, #feed_item_past a
+{
+   /*background: rgba(0, 0, 0, 0.757812);*/
+   color: #cddfe7;
+   text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+}
+
 .calendar-list
 {
    padding-top: 20px;
@@ -415,6 +423,7 @@ margin-left: auto;
     background: -moz-linear-gradient(100% 100% 90deg, #085874,#2197C1);
     background: -webkit-gradient(linear, left top, left bottom, from(#2197C1), to(#085874));
     padding: 3px 18px;
+    padding-top: 10px;
     margin: 5px 10px 5px 10px;
     -webkit-background-clip: padding-box;
     font: italic 18px/23px 'Lato',Georgia, "Times New Roman", Times, serif;
@@ -459,11 +468,6 @@ margin-left: auto;
    border-top-color: #1b435e;
    background: #1b435e;
    }
-.signin-notice
-{
-    text-shadow: rgba(0,0,0,.4) 0 1px 0;
-    font-size: 12px;
-}
 .selected-input
 {
     -moz-box-shadow: 0 1px 3px rgba(255,255,0,0.5);
@@ -524,11 +528,25 @@ margin-left: auto;
 	width: 75%;
 	margin-bottom: 1px;
 	font: 15px 'Lato',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	clear: both;
 	background-color: rgba(255,255,255,.25);
 	border: 1px solid #607c90;
-	width:810px;
+	width:500px;
 }
+#calendar_where {
+	padding: 8px;
+	border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #a3c3d6;
+	float: right;
+	margin-bottom: 1px;
+	font: 15px 'Lato',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	background-color: rgba(255,255,255,.25);
+	border: 1px solid #607c90;
+	width:200px;
+}
+
 input[type="text"], input[type="password"]
 {
 	padding: 8px;
@@ -590,5 +608,45 @@ color: #2daebf;
     padding: 1px;
     margin: 1px;
     text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.3);
+}
+.signin-notice
+{
+    color: #ffb515;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    font-size: 16px;
+}
+#sign-up a
+{
+    color: #ffb515;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    font-size: 16px;
+}
+.apple_pagination {
+  font-size: 11px;
+  text-align: right;
+  padding: 1px; }
+  .apple_pagination a, .apple_pagination span {
+    padding: .2em .3em; }
+  .apple_pagination span.disabled {
+    color: #AAA; }
+  .apple_pagination span.current {
+    font-weight: bold;
+    background: transparent no-repeat 50% 50%; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: #ffb515; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline;
+}
+.input-form
+{
+    padding-bottom: 5px;
+}
+div[id^=map-]
+{
+    height: 400px;
+    width: 400px;
+    /*display: none;*/
+
 }
 

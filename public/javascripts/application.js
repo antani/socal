@@ -102,22 +102,65 @@ $(document).ready(function() {
          //alert(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes() ));
          //Check if the milisecond matches with stamped values
            $("#feed_item_today :input").each( function() {
-  //         $("#error").html(sds);
-           elemVal = $(this).val();
-           //alert(ds);
-            if(elemVal == sds)
-            {
-                humanMsg.displayMsg("Reminder : " + $(this).attr('name'));
-                //do not consider this element again.
+//               $("#error").html(sds);
+               elemVal = $(this).val();
+               //alert(ds);
+                if(elemVal == sds)
+                {
 
-            }
+//                    $(this).addClass("selected-input");
+                    humanMsg.displayMsg("Reminder : " + $(this).attr('name'));
+                    //do not consider this element again.
+
+                }
          });
-
-
-
-
-
      }, 1000); //Bug - run Every second to make sure miliseconds are in sync
+
+     //Add gMap to the div
+     $('div[id^="map-"]').each(function() {
+        var relStr = $(this).attr('rel');
+        var co_ords = relStr.split(',');
+        lat = co_ords[0];
+        lon = co_ords[1];
+        options = {
+                        latitude:               lat,
+                        longitude:              lon,
+                        zoom:                   15,
+                        markers:                [{latitude: lat, longitude: lon}],
+                        scrollwheel:            false,
+                        maptype:                G_NORMAL_MAP,
+                        icon:
+                        {
+                            shadowsize:         false,
+                            iconanchor:         [9,34],
+                            infowindowanchor:   [8, 2]
+                        }
+                    };
+
+        $(this).gMap(options);
+      });
+
+     //Step: 1 set hover event on all the 'where' class divs
+         $('a[id^="map-"]').fancybox({
+		    'hideOnContentClick': false,
+		    'onComplete':function() {
+		    $("#fancybox-wrap").hover(function() {
+			    $("#fancybox-title").show();
+		    }, function() {
+			    $("#fancybox-title").hide();
+		    });
+	    }
+     });
+     $(".map-icon").hide();
+     $('a[id^="map-"]').hover(
+
+        function() { $(this).next('.map-icon').show(slow);},
+        function() { $(this).next('.map-icon').hide(slow);}
+//         $(this).next().hide(slow);
+     );
+
+
+
 
 
 });

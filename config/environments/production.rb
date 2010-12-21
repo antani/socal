@@ -47,5 +47,6 @@ Socal::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   config.action_mailer.default_url_options = { :host => 'http://morning-autumn-487.heroku.com' }
+
 end
 

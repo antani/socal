@@ -1,4 +1,4 @@
-          <div id="pageinfo" class="flickr_pagination">
+           <div id="pageinfo" class="flickr_pagination">
             <%= sanitize(page_entries_info @feed_items)%>
             <div >
                 <%= will_paginate @feed_items, :container => false %>
@@ -37,4 +37,10 @@
  Time Now - <%= Time.now %>
      Time Now Midnight- <%= Time.now.midnight %>
      Current time zone: <%= Time.zone.name %>
+
+      <p class="example">e.g. : Haircut tomorrow, Meeting with Boss next Wednesday, Extremely urgent meeting today </p>
+
+
+<%= link_to "Sign up", new_user_registration_path %> or
+divid = feed_item_counter+1
 
