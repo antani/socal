@@ -12,6 +12,9 @@ $(document).ready(function() {
         $('#pageinfo').load("/ #pageinfo");
         return false;
     }
+
+    $('#signin-link').fancybox();
+
     $("input:text:visible:first").focus();
     $('.delete-icon').bind('ajax:success', function() {
         //$(this).closest('tr').animate({"color": '#555555'}, 'slow');
@@ -125,8 +128,9 @@ $(document).ready(function() {
         options = {
                         latitude:               lat,
                         longitude:              lon,
-                        zoom:                   15,
-                        markers:                [{latitude: lat, longitude: lon}],
+                        zoom:                   12,
+                        markers:                [{latitude: lat, longitude: lon, html: "_latlng"},{ address: "Taj Mahal Agra",html: "_address" }],
+
                         scrollwheel:            false,
                         maptype:                G_NORMAL_MAP,
                         icon:
@@ -136,21 +140,18 @@ $(document).ready(function() {
                             infowindowanchor:   [8, 2]
                         }
                     };
+        //options = {markers : [{ address: "Tettnang, Germany", html: "The place I live" }],
+        //           zoom:15
+
+        // }
 
         $(this).gMap(options);
       });
 
      //Step: 1 set hover event on all the 'where' class divs
-         $('a[id^="map-"]').fancybox({
-		    'hideOnContentClick': false,
-		    'onComplete':function() {
-		    $("#fancybox-wrap").hover(function() {
-			    $("#fancybox-title").show();
-		    }, function() {
-			    $("#fancybox-title").hide();
-		    });
-	    }
-     });
+     $('a[id^="map-"]').fancybox();
+    //$('a[id^="map-"]').ceebox();
+
      $(".map-icon").hide();
      $('a[id^="map-"]').hover(
 

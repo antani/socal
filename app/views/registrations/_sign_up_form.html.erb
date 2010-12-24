@@ -1,0 +1,18 @@
+<%= set_focus_to_id 'user_email' %>
+<%= form_for(:user, @user, :url => registration_path(:user)) do |f| %>
+
+
+  <p><%= f.label :email %><br />
+  <%= f.text_field :email %></p>
+
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></p>
+
+  <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.us_zones %>
+
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
+

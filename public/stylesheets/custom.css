@@ -5,7 +5,8 @@ font-family: league;
 html
 {
 
-      background-image: url(/images/bkg.jpg);
+/*      background-image: url(/images/bkg.jpg);*/
+            background: url("/images/body.png") repeat-x scroll 0 0 #212121;
 }
 
 .container {
@@ -615,12 +616,55 @@ color: #2daebf;
     text-shadow: rgba(0,0,0,.4) 0 1px 0;
     font-size: 16px;
 }
+#sign-up{
+    width: 300px;
+    float:left;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -moz-box-shadow: 2px 2px 7px 0 #151515;
+    background: none repeat scroll 0 0 #272727;
+    padding: 10px;
+}
+#sign-up a{
+    padding: 1px;
+}
+
+#sign-in{
+    float:right;
+    width:300px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -moz-box-shadow: 2px 2px 7px 0 #151515;
+    background: none repeat scroll 0 0 #272727;
+    padding: 10px;
+}
+#sign-in a,a:visited{
+    color:green;
+}
+#details
+{
+    float:right;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -moz-box-shadow: 2px 2px 7px 0 #151515;
+    background: none repeat scroll 0 0 #272727;
+    padding: 10px;
+    margin-top: 10px;
+    overflow:auto;
+    width:300px
+}
+
 #sign-up a
 {
     color: #ffb515;
     text-shadow: rgba(0,0,0,.4) 0 1px 0;
     font-size: 16px;
 }
+#signin-form
+{
+    padding: 5px;
+    background: rgba(0,0,0,0.1);
+    color: green;
+}
+
+
 .apple_pagination {
   font-size: 11px;
   text-align: right;

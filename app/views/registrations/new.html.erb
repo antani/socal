@@ -1,22 +1,5 @@
 Registration.new
 <h2 class="signin-h2 round">Sign up</h2>
-<%= set_focus_to_id 'user_email' %>
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
-
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
-
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
-
-  <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.us_zones %>
-
-  <p><%= f.submit "Sign up" %></p>
-<% end %>
-
+<%= render :partial => "sign_up_form" %>
 <%= render :partial => "devise/shared/links" %>
 

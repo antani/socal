@@ -10,15 +10,27 @@
   </table>
   <% else %>
      <div id="sign-up">
-        <%= link_to "Sign up", new_user_registration_path %> or
-        <%= link_to "Sign in", new_user_session_path %> or signin using...
+          <%= render :partial => "registrations/sign_up_form" %>
      </div>
-     <div class="login-using">
-      <a href="/auth/twitter" class="auth_provider"><%= image_tag "social/twitter.png", :size => "32x32",:alt => "Twitter" %></a>
-      <a href="/auth/facebook" class="auth_provider"><%= image_tag "social/facebook.png", :size => "32x32", :alt => "Facebook" %></a>
-      <a href="/auth/google_apps" class="auth_provider"><%= image_tag "social/google.png", :size => "32x32", :alt => "Google" %></a>
-      <a href="/auth/open_id" class="auth_provider"><%= image_tag "open_id_32.png", :size => "32x32",:alt => "OpenID" %></a>
-     <div class="clear"></div>
+     <div id="sign-in">
+
+          <a href="#signin-form" id="signin-link">Sign-in</a>  or signin using...<br/>
+          <a href="/auth/twitter" class="auth_provider"><%= image_tag "social/twitter.png", :size => "32x32",:alt => "Twitter" %></a>
+          <a href="/auth/facebook" class="auth_provider"><%= image_tag "social/facebook.png", :size => "32x32", :alt => "Facebook" %></a>
+          <a href="/auth/google_apps" class="auth_provider"><%= image_tag "social/google.png", :size => "32x32", :alt => "Google" %></a>
+          <a href="/auth/open_id" class="auth_provider"><%= image_tag "open_id_32.png", :size => "32x32",:alt => "OpenID" %></a>
+         <div class="clear"></div>
      </div>
+     <div id="details">
+      <p>Socal is the soc<del>i</del>al calendar and a to-do list. Your calendar events will be posted to your social world(only if you wish). You can easily share your calendar events to Twitter, Facebook, Foursquare, Gowalla to make sure your social circle is aware of what you are up to. A sophisticated reminder system makes sure that you are always aware of your schedule.</p>
+      <div class="clear"></div>
+     </div>
+     <div style="display:none">
+       <div id="signin-form">
+       <%= render :partial => "devise/sessions/sign_in_form" %>
+       </div>
+     </div>
+
+
   <% end %>
 
