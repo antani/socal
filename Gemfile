@@ -7,7 +7,7 @@ gem 'rails', '3.0.1'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise'
-gem 'omniauth'
+gem 'omniauth', :git => "git://github.com/kvnsmth/omniauth.git"
 gem 'nifty-generators'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
@@ -16,9 +16,10 @@ gem 'populator'
 gem 'jquery-rails', '>= 0.2.6'
 #gem "aaronh-chronic", "0.3.9"
 gem 'chronic'
-gem 'omniauth'
-gem "rails-geocoder", :require => "geocoder"
 
+gem "rails-geocoder", :require => "geocoder"
+gem "multi_json"
+gem "twitter"
 #gem 'geokit-rails' , :git=>'git://github.com/andre/geokit-rails.git'
 #gem 'ym4r-gm', :git => 'git://github.com/queso/ym4r-gm.git'
 

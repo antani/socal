@@ -1,11 +1,19 @@
 <%= form_for @calendar do |f| %>
 
   <div class="input-form">
+    <div id="input-form-left">
+    <%= f.label :event, :id => "input-form-event-label"%>
     <%= f.text_field :event%>
+    </div>
+
+    <div id="input-form-right">
+    <%= f.label :where, :id => "input-form-where-label" %>
     <%= f.text_field :where%>
+    </div>
   </div>
   <br/>
   <br/>
+  <div class="clear"></div>
   <div>
     <%= f.submit "     Submit     " %>
   </div>

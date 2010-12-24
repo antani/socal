@@ -13,7 +13,18 @@ $(document).ready(function() {
         return false;
     }
 
-    $('#signin-link').fancybox();
+    $('#signin-link').fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600,
+		'speedOut'		:	200,
+		'overlayShow'	:	true,
+		'padding'       :   10,
+		'opacity'       :   true,
+		'overlayOpacity':   0.2,
+		'titlePosition' : 'outside',
+		'showCloseButton' : false
+	});
 
     $("input:text:visible:first").focus();
     $('.delete-icon').bind('ajax:success', function() {

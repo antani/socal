@@ -1,3 +1,5 @@
+
+
 class CalendarsController < ApplicationController
   #-----------------------------Nasty Bug !
   #Time.zone = "UTC"
@@ -49,9 +51,16 @@ class CalendarsController < ApplicationController
     #geocoder = Graticule.service(:google).new "ABQIAAAAO1AbdOVt9zN5lJwJyNcDuhTX2XchcwgyHzp4Xo0DHRAzt2aLjhRSFPmH2rpNoXYunPWQ2jCi3aZflA"
     #location = geocoder.locate whereStr
     # look up coordinates of some location (like searching Google Maps)
-    co_ords=Geocoder.fetch_coordinates(whereStr)
-    logger.debug co_ords[0]
-    logger.debug co_ords[1]
+    if whereStr.empty?
+      lat =nil
+      lon =nil
+    else
+      co_ords=Geocoder.fetch_coordinates(whereStr)
+      logger.debug co_ords[0]
+      logger.debug co_ords[1]
+      lat = co_ords[0]
+      lon = co_ords[1]
+    end
 
     # Due to the bug in Chronic- words 'on' or 'at' dont work well
     # we need to remove those words from events before we parse in chronic
@@ -62,7 +71,7 @@ class CalendarsController < ApplicationController
     #eventStr = eventStr.gsub('on', ' ' )
     #eventStr = eventStr.gsub('at', ' ' )
 
-    if eventStr != nil
+    if !eventStr.empty? && eventStr != nil
       guessed_when = Chronic.parse(trimmedEventStr)
     else
       guessed_when = Time.zone.now
@@ -79,10 +88,11 @@ class CalendarsController < ApplicationController
       #Automatically flag an event important
       importantEvent = trimmedEventStr.include? 'important'
 
-      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>whereStr, :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => co_ords[0], :longitude => co_ords[1])
+      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>whereStr, :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => lat, :longitude => lon)
       if @calendar
         if @calendar.save
-          flash[:success] = "Calendar created"
+          #post_to_twitter(@calendar)
+          #flash[:success] = "Calendar created"
           redirect_to root_path
       else
         @feed_items = []
@@ -129,6 +139,20 @@ class CalendarsController < ApplicationController
       format.xml  { render :xml => @calendar.errors, :status => :unprocessable_entity }
      end
    end
+ end
+
+
+
+ def post_to_twitter(calendar)
+   Twitter.configure do |config|
+      config.consumer_key = 'vm1CDPRNqXHXseMnUKHxDA'
+      config.consumer_secret = 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
+      config.oauth_token =  @oauth_token
+      config.oauth_token_secret = @oauth_token_secret
+    end
+
+
+   Twitter.update("From Socal -" + calendar.event)
  end
 
 

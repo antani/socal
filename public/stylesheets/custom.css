@@ -221,15 +221,28 @@ footer nav {
 
 .auth_provider img {
   display: block;
+    padding: 5px;
 }
 
 .auth_provider {
   float: left;
   text-decoration: none;
-  margin-right: 20px;
+  padding: 5px;
+/*  margin-right: 20px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 10px;*/
 }
+#input-form-left
+{
+    float:left;
+    width: 500px;
+}
+#input-form-right
+{
+    float:right;
+    width: 250px;
+}
+
 
 #signin
 {
@@ -265,10 +278,21 @@ footer nav {
 
 #feed_item_today, #feed_item_future, #feed_item_tomorrow, #feed_item_past
 {
-   /*background: rgba(0, 0, 0, 0.757812);*/
+   /*background: rgba(0, 0, 0, 0.757812);
    background: rgba(0, 0, 0, 0.2);
-  text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.2);*/
   padding:1px;
+      -moz-border-radius: 7px 7px 7px 7px;
+    -moz-box-shadow: 0 0 5px #171C1E;
+    background-color: #1A2F36;
+    background-image: url("/images/addon-item-background-default.png");
+    background-position: center top;
+    background-repeat: repeat-x;
+    border: 1px solid #243F47;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 14px;
+    position: relative;
 }
 #feed_item_today a, #feed_item_future a, #feed_item_tomorrow a, #feed_item_past a
 {
@@ -473,6 +497,7 @@ margin-left: auto;
 {
     -moz-box-shadow: 0 1px 3px rgba(255,255,0,0.5);
     -webkit-box-shadow: 0 1px 3px rgba(255,255,0,0.5);
+
 }
 /*----------------------------------------------------------------*/
 .flickr_pagination {
@@ -545,7 +570,7 @@ margin-left: auto;
 	font: 15px 'Lato',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	background-color: rgba(255,255,255,.25);
 	border: 1px solid #607c90;
-	width:200px;
+	width:250px;
 }
 
 input[type="text"], input[type="password"]
@@ -638,6 +663,7 @@ color: #2daebf;
 }
 #sign-in a,a:visited{
     color:green;
+    padding: 0px;
 }
 #details
 {

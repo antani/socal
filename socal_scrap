@@ -53,3 +53,10 @@ divid = feed_item_counter+1
 
         <%= link_to "Sign in", :anchor=>"signin-form" , :id=>"signin-link" %> or signin using...<br/>
 
+
+
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+<% end %>
+
