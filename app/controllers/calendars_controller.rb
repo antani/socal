@@ -93,9 +93,10 @@ class CalendarsController < ApplicationController
       @calendar  = current_user.calendars.build(:event=>eventStr, :where=>whereStr, :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => lat, :longitude => lon)
       if @calendar
         if @calendar.save
-          post_to_twitter(@calendar)
+          #post_to_twitter(@calendar)
           #flash[:success] = "Calendar created"
           #send_mail
+
           redirect_to root_path
       else
         @feed_items = []

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="font-size: 100.01%; margin: 0; background-attachment: scroll; background-repeat: repeat-x; background-color: #212121; border: 0; padding: 0; height: 100%; background-image: url('http://morning-autumn-487.heroku.com/images/body.png');">
+  <head>
+  <style type="text/css">
+  body {
+      background-repeat: repeat-x;
+      background-position: center top;
+      color: #cddfe7;
+  }
+   a {
+      color: rgba(144, 178, 71);
+      /*color: #09c;*/
+      text-decoration: none;
+    }
+
+    a:hover {
+    /*  color: #069;*/
+      color: rgba(144, 178, 71);
+      text-decoration: underline;
+    }
+    #feed_item_tomorrow, #feed_item_past {
+      -moz-border-radius: 7px 7px 7px 7px;
+      -moz-box-shadow: 0 0 5px #171C1E;
+      background-color: #1A2F36;
+      background-image: url("/images/addon-item-background-default.png");
+      background-position: center top;
+      background-repeat: repeat-x;
+      border: 1px solid #243F47;
+      margin-bottom: 30px;
+      overflow: hidden;
+      padding: 14px;
+      position: relative;
+  }
+  </style>
+  </head>
+  <body>
+   <div>
+     <a href="http://morning-autumn-487.heroku.com/"><img src="http://morning-autumn-487.heroku.com/images/logo-small.png?1293282824"/></a>
+     <div id="feed_item_tomorrow">
+     <p><%= @user.email %>,</p>
+     <p>You have scheduled the following event :<p>
+     <p><%=@cal.event %>, scheduled at <%=@cal.when%> - at <%=@cal.where%></p>
+     <br />
+    </div>
+  </body>
+</html>
+

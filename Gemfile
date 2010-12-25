@@ -16,6 +16,7 @@ gem 'jquery-rails', '>= 0.2.6'
 gem 'chronic'
 gem "rails-geocoder", :require => "geocoder"
 gem "multi_json"
+gem "rufus-scheduler"
 #gem "faraday"
 #gem "twitter", '>= 1.0.0'
 
