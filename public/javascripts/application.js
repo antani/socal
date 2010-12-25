@@ -156,7 +156,7 @@ $(document).ready(function() {
 
         // }
 
-        $(this).gMap(options);
+        //$(this).gMap(options);
       });
 
      //Step: 1 set hover event on all the 'where' class divs
@@ -171,9 +171,26 @@ $(document).ready(function() {
 //         $(this).next().hide(slow);
      );
 
-
-
-
-
+     $('div[id^="map-"]').each(function() {
+            var relStr = $(this).attr('rel');
+            var co_ords = relStr.split(',');
+            lat = co_ords[0];
+            lon = co_ords[1];
+            var mapstraction;
+            mapstraction = new mxn.Mapstraction($(this).attr('id'),'google');
+            var myPoint = new mxn.LatLonPoint(lat,lon);
+            mapstraction.setCenterAndZoom(myPoint, 12);
+            mapstraction.addControls({
+                                        pan: true,
+                                        zoom: 'small',
+                                        map_type: true
+                                    });
+            // create a marker positioned at a lat/lon
+            my_marker = new mxn.Marker(myPoint);
+            my_marker.setIcon('http://mapstraction.com/icon.gif');
+            // display marker
+            mapstraction.addMarker(my_marker);
+     }
+     );
 });
 
