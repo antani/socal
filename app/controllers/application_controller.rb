@@ -9,6 +9,17 @@ class ApplicationController < ActionController::Base
     @title = @user.name
   end
 
+  def client
+   Twitter.configure do |config|
+      config.consumer_key = 'vm1CDPRNqXHXseMnUKHxDA'
+      config.consumer_secret = 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
+      config.oauth_token = session['access_token']
+      config.oauth_token_secret = session['access_secret']
+    end
+    @client ||= Twitter::Client.new
+
+ end
+
 
 
 

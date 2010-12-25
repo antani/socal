@@ -1,6 +1,8 @@
-
-
 class CalendarsController < ApplicationController
+#  include Twitter::AuthenticationHelpers
+#  rescue_from Twitter::Unauthorized, :with => :force_sign_in
+
+
   #-----------------------------Nasty Bug !
   #Time.zone = "UTC"
   Chronic.time_class = Time.zone
@@ -91,8 +93,9 @@ class CalendarsController < ApplicationController
       @calendar  = current_user.calendars.build(:event=>eventStr, :where=>whereStr, :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => lat, :longitude => lon)
       if @calendar
         if @calendar.save
-          #post_to_twitter(@calendar)
+          post_to_twitter(@calendar)
           #flash[:success] = "Calendar created"
+          #send_mail
           redirect_to root_path
       else
         @feed_items = []
@@ -141,20 +144,16 @@ class CalendarsController < ApplicationController
    end
  end
 
-
-
  def post_to_twitter(calendar)
-   Twitter.configure do |config|
-      config.consumer_key = 'vm1CDPRNqXHXseMnUKHxDA'
-      config.consumer_secret = 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
-      config.oauth_token =  @oauth_token
-      config.oauth_token_secret = @oauth_token_secret
-    end
-
-
-   Twitter.update("From Socal -" + calendar.event)
+   client.update("From Socal -" + calendar.event)
  end
 
+
+
+
+ def send_mail
+   UserMailer.registration_confirmation(@current_user,@calendar).deliver
+ end
 
 end
 
