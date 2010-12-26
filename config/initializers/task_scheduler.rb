@@ -31,8 +31,10 @@ end
         Rails.logger.debug auth.secret
 
         Twitter.configure do |config|
-          config.consumer_key = 'vm1CDPRNqXHXseMnUKHxDA'
-          config.consumer_secret = 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
+          #config.consumer_key = 'vm1CDPRNqXHXseMnUKHxDA'
+          #config.consumer_secret = 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
+          config.consumer_key = 'LkNRuATCSidM7rF63NnUYw'
+          config.consumer_secret = '96cdM22QKD5ZeGuI2jv7wYXm7SuT1lBdj2hxWD1kwgA'
           config.oauth_token = auth.token
           config.oauth_token_secret = auth.secret
         end
