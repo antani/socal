@@ -15,6 +15,7 @@ end
     @mail_calendar.each do |c|
       UserMailer.registration_confirmation(c.user,c).deliver
       twitter_noise(c.user,c)
+      facebook_noise(c.user,c)
     end
     Rails.logger.debug "Noised---------------------------------------------------------------------------------"
   end
@@ -41,5 +42,17 @@ end
     #    @client ||= Twitter::Client.new
         Twitter.update("From Socal -" + calendar.event)
      end
+  end
+
+  def facebook_noise(user,calendar)
+    Rails.logger.debug "Starting to create twitter noise-------------------------------------------------------"
+    auth = user.authentications.find(:first, :conditions => { :provider => 'facebook' })
+    Rails.logger.debug auth
+    if auth
+        graph = Koala::Facebook::GraphAPI.new(auth.token)
+        profile = graph.get_object("me")
+        #friends = graph.get_connections("me", "friends")
+        graph.put_object("me", "feed", :message => "From Socal")
+    end
   end
 
