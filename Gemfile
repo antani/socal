@@ -7,7 +7,7 @@ gem 'rails', '3.0.1'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise'
-gem 'omniauth', :git => "git://github.com/kvnsmth/omniauth.git"
+#gem 'omniauth', :git => "git://github.com/kvnsmth/omniauth.git"
 gem 'nifty-generators'
 gem 'will_paginate'
 gem 'faker'
@@ -17,6 +17,10 @@ gem 'chronic'
 gem "rails-geocoder", :require => "geocoder"
 gem "multi_json"
 gem "rufus-scheduler"
+gem 'omniauth', '~> 0.1.6'
+gem 'twitter', '~> 1.0.0'
+
+
 #gem "faraday"
 #gem "twitter", '>= 1.0.0'
 

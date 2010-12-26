@@ -8,15 +8,15 @@ class AuthenticationsController < ApplicationController
   def create
       omniauth = request.env["omniauth.auth"]
       logger.debug omniauth.to_yaml
-      @oauth_token = omniauth['credentials']['token']
-      @oauth_token_secret = omniauth['credentials']['secret']
-
       authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
       if authentication
         #flash[:notice] = "Signed in successfully."
         sign_in_and_redirect(:user, authentication.user)
       elsif current_user
-        current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
+        current_user.authentications.create!(:provider => omniauth['provider'],
+                                             :uid => omniauth['uid'],
+                                             :token => omniauth['credentials']['token'],
+                                             :secret => omniauth['credentials']['secret'])
         #flash[:notice] = "Authentication successful."
         redirect_to authentications_url
       else
