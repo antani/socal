@@ -1,0 +1,163 @@
+==> dyno-3789626.log <==
+>> Thin web server (v1.2.6 codename Crazy Delicious)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:10863, CTRL+C to stop
+warning: peer certificate won't be verified in this SSL session
+warning: peer certificate won't be verified in this SSL session
+================================================================================
+scheduler caught exception :
+OAuthException: (#200) The user hasn't authorized the application to perform this action
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:184:in `graph_call'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala.rb:77:in `api'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:181:in `graph_call'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:138:in `put_object'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:156:in `put_wall_post'
+/disk1/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/config/initializers/task_scheduler.rb:60:in `facebook_noise'
+/disk1/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/config/initializers/task_scheduler.rb:18:in `noise'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/activerecord-3.0.1/lib/active_record/relation.rb:13:in `each'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/activerecord-3.0.1/lib/active_record/relation.rb:13:in `__send__'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/activerecord-3.0.1/lib/active_record/relation.rb:13:in `each'
+/disk1/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/config/initializers/task_scheduler.rb:15:in `noise'
+/disk1/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/config/initializers/task_scheduler.rb:8
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:181:in `call'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:181:in `trigger_block'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:145:in `trigger'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `call'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `trigger_job'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `initialize'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `new'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `trigger_job'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:132:in `send'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:132:in `trigger'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:269:in `trigger'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobqueues.rb:60:in `trigger_matching_jobs'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:293:in `step'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:357:in `start'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:355:in `loop'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:355:in `start'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:354:in `initialize'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:354:in `new'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:354:in `start'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:115:in `start_new'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/scheduler.rb:44:in `start_new'
+/disk1/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/config/initializers/task_scheduler.rb:4
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:235:in `load'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:235:in `load'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:227:in `load_dependency'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:235:in `load'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/engine.rb:201
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/engine.rb:200:in `each'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/engine.rb:200
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:25:in `instance_exec'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:25:in `run'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:50:in `run_initializers'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:49:in `each'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:49:in `run_initializers'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/application.rb:134:in `initialize!'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/application.rb:77:in `send'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/application.rb:77:in `method_missing'
+/disk1/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/config/environment.rb:5
+/usr/ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+config.ru:3
+/home/heroku_rack/heroku.ru:23
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:63:in `new'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:63:in `map'
+/home/heroku_rack/heroku.ru:18
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
+/home/heroku_rack/heroku.ru:11:in `new'
+/home/heroku_rack/heroku.ru:11
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
+/home/slugs/383546_0fde417_3e66-6a9aae64-d396-4f1d-a457-4806bd788a32/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
+/home/heroku_rack/heroku.ru:1:in `new'
+/home/heroku_rack/heroku.ru:1
+================================================================================
+
+==> production.log <==
+
+
+Started GET "/" for 122.167.106.210 at Sun Dec 26 22:32:59 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (17.5ms)
+Rendered shared/_feed_item.html.erb (9.9ms)
+Rendered shared/_feed.html.erb (38.1ms)
+Rendered layouts/_stylesheets.html.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered pages/home.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 137ms (Views: 72.2ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/users/sign_out" for 122.167.106.210 at Sun Dec 26 22:33:14 -0800 2010
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://morning-autumn-487.heroku.com/
+Completed 302 Found in 18ms
+
+
+Started GET "/" for 122.167.106.210 at Sun Dec 26 22:33:14 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered registrations/_sign_up_form.html.erb (454.7ms)
+Rendered devise/sessions/_sign_in_form.html.erb (2.2ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered pages/home.html.erb within layouts/application (465.8ms)
+Completed 200 OK in 467ms (Views: 466.4ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/auth/facebook" for 122.167.106.210 at Sun Dec 26 22:33:18 -0800 2010
+
+
+Started GET "/auth/facebook/callback?code=87ca335e3fa4ffd5a9392242-500716547%7CEyfuRoWx1XGFGDzxOUlv_ofZ8fo" for 122.167.106.210 at Sun Dec 26 22:33:20 -0800 2010
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"87ca335e3fa4ffd5a9392242-500716547|EyfuRoWx1XGFGDzxOUlv_ofZ8fo", "provider"=>"facebook"}
+Redirected to http://morning-autumn-487.heroku.com/
+Completed 302 Found in 46ms
+
+
+Started GET "/" for 122.167.106.210 at Sun Dec 26 22:33:22 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (2.3ms)
+Rendered shared/_feed_item.html.erb (2.1ms)
+Rendered shared/_feed.html.erb (2.5ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/calendars/577/edit?popup=true" for 122.167.106.210 at Sun Dec 26 22:33:25 -0800 2010
+  Processing by CalendarsController#edit as HTML
+  Parameters: {"popup"=>"true", "id"=>"577"}
+Rendered calendars/_form.html.erb (8.3ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered calendars/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/calendars/577/stylesheets/fancybox/jquery.fancybox-1.3.4.css" for 122.167.106.210 at Sun Dec 26 22:33:26 -0800 2010
+
+ActionController::RoutingError (No route matches "/calendars/577/stylesheets/fancybox/jquery.fancybox-1.3.4.css"):
+  
+
+
+
+Started POST "/calendars/577" for 122.167.106.210 at Sun Dec 26 22:33:32 -0800 2010
+  Processing by CalendarsController#update as HTML
+  Parameters: {"authenticity_token"=>"Dc4eoj2hJD0VEktEeg0oa6hGE/Pe3+PYjf2mZZtTZws=", "utf8"=>"\342\234\223", "id"=>"577", "calendar"=>{"when(1i)"=>"2010", "when(2i)"=>"12", "when(3i)"=>"27", "important"=>"0", "when(4i)"=>"12", "event"=>"Meeting tomorrow", "when(5i)"=>"10", "where"=>"Paris"}}
+Redirected to http://morning-autumn-487.heroku.com/
+Completed 302 Found in 29ms
+
+
+Started GET "/" for 122.167.106.210 at Sun Dec 26 22:33:32 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (2.2ms)
+Rendered shared/_feed_item.html.erb (2.0ms)
+Rendered shared/_feed.html.erb (2.4ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 32ms (Views: 9.1ms | ActiveRecord: 41.1ms)
+
