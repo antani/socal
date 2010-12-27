@@ -52,7 +52,8 @@ end
         graph = Koala::Facebook::GraphAPI.new(auth.token)
         profile = graph.get_object("me")
         #friends = graph.get_connections("me", "friends")
-        graph.put_object("me", "feed", :message => "From Socal")
+        #graph.put_object("me", "feed", :message => "From Socal")
+        graph.put_wall_post("Testing Socal with Koala")
     end
   end
 
