@@ -74,7 +74,14 @@ class CalendarsController < ApplicationController
     #eventStr = eventStr.gsub('at', ' ' )
 
     if !eventStr.empty? && eventStr != nil
-      guessed_when = Chronic.parse(trimmedEventStr)
+      begin
+          guessed_when = Chronic.parse(trimmedEventStr)
+          if guessed_when.nil?
+             guessed_when = Time.now
+          end
+      rescue Exception => exc
+          guessed_when = Time.now
+      end
     else
       guessed_when = Time.zone.now
     end
@@ -145,9 +152,21 @@ class CalendarsController < ApplicationController
    end
  end
 
- def post_to_twitter(calendar)
-   client.update("From Socal -" + calendar.event)
- end
+  def toggle_done
+    @calendar = Calendar.find(params[:id])
+    @calendar.toggle!(:done)
+
+    respond_to do |format|
+
+      format.html {
+      flash[:success] = "Calendar updated"
+      redirect_to root_path
+      }
+      format.js
+    end
+  end
+
+
 
 
 

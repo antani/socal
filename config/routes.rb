@@ -2,6 +2,10 @@ Socal::Application.routes.draw do
   resources :authentications
 
   resources :calendars
+  resources :calendars do
+    get 'toggle_done', :on => :member
+  end
+
   #, :only => [:create, :destroy, :edit, :update]
   #, :only => [:create, :destroy, :edit]
 

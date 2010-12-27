@@ -1,6 +1,6 @@
-<tr>
+<tr rel='<%=feed_item.done%>'>
   <td>
-    <span>
+    <span class="event-span">
 <!--    :controller => :calendars, :action=>:edit, :id=>feed_item.id
           Milis:<%= feed_item.when.to_i%>-->
          <% if feed_item.important %>
@@ -31,10 +31,13 @@
   </td>
   <% if current_user == feed_item.user %>
   <td>
-    <%= link_to image_tag("delete.png"),
-                                      feed_item,
-                                     :method => :delete,
-                                     :title => feed_item.event, :remote=> true, :class=>"delete-icon" %>
+      <%= link_to image_tag("done.png"),
+            { :controller => :calendars, :action =>:toggle_done, :id => feed_item.id },
+            { :title => "Mark as done", :remote => true, :class =>"done-icon" } %>
+      <%= link_to image_tag("delete.png"),
+                  feed_item,
+                 :method => :delete,
+                 :title => "Delete event", :remote=> true, :class=>"delete-icon" %>
   </td>
   <div style="display:none"><div id="map-<%=feed_item.id%>" rel="<%=feed_item.latitude%>,<%=feed_item.longitude%>" style="width: 600px; height: 400px"></div></div>
 
