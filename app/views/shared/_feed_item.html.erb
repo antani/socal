@@ -3,6 +3,10 @@
     <span class="event-span">
 <!--    :controller => :calendars, :action=>:edit, :id=>feed_item.id
           Milis:<%= feed_item.when.to_i%>-->
+          <%= link_to image_tag("done.png"),
+            { :controller => :calendars, :action =>:toggle_done, :id => feed_item.id },
+            { :title => "Mark as done", :remote => true, :class =>"done-icon" } %>
+
          <% if feed_item.important %>
              <span class="important-event">
              <%= image_tag("exclamation.png") %>
@@ -31,9 +35,6 @@
   </td>
   <% if current_user == feed_item.user %>
   <td>
-      <%= link_to image_tag("done.png"),
-            { :controller => :calendars, :action =>:toggle_done, :id => feed_item.id },
-            { :title => "Mark as done", :remote => true, :class =>"done-icon" } %>
       <%= link_to image_tag("delete.png"),
                   feed_item,
                  :method => :delete,
