@@ -45,12 +45,16 @@ end
   end
 
   def facebook_noise(user,calendar)
-    Rails.logger.debug "Starting to create twitter noise-------------------------------------------------------"
+    Rails.logger.debug "Starting to create facebook_noise noise-------------------------------------------------------"
     auth = user.authentications.find(:first, :conditions => { :provider => 'facebook' })
     Rails.logger.debug auth
     if auth
+        Rails.logger.debug "Auth-token for fb :"
+        Rails.logger.debug auth.token
+        Rails.logger.debug "--------------------"
         graph = Koala::Facebook::GraphAPI.new(auth.token)
         profile = graph.get_object("me")
+
         #friends = graph.get_connections("me", "friends")
         #graph.put_object("me", "feed", :message => "From Socal")
         graph.put_wall_post("Testing Socal with Koala")
