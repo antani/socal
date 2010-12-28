@@ -1,3 +1,4 @@
+<%= form_for (@calendar) do |f| %>
   <div>
     <%= f.label :event%><br />
     <%= f.text_field :event %>
@@ -16,4 +17,5 @@
   <div>
     <%= f.submit %>
   </div>
+<% end %>
 

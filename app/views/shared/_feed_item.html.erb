@@ -13,7 +13,8 @@
 
          <% end %>
           <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.when.to_i%>"></input>
-          <a class="edit-form-<%=feed_item.id%>" href="#edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>
+          <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :remote => true %>
+
           <% if feed_item.important %>
            </span>
           <% end %>

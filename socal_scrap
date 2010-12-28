@@ -62,6 +62,8 @@ divid = feed_item_counter+1
 
 <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :remote => true %>
 
+          <a class="edit-form-<%=feed_item.id%>" href="#edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>
+
 
             <div id="edit-form-<%=feed_item.id%>">
                 <% form_for(feed_item) do |f|
