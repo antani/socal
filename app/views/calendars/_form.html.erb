@@ -1,40 +1,19 @@
-
-<%= form_for(@calendar) do |f| %>
-  <% if @calendar.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @calendar.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <!--<div class="field">
-    <%= f.label :id %><br />
-    <%= f.text_field :id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </div> -->
-  <div >
+  <div>
     <%= f.label :event%><br />
     <%= f.text_field :event %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :where %><br />
     <%= f.text_field :where %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :when %><br />
     <%= f.datetime_select :when %>
   </div>
-  <div class="field">
+  <div>
   <%= f.check_box :important %><b>Important Event ?</b>
   </div>
-  <div class="actions">
+  <div>
     <%= f.submit %>
   </div>
-<% end %>
 

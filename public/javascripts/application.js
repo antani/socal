@@ -184,6 +184,12 @@ $(document).ready(function() {
      //Step: 1 set hover event on all the 'where' class divs
      $('a[id^="map-"]').fancybox();
     //$('a[id^="map-"]').ceebox();
+     $('a[class^="edit-form"]').fancybox({
+                                'width':300,
+                                'height':200,
+                                'type':'iframe',
+                                'autoScale':'false'
+                                });
 
      $(".map-icon").hide();
      $('a[id^="map-"]').hover(

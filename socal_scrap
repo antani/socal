@@ -60,3 +60,34 @@ divid = feed_item_counter+1
   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 <% end %>
 
+<%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :remote => true %>
+
+
+            <div id="edit-form-<%=feed_item.id%>">
+                <% form_for(feed_item) do |f|
+                    render :partial => 'calendars/form', :locals => { :f => f }
+                end %>
+            </div>
+
+
+
+  <% if @calendar.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @calendar.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div style="display:none">
+                    <div id="edit-form-<%=feed_item.id%>">
+                        <% form_for(feed_item) do |f| %>
+                            <%= render :partial => 'calendars/form', :locals => { :f => f } %>
+                        <% end %>
+                    </div>
+         </div>
+

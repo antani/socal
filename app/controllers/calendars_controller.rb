@@ -147,6 +147,7 @@ class CalendarsController < ApplicationController
       format.xml  { head :ok }
      else
       format.html { render :action => "edit" }
+      format.js
       format.xml  { render :xml => @calendar.errors, :status => :unprocessable_entity }
      end
    end

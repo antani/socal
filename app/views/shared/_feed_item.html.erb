@@ -13,7 +13,7 @@
 
          <% end %>
           <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.when.to_i%>"></input>
-          <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :popup => true %>
+          <a class="edit-form-<%=feed_item.id%>" href="#edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>
           <% if feed_item.important %>
            </span>
           <% end %>
@@ -31,19 +31,20 @@
       <% if feed_item.where != nil %>
         <span class="where"><a id="map-<%=feed_item.id%>" href="#map-<%=feed_item.id%>" ><%=feed_item.where %>.</a><img id="img-<%=feed_item.id%>" class="map-icon" src="/images/gmap_pin_orange.png" size="15x15"/></span>
       <%end%>
+
     </span>
   </td>
   <% if current_user == feed_item.user %>
-  <td>
-      <%= link_to image_tag("delete.png"),
-                  feed_item,
-                 :method => :delete,
-                 :title => "Delete event", :remote=> true, :class=>"delete-icon" %>
-  </td>
-  <div style="display:none"><div id="map-<%=feed_item.id%>" rel="<%=feed_item.latitude%>,<%=feed_item.longitude%>" style="width: 600px; height: 400px"></div></div>
-
+      <td>
+          <%= link_to image_tag("delete.png"),
+                      feed_item,
+                     :method => :delete,
+                     :title => "Delete event", :remote=> true, :class=>"delete-icon" %>
+      </td>
+      <div style="display:none">
+            <div id="map-<%=feed_item.id%>" rel="<%=feed_item.latitude%>,<%=feed_item.longitude%>" style="width: 600px; height: 400px"></div>
+      </div>
   <% end %>
-
 
 
 </tr>
