@@ -50,9 +50,10 @@ class CalendarsController < ApplicationController
   def create
     eventStr =  params['calendar']['event']
     whereStr =  params['calendar']['where']
-    #geocoder = Graticule.service(:google).new "ABQIAAAAO1AbdOVt9zN5lJwJyNcDuhTX2XchcwgyHzp4Xo0DHRAzt2aLjhRSFPmH2rpNoXYunPWQ2jCi3aZflA"
-    #location = geocoder.locate whereStr
-    # look up coordinates of some location (like searching Google Maps)
+    whenStr  =  params['calendar']['when']
+    logger.debug "whenStr : "
+    logger.debug whenStr
+    #Get geo location
     if whereStr.empty?
       lat =nil
       lon =nil
@@ -63,31 +64,29 @@ class CalendarsController < ApplicationController
       lat = co_ords[0]
       lon = co_ords[1]
     end
-
-    # Due to the bug in Chronic- words 'on' or 'at' dont work well
-    # we need to remove those words from events before we parse in chronic
-    trimmedEventStr = eventStr.downcase
-    trimmedEventStr = trimmedEventStr.gsub('on','')
-    trimmedEventStr = trimmedEventStr.gsub('at','')
-    #eventStr = eventStr.downcase
-    #eventStr = eventStr.gsub('on', ' ' )
-    #eventStr = eventStr.gsub('at', ' ' )
-
-    if !eventStr.empty? && eventStr != nil
+    #guess the timining of the event
+    if !whenStr.empty? && whenStr != nil
       begin
-          guessed_when = Chronic.parse(trimmedEventStr)
+          guessed_when = Chronic.parse(whenStr)
+          logger.debug "guessed_when 1: "
+          logger.debug guessed_when
           if guessed_when.nil?
              guessed_when = Time.now
+          logger.debug "guessed_when 2: "
+          logger.debug guessed_when
           end
       rescue Exception => exc
           guessed_when = Time.now
+          logger.debug "guessed_when 3: "
+          logger.debug guessed_when
       end
     else
       guessed_when = Time.zone.now
+          logger.debug "guessed_when 4: "
+          logger.debug guessed_when
     end
 
     logger.debug 'Inside create....................................................'
-    logger.debug trimmedEventStr
     logger.debug guessed_when
     #logger.debug location
     logger.debug eventStr
@@ -95,7 +94,7 @@ class CalendarsController < ApplicationController
 
     if eventStr
       #Automatically flag an event important
-      importantEvent = trimmedEventStr.include? 'important'
+      importantEvent = eventStr.include? 'important'
 
       @calendar  = current_user.calendars.build(:event=>eventStr, :where=>whereStr, :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => lat, :longitude => lon)
       if @calendar

@@ -182,7 +182,10 @@ $(document).ready(function() {
       });
 
      //Step: 1 set hover event on all the 'where' class divs
-     $('a[id^="map-"]').fancybox();
+     $('a[id^="map-"]').colorbox({inline:true, href: function() {
+                                                          //alert($(this).attr('id'));
+                                                          return "#"+$(this).attr('id');
+                                                     }});
     //$('a[id^="map-"]').ceebox();
     /* $('a[class^="edit-form"]').fancybox({
                                 'width':300,
@@ -204,10 +207,14 @@ $(document).ready(function() {
             var co_ords = relStr.split(',');
             lat = co_ords[0];
             lon = co_ords[1];
+            loc = co_ords[2];
+            var a = [loc];
+
+
             var mapstraction;
             mapstraction = new mxn.Mapstraction($(this).attr('id'),'google');
             var myPoint = new mxn.LatLonPoint(lat,lon);
-            mapstraction.setCenterAndZoom(myPoint, 12);
+            mapstraction.setCenterAndZoom(myPoint, 15);
             mapstraction.addControls({
                                         pan: true,
                                         zoom: 'small',
@@ -218,6 +225,17 @@ $(document).ready(function() {
             my_marker.setIcon('http://mapstraction.com/icon.gif');
             // display marker
             mapstraction.addMarker(my_marker);
+
+
+/*            $(this).googlemap({
+                    controls: true,
+                    labels: true,
+                    zoom: 14,
+                    addresses: a,
+                    debug: true
+                });*/
+
+
      }
      );
 });
