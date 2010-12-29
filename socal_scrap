@@ -34,7 +34,7 @@
 
 
 
- Time Now - <%= Time.now %>
+     Time Now - <%= Time.now %>
      Time Now Midnight- <%= Time.now.midnight %>
      Current time zone: <%= Time.zone.name %>
 
