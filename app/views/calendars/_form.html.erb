@@ -1,21 +1,25 @@
-<%= form_for (@calendar) do |f| %>
   <div>
     <%= f.label :event%><br />
-    <%= f.text_field :event %>
+    <%= f.text_field :event, :class=>"inline-edit-input" %>
   </div>
+  <br />
+  <div class="clear"></div>
   <div>
     <%= f.label :where %><br />
     <%= f.text_field :where %>
   </div>
+  <br />
+  <div class="clear"></div>
   <div>
     <%= f.label :when %><br />
     <%= f.text_field :when %>
   </div>
+  <br />
+  <div class="clear"></div>
   <div>
   <%= f.check_box :important %><b>Important Event ?</b>
   </div>
   <div>
-    <%= f.submit %>
+  <%= f.check_box :done %><b>Completed ?</b>
   </div>
-<% end %>
 

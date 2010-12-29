@@ -64,6 +64,7 @@ divid = feed_item_counter+1
 <% end %>
 
 <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :remote => true %>
+ <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :remote => true %>
 
           <a class="edit-form-<%=feed_item.id%>" href="#edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>
 
@@ -101,4 +102,67 @@ divid = feed_item_counter+1
     <%= f.label :when %><br />
     <%= f.datetime_select :when %>
   </div>
+
+
+
+<%= form_for (@calendar) do |f|
+
+
+<div style="display:none">
+  <div id="inline-edit-form-596" class="inline-edit-form">
+     <form accept-charset="UTF-8" action="/calendars/596" class="edit_calendar" id="edit_calendar_596" method="post"></form>
+     <div style="margin:0;padding:0;display:inline">
+         <input name="utf8" type="hidden" value="✓">
+         <input name="_method" type="hidden" value="put">
+         <input name="authenticity_token" type="hidden" value=""></div>
+      <div>
+          <label for="calendar_event">Event</label><br>
+          <input class="inline-edit-input" id="calendar_event" name="calendar[event]" size="30" type="text" value="Interesting event">
+      </div>
+  </div>
+</div>
+
+
+
+<div style="display: none;">
+          <div class="inline-edit-form" id="inline-edit-form-598">
+           </div>
+</div>
+<div style="margin: 0pt; padding: 0pt; display: inline;"></div>
+<div>
+    <label for="calendar_event">Event</label><br>
+    <input type="text" value="Another interesting important event" size="30" name="calendar[event]" id="calendar_event" class="inline-edit-input">
+</div>
+
+
+
+
+     //Add gMap to the div
+     $('div[id^="map-"]').each(function() {
+        var relStr = $(this).attr('rel');
+        var co_ords = relStr.split(',');
+        lat = co_ords[0];
+        lon = co_ords[1];
+        options = {
+                        latitude:               lat,
+                        longitude:              lon,
+                        zoom:                   12,
+                        markers:                [{latitude: lat, longitude: lon, html: "_latlng"},{ address: "Taj Mahal Agra",html: "_address" }],
+
+                        scrollwheel:            false,
+                        maptype:                G_NORMAL_MAP,
+                        icon:
+                        {
+                            shadowsize:         false,
+                            iconanchor:         [9,34],
+                            infowindowanchor:   [8, 2]
+                        }
+                    };
+        //options = {markers : [{ address: "Tettnang, Germany", html: "The place I live" }],
+        //           zoom:15
+
+        // }
+
+        //$(this).gMap(options);
+      });
 

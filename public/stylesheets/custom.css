@@ -286,6 +286,7 @@ footer nav {
     padding: 14px;
     position: relative;
     background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.2) 100%);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2C263F), to(rgba(44, 38, 63, 0.398438)));
 }
 #feed_item_today a, #feed_item_future a, #feed_item_tomorrow a, #feed_item_past a
 {
@@ -651,7 +652,7 @@ color: #2daebf;
 #sign-up{
     width: 300px;
     float:left;
-        padding: 10px;
+    padding: 10px;
     /*-moz-border-radius: 14px 14px 14px 14px;
     -moz-box-shadow: 2px 2px 7px 0 #151515;
     background: none repeat scroll 0 0 #272727;
@@ -660,6 +661,7 @@ color: #2daebf;
 .main-background
 {
     background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.4) 100%);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2C263F), to(rgba(44, 38, 63, 0.398438)));
     -moz-border-radius: 14px 14px 14px 14px;
     -moz-box-shadow: 2px 2px 7px 0 #151515;
     border: 1px solid #373553;
@@ -713,7 +715,7 @@ color: #2daebf;
 #signin-form
 {
     padding: 5px;
-
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2C263F), to(rgba(44, 38, 63, 0.398438)));
     background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.4) 100%);
     color: #BFB8E5;
 
@@ -746,6 +748,19 @@ div[id^=map-]
     height: 400px;
     width: 400px;
     /*display: none;*/
+
+}
+.inline-edit-form
+{
+    width: 450px;
+    height: 300px;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2C263F), to(rgba(44, 38, 63, 0.398438)));
+    background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.4) 100%);
+
+}
+.inline-edit-input
+{
+    float:left;
 
 }
 

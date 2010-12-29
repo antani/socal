@@ -18,7 +18,7 @@ var humanMsg = {
 			logName = 'Previous Messages';
 
 		// Opacity of the message
-		humanMsg.msgOpacity = .5;
+		humanMsg.msgOpacity = .6;
 
 		if (msgOpacity != undefined)
 			humanMsg.msgOpacity = parseFloat(msgOpacity);
@@ -57,7 +57,7 @@ var humanMsg = {
 		// Watch for mouse & keyboard in .5s
 		humanMsg.t1 = setTimeout("humanMsg.bindEvents()", 700)
 		// Remove message after 5s
-		humanMsg.t2 = setTimeout("humanMsg.removeMsg()", 5000)
+		humanMsg.t2 = setTimeout("humanMsg.removeMsg()", 10000)
 	},
 
 	bindEvents: function() {

@@ -1,4 +1,4 @@
-<tr rel='<%=feed_item.done%>'>
+<tr class='<%=feed_item.done%>'>
   <td>
     <span class="event-span">
 <!--    :controller => :calendars, :action=>:edit, :id=>feed_item.id
@@ -10,9 +10,8 @@
          <% if feed_item.important %>
              <span class="important-event">
          <% end %>
-          <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.when.to_i%>"></input>
-          <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :remote => true %>
-
+           <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.when.to_i%>">
+           <a id="edit-form-link-<%=feed_item.id%>" href="#inline-edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>
           <% if feed_item.important %>
            </span>
           <% end %>
@@ -28,7 +27,7 @@
       and at
       <% end %>
       <% if feed_item.where != nil %>
-        <span class="where"><a id="map-<%=feed_item.id%>" href="#map-<%=feed_item.id%>" ><%=feed_item.where %>.</a><img id="img-<%=feed_item.id%>" class="map-icon" src="/images/gmap_pin_orange.png" size="15x15"/></span>
+        <span class="where"><a id="map-link<%=feed_item.id%>" rel="map-<%=feed_item.id%>" href="#map-<%=feed_item.id%>" ><%=feed_item.where %>.</a><img id="img-<%=feed_item.id%>" class="map-icon" src="/images/gmap_pin_orange.png"/></span>
       <%end%>
 
     </span>
@@ -40,11 +39,6 @@
                      :method => :delete,
                      :title => "Delete event", :remote=> true, :class=>"delete-icon" %>
       </td>
-      <div style="display:none">
-            <div id="map-<%=feed_item.id%>" rel="<%=feed_item.latitude%>,<%=feed_item.longitude%>,<%=feed_item.where%>" style="width: 500px; height: 500px"></div>
-      </div>
   <% end %>
-
-
-</tr>
+  </tr>
 

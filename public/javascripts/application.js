@@ -7,13 +7,16 @@ $(document).ready(function() {
 
     function showDeletePost()
     {
-        //humanMsg.displayMsg("Calendar Event Deleted");
-
         $('#pageinfo').load("/ #pageinfo");
         return false;
     }
 
-    $('#signin-link').fancybox({
+    $('#signin-link').colorbox({inline:true, href: function() {
+                                               return $(this).attr('href');
+                                               }});
+
+
+/*    $('#signin-link').fancybox({
 		'transitionIn'	:	'elastic',
 		'transitionOut'	:	'elastic',
 		'speedIn'		:	600,
@@ -24,11 +27,10 @@ $(document).ready(function() {
 		'overlayOpacity':   0.2,
 		'titlePosition' : 'outside',
 		'showCloseButton' : false
-	});
+	});*/
 
     $("input:text:visible:first").focus();
     $('.delete-icon').bind('ajax:success', function() {
-        //$(this).closest('tr').animate({"color": '#555555'}, 'slow');
         $(this).closest('tr').fadeOut("linear", showDeletePost);
     });
     $('#feed_item_today,#feed_item_past,#feed_item_tomorrow').find('tbody tr').each(function() {
@@ -90,120 +92,44 @@ $(document).ready(function() {
 				allFields.val( "" ).removeClass( "ui-state-error" );
 			}});
 
-//    $("select").styleSelect();
-
-/*    $( "#feed_items_all a" ).click(function(){
-        alert("opening");
-        $( "#editcal" ).dialog( "open" );
-        //event.preventDefault;
-        return false;
-    });*/
-
-
-//   $( "#feed_items_all a" )
-//			.click(function()
-//			    alert("opening");
-//				$( "#editcal" ).dialog( "open" );
-//				return false;
-//            }
-			//});
-
      //Populating all the event notifiers and their timestamps
 
      //Opening relevant notification popups
      setInterval(function()
      {
          var d = new Date();
-//         var ds = new String(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes()));
          var ds = d.getTime();
-         //alert(ds);
          var sds = ds.toString().substring(0,10);
-         //var allInputs = $(":input");
-         /*for(i=0;i<allInputs.length; i++)
-         {
-            elem = allInputs[i];
-            //alert($(elem).val());
-            //alert(ds);
-            elemVal = $(elem).val();
-            if(elemVal == ds)
-            {
-                humanMsg.displayMsg("Reminder : " + $(elem).attr('name'));
-
-            }
-         }*/
-//         1292764500
-//         129276462
-//         1292764620
-//           $("#error").html(sds);
-         //alert(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), d.getUTCHours(), d.getUTCMinutes() ));
          //Check if the milisecond matches with stamped values
            $("#feed_item_today :input").each( function() {
-//               $("#error").html(sds);
                elemVal = $(this).val();
-               //alert(ds);
                 if(elemVal == sds)
                 {
-
-//                    $(this).addClass("selected-input");
-                    humanMsg.displayMsg("Reminder : " + $(this).attr('name'));
-                    //do not consider this element again.
-
+                    msg=$(this).attr('name');
+                    //humanMsg.displayMsg("Reminder : " + $(this).attr('name'));
+                    $.pnotify({
+						pnotify_title: 'Reminder',
+						pnotify_text: msg,
+						pnotify_opacity: .8
+					});
                 }
          });
      }, 1000); //Bug - run Every second to make sure miliseconds are in sync
 
-     //Add gMap to the div
-     $('div[id^="map-"]').each(function() {
-        var relStr = $(this).attr('rel');
-        var co_ords = relStr.split(',');
-        lat = co_ords[0];
-        lon = co_ords[1];
-        options = {
-                        latitude:               lat,
-                        longitude:              lon,
-                        zoom:                   12,
-                        markers:                [{latitude: lat, longitude: lon, html: "_latlng"},{ address: "Taj Mahal Agra",html: "_address" }],
-
-                        scrollwheel:            false,
-                        maptype:                G_NORMAL_MAP,
-                        icon:
-                        {
-                            shadowsize:         false,
-                            iconanchor:         [9,34],
-                            infowindowanchor:   [8, 2]
-                        }
-                    };
-        //options = {markers : [{ address: "Tettnang, Germany", html: "The place I live" }],
-        //           zoom:15
-
-        // }
-
-        //$(this).gMap(options);
-      });
 
      //Step: 1 set hover event on all the 'where' class divs
-     $('a[id^="map-"]').colorbox({inline:true, href: function() {
-                                                          //alert($(this).attr('id'));
-                                                          return "#"+$(this).attr('id');
-                                                     }});
-    //$('a[id^="map-"]').ceebox();
-    /* $('a[class^="edit-form"]').fancybox({
-                                'width':300,
-                                'height':200,
-                                'type':'iframe',
-                                'autoScale':'false'
-                                });
-     */
+     $('a[rel^="map-"]').colorbox({inline:true, href: function() {
+                                               return "#"+$(this).attr('rel');
+                                               }});
      $(".map-icon").hide();
-     $('a[id^="map-"]').hover(
+     $('a[rel^="map-"]').hover(
 
         function() { $(this).next('.map-icon').show(slow);},
         function() { $(this).next('.map-icon').hide(slow);}
-//         $(this).next().hide(slow);
      );
 
      $('div[id^="map-"]').each(function() {
-            var relStr = $(this).attr('rel');
+            var relStr = $(this).attr('title');
             var co_ords = relStr.split(',');
             lat = co_ords[0];
             lon = co_ords[1];
@@ -225,18 +151,17 @@ $(document).ready(function() {
             my_marker.setIcon('http://mapstraction.com/icon.gif');
             // display marker
             mapstraction.addMarker(my_marker);
-
-
-/*            $(this).googlemap({
-                    controls: true,
-                    labels: true,
-                    zoom: 14,
-                    addresses: a,
-                    debug: true
-                });*/
-
-
      }
      );
+//     $('a[id^="edit-form-link-"]').fancybox(); transition:'fade', speed:500}
+       $('a[id^="edit-form-link-"]').colorbox({title:'Edit Calendar Entry',transition:'elastic',opacity:0.3,inline:true, href: function() {
+                                               return $(this).attr('href');
+                                               }});
+
+       $('div[id^="inline-edit-form-"]').css("padding","6px");
+       $('div[id^="inline-edit-form-"]').find('label').css("padding","5px");
+       $('div[id^="inline-edit-form-"]').find('input').css("float","left");
+
+
 });
 
