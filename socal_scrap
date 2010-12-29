@@ -33,6 +33,9 @@
     <hr/>
 
 
+             <%= image_tag("exclamation.png") %>
+
+
 
      Time Now - <%= Time.now %>
      Time Now Midnight- <%= Time.now.midnight %>

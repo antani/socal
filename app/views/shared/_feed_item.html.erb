@@ -9,8 +9,6 @@
 
          <% if feed_item.important %>
              <span class="important-event">
-             <%= image_tag("exclamation.png") %>
-
          <% end %>
           <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.when.to_i%>"></input>
           <%=link_to feed_item.event , :controller => :calendars, :action=>:edit,:id=>feed_item.id, :remote => true %>
