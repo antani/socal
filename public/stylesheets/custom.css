@@ -5,8 +5,8 @@ font-family: league;
 html
 {
 
-    background-image: url(/images/black.jpg);
-   /*    background: url("/images/body.png") repeat-x scroll 0 0 #212121;*/
+    /*background-image: url(/images/black.jpg);*/
+    background: url("/images/body.png") repeat-x scroll 0 0 #212121;
 }
 
 .container {
