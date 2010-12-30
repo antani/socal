@@ -4,7 +4,6 @@
 $(document).ready(function() {
 
 
-
     function showDeletePost()
     {
         $('#pageinfo').load("/ #pageinfo");
@@ -40,6 +39,9 @@ $(document).ready(function() {
 
         }
     });
+
+
+
     $('.done-icon').bind('ajax:success', function() {
         var currentVal = $(this).closest('tr').attr('class');
 //        alert(currentVal);

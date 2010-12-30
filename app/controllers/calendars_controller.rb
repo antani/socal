@@ -139,7 +139,7 @@ class CalendarsController < ApplicationController
       @calendar.update_attributes(:whendate => when_date)
       #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
       format.html {
-        flash[:success] = "Calendar updated"
+        #flash[:success] = "Calendar updated"
         redirect_to root_path
       }
       format.js

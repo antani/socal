@@ -43,6 +43,7 @@ GEM
     builder (2.1.2)
     chronic (0.3.0)
     closure-compiler (0.3.3)
+    daemons (1.0.10)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -56,6 +57,7 @@ GEM
       rack (>= 1.1.0, < 2)
     faraday_middleware (0.3.1)
       faraday (~> 0.5.3)
+    gem_plugin (0.2.3)
     hashie (0.4.0)
     i18n (0.4.2)
     jquery-rails (0.2.6)
@@ -72,6 +74,9 @@ GEM
     mime-types (1.16)
     mocha (0.9.10)
       rake
+    mongrel (1.2.0.pre2)
+      daemons (~> 1.0.10)
+      gem_plugin (~> 0.2.3)
     multi_json (0.0.5)
     multi_xml (0.2.0)
     multipart-post (1.0.1)
@@ -174,6 +179,7 @@ DEPENDENCIES
   jquery-rails (>= 0.2.6)
   koala
   mocha
+  mongrel
   multi_json
   nifty-generators
   omniauth (~> 0.1.6)

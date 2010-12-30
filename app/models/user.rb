@@ -11,18 +11,24 @@ class User < ActiveRecord::Base
 
 
    def feed
-    # This is preliminary. See Chapter 12 for the full implementation.
-    Calendar.where("user_id = ?", id)
+      Calendar.where("user_id = ?", id)
   end
 
 
 
   def apply_omniauth(omniauth)
     self.email = omniauth['user_info']['email'] if email.blank?
-    authentications.build(:provider => omniauth['provider'],
-                          :uid => omniauth['uid'],
-                          :token => omniauth['credentials']['token'],
-                          :secret => omniauth['credentials']['secret'])
+    provider = omniauth['provider']
+
+    if (provider=='twitter' or provider=='facebook' or provider=='foursquare')
+        authentications.build(:provider => omniauth['provider'],
+                              :uid => omniauth['uid'],
+                              :token => omniauth['credentials']['token'],
+                              :secret => omniauth['credentials']['secret'])
+    else
+        authentications.build(:provider => omniauth['provider'],
+                              :uid => omniauth['uid'])
+    end
   end
 
   def password_required?

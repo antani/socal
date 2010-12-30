@@ -18,7 +18,8 @@
           <a href="#signin-form" id="signin-link">Sign-in</a>  or signin using...<br/>
           <a href="/auth/twitter" class="auth_provider"><%= image_tag "social/twitter.png", :size => "32x32",:alt => "Twitter" %></a>
           <a href="/auth/facebook" class="auth_provider"><%= image_tag "social/facebook.png", :size => "32x32", :alt => "Facebook" %></a>
-          <a href="/auth/google_apps" class="auth_provider"><%= image_tag "social/google.png", :size => "32x32", :alt => "Google" %></a>
+          <a href="/auth/google" class="auth_provider"><%= image_tag "social/google.png", :size => "32x32", :alt => "Google" %></a>
+          <a href="/auth/yahoo" class="auth_provider"><%= image_tag "social/yahoo.png", :size => "32x32", :alt => "Yahoo" %></a>
           <a href="/auth/open_id" class="auth_provider"><%= image_tag "open_id_32.png", :size => "32x32",:alt => "OpenID" %></a>
           <a href="/auth/foursquare" class="auth_provider"><%= image_tag "foursquare_32.png", :size => "32x32",:alt => "foursquare" %></a>
           <a href="/auth/gowalla" class="auth_provider"><%= image_tag "gowalla_32.png", :size => "32x32",:alt => "gowalla" %></a>
@@ -36,7 +37,5 @@
        <%= render :partial => "devise/sessions/sign_in_form" %>
        </div>
      </div>
-
-
   <% end %>
 
