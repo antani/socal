@@ -20,6 +20,8 @@ gem "rufus-scheduler"
 gem 'omniauth', '~> 0.1.6'
 gem 'twitter', '~> 1.0.0'
 gem "koala"
+gem "jammit", :git => "git://github.com/documentcloud/jammit.git"
+
 
 
 #gem "faraday"

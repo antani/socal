@@ -1,7 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-
+require 'jammit'
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
@@ -39,6 +39,8 @@ module Socal
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     #config.action_view.javascript_expansions[:defaults] = ['jquery', 'rails','humanmsg']
+    config.gem "jammit"
+    config.serve_static_assets = true
   end
 end
 
