@@ -6,8 +6,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
    #Development key
 #   provider :twitter, 'vm1CDPRNqXHXseMnUKHxDA', 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
     provider :facebook, '142425905811019', '3874b30930835eb3c48ad3ec09da4056',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
-    #provider :open_id, OpenID::Store::Filesystem.new('/tmp')
-    provider :open_id, OpenID::Store::Memcache.new(Dalli::Client.new)
+    provider :open_id, OpenID::Store::Filesystem.new('/tmp')
       use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'yahoo', :identifier => 'yahoo.com'
       use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
 
