@@ -1,229 +1,158 @@
-==> production.log <==
-Rendered shared/_calendar_form.html.erb (2.3ms)
-Rendered shared/_feed_item.html.erb (21.7ms)
-Rendered shared/_feed.html.erb (22.2ms)
-Rendered layouts/_stylesheets.html.erb (1.2ms)
-Rendered layouts/_header.html.erb (0.6ms)
-Rendered pages/home.html.erb within layouts/application (28.8ms)
-Completed 200 OK in 40ms (Views: 29.4ms | ActiveRecord: 8.1ms)
-
-
-Started GET "/users/sign_out" for 122.167.104.233 at Mon Dec 27 23:43:53 -0800 2010
-  Processing by Devise::SessionsController#destroy as HTML
-Redirected to http://morning-autumn-487.heroku.com/
-Completed 302 Found in 19ms
-
-
-Started GET "/" for 122.167.104.233 at Mon Dec 27 23:43:54 -0800 2010
-  Processing by PagesController#home as HTML
-Rendered registrations/_sign_up_form.html.erb (102.7ms)
-Rendered devise/sessions/_sign_in_form.html.erb (1.5ms)
-Rendered layouts/_stylesheets.html.erb (1.2ms)
-Rendered layouts/_header.html.erb (0.5ms)
-Rendered pages/home.html.erb within layouts/application (109.5ms)
-Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 20.1ms)
-
-
-Started GET "/auth/twitter" for 122.167.104.233 at Mon Dec 27 23:44:08 -0800 2010
-
-
-Started GET "/auth/twitter/callback?oauth_token=dhOtZYhvFDDxpmXYrkzhOMzfBPAysJqy6M8AeYKU&oauth_verifier=Egb1SGV1yOBKtontn4qtVe7JvLws8usi244p0pcbUVc" for 122.167.104.233 at Mon Dec 27 23:44:10 -0800 2010
-  Processing by AuthenticationsController#create as HTML
-  Parameters: {"oauth_verifier"=>"Egb1SGV1yOBKtontn4qtVe7JvLws8usi244p0pcbUVc", "oauth_token"=>"dhOtZYhvFDDxpmXYrkzhOMzfBPAysJqy6M8AeYKU", "provider"=>"twitter"}
-Redirected to http://morning-autumn-487.heroku.com/
-Completed 302 Found in 18ms
-
-
-Started GET "/" for 122.167.104.233 at Mon Dec 27 23:44:11 -0800 2010
-  Processing by PagesController#home as HTML
-Rendered shared/_calendar_form.html.erb (2.2ms)
-Rendered shared/_feed_item.html.erb (21.6ms)
-Rendered shared/_feed.html.erb (22.1ms)
-Rendered layouts/_stylesheets.html.erb (1.2ms)
-Rendered layouts/_header.html.erb (0.6ms)
-Rendered pages/home.html.erb within layouts/application (28.8ms)
-Completed 200 OK in 45ms (Views: 29.3ms | ActiveRecord: 13.3ms)
-
-
-Started GET "/users/sign_out" for 122.167.104.233 at Mon Dec 27 23:44:36 -0800 2010
-  Processing by Devise::SessionsController#destroy as HTML
-Redirected to http://morning-autumn-487.heroku.com/
-Completed 302 Found in 15ms
-
-
-Started GET "/" for 122.167.104.233 at Mon Dec 27 23:44:41 -0800 2010
-  Processing by PagesController#home as HTML
-Rendered registrations/_sign_up_form.html.erb (97.1ms)
-Rendered devise/sessions/_sign_in_form.html.erb (1.6ms)
-Rendered layouts/_stylesheets.html.erb (1.2ms)
-Rendered layouts/_header.html.erb (0.7ms)
-Rendered pages/home.html.erb within layouts/application (104.1ms)
-Completed 200 OK in 105ms (Views: 104.6ms | ActiveRecord: 12.4ms)
-
-
-Started POST "/users/sign_in" for 122.167.104.233 at Mon Dec 27 23:45:55 -0800 2010
-  Processing by Devise::SessionsController#create as HTML
-  Parameters: {"authenticity_token"=>"GNtO6luOoneLgNwBKcGAaW8oEaAqbhQ9xhiaez+MHdU=", "utf8"=>"\342\234\223", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"ved.antani+fb2@gmail.com"}}
-Redirected to http://morning-autumn-487.heroku.com/
-Completed 302 Found in 123ms
-
-
-Started GET "/" for 122.167.104.233 at Mon Dec 27 23:45:56 -0800 2010
-  Processing by PagesController#home as HTML
-Rendered shared/_calendar_form.html.erb (2.3ms)
-Rendered shared/_feed_item.html.erb (2.5ms)
-Rendered shared/_feed.html.erb (2.9ms)
-Rendered layouts/_stylesheets.html.erb (1.2ms)
-Rendered layouts/_header.html.erb (0.6ms)
-Rendered pages/home.html.erb within layouts/application (9.4ms)
-Completed 200 OK in 19ms (Views: 9.9ms | ActiveRecord: 36.6ms)
-
-
-Started GET "/authentications" for 122.167.104.233 at Mon Dec 27 23:46:05 -0800 2010
-  Processing by AuthenticationsController#index as HTML
-Rendered layouts/_stylesheets.html.erb (1.3ms)
-Rendered layouts/_header.html.erb (0.8ms)
-Rendered authentications/index.html.erb within layouts/application (9.6ms)
-Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 2.3ms)
-
-
-Started GET "/auth/twitter" for 122.167.104.233 at Mon Dec 27 23:46:08 -0800 2010
-
-
-Started GET "/auth/twitter/callback?oauth_token=62wzp1har8KfiytJCik2dcxcKabQOYxuS5qhGwIDRE&oauth_verifier=VtBDrT07OsetLt8ZWnW5VI8UJEbHBu0YzDs15qOIYhM" for 122.167.104.233 at Mon Dec 27 23:46:24 -0800 2010
-  Processing by AuthenticationsController#create as HTML
-  Parameters: {"oauth_verifier"=>"VtBDrT07OsetLt8ZWnW5VI8UJEbHBu0YzDs15qOIYhM", "oauth_token"=>"62wzp1har8KfiytJCik2dcxcKabQOYxuS5qhGwIDRE", "provider"=>"twitter"}
-Redirected to http://morning-autumn-487.heroku.com/authentications
-Completed 302 Found in 24ms
-
-
-Started GET "/authentications" for 122.167.104.233 at Mon Dec 27 23:46:25 -0800 2010
-  Processing by AuthenticationsController#index as HTML
-Rendered layouts/_stylesheets.html.erb (1.3ms)
-Rendered layouts/_header.html.erb (0.8ms)
-Rendered authentications/index.html.erb within layouts/application (10.1ms)
-Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 11.6ms)
-
-
-Started GET "/" for 122.167.104.233 at Mon Dec 27 23:46:30 -0800 2010
-  Processing by PagesController#home as HTML
-Rendered shared/_calendar_form.html.erb (2.8ms)
-Rendered shared/_feed_item.html.erb (3.3ms)
-Rendered shared/_feed.html.erb (3.8ms)
-Rendered layouts/_stylesheets.html.erb (2.0ms)
-Rendered layouts/_header.html.erb (0.8ms)
-Rendered pages/home.html.erb within layouts/application (13.1ms)
-Completed 200 OK in 37ms (Views: 13.7ms | ActiveRecord: 16.8ms)
-
-
-Started GET "/calendars/585/edit?remote=true" for 122.167.104.233 at Mon Dec 27 23:46:32 -0800 2010
-  Processing by CalendarsController#edit as HTML
-  Parameters: {"id"=>"585", "remote"=>"true"}
-Rendered calendars/_form.html.erb (7.0ms)
-Rendered layouts/_stylesheets.html.erb (1.4ms)
-Rendered layouts/_header.html.erb (0.6ms)
-Rendered calendars/edit.html.erb within layouts/application (11.8ms)
-Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 2.7ms)
-
-
-Started GET "/calendars/585/stylesheets/fancybox/jquery.fancybox-1.3.4.css" for 122.167.104.233 at Mon Dec 27 23:46:33 -0800 2010
-
-ActionController::RoutingError (No route matches "/calendars/585/stylesheets/fancybox/jquery.fancybox-1.3.4.css"):
-  
-
-
-
-Started POST "/calendars/585" for 122.167.104.233 at Mon Dec 27 23:46:39 -0800 2010
-  Processing by CalendarsController#update as HTML
-  Parameters: {"authenticity_token"=>"GNtO6luOoneLgNwBKcGAaW8oEaAqbhQ9xhiaez+MHdU=", "utf8"=>"\342\234\223", "id"=>"585", "calendar"=>{"when(1i)"=>"2010", "when(2i)"=>"12", "when(3i)"=>"28", "important"=>"0", "when(4i)"=>"13", "event"=>"Great event today", "when(5i)"=>"23", "where"=>"Paris"}}
-Redirected to http://morning-autumn-487.heroku.com/
-Completed 302 Found in 10ms
-
-
-Started GET "/" for 122.167.104.233 at Mon Dec 27 23:46:39 -0800 2010
-  Processing by PagesController#home as HTML
-Rendered shared/_calendar_form.html.erb (2.1ms)
-Rendered shared/_feed_item.html.erb (2.4ms)
-Rendered shared/_feed.html.erb (2.7ms)
-Rendered layouts/_stylesheets.html.erb (92.2ms)
-Rendered layouts/_header.html.erb (0.8ms)
-Rendered pages/home.html.erb within layouts/application (100.5ms)
-Completed 200 OK in 121ms (Views: 101.0ms | ActiveRecord: 19.3ms)
-
 ==> dyno-3789626.log <==
 >> Thin web server (v1.2.6 codename Crazy Delicious)
 >> Maximum connections set to 1024
->> Listening on 0.0.0.0:18765, CTRL+C to stop
-/disk1/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/app/views/calendars/_form.html.erb:1: warning: don't put space before argument parentheses
-================================================================================
-scheduler caught exception :
-OAuthException: (#506) Duplicate status message
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:184:in `graph_call'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala.rb:77:in `api'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:181:in `graph_call'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:138:in `put_object'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/koala-0.10.0/lib/koala/graph_api.rb:156:in `put_wall_post'
-/disk1/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/config/initializers/task_scheduler.rb:60:in `facebook_noise'
-/disk1/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/config/initializers/task_scheduler.rb:18:in `noise'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/activerecord-3.0.1/lib/active_record/relation.rb:13:in `each'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/activerecord-3.0.1/lib/active_record/relation.rb:13:in `__send__'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/activerecord-3.0.1/lib/active_record/relation.rb:13:in `each'
-/disk1/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/config/initializers/task_scheduler.rb:15:in `noise'
-/disk1/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/config/initializers/task_scheduler.rb:8
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:181:in `call'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:181:in `trigger_block'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:145:in `trigger'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `call'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `trigger_job'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `initialize'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `new'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:337:in `trigger_job'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:132:in `send'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:132:in `trigger'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobs.rb:269:in `trigger'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/jobqueues.rb:60:in `trigger_matching_jobs'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:293:in `step'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:357:in `start'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:355:in `loop'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:355:in `start'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:354:in `initialize'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:354:in `new'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:354:in `start'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/sc/scheduler.rb:115:in `start_new'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rufus-scheduler-2.0.7/lib/rufus/scheduler.rb:44:in `start_new'
-/disk1/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/config/initializers/task_scheduler.rb:4
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:235:in `load'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:235:in `load'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:227:in `load_dependency'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/activesupport-3.0.1/lib/active_support/dependencies.rb:235:in `load'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/engine.rb:201
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/engine.rb:200:in `each'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/engine.rb:200
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:25:in `instance_exec'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:25:in `run'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:50:in `run_initializers'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:49:in `each'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/initializable.rb:49:in `run_initializers'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/application.rb:134:in `initialize!'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/application.rb:77:in `send'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/railties-3.0.1/lib/rails/application.rb:77:in `method_missing'
-/disk1/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/config/environment.rb:5
-/usr/ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-/usr/ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-config.ru:3
-/home/heroku_rack/heroku.ru:23
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:63:in `new'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:63:in `map'
-/home/heroku_rack/heroku.ru:18
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
-/home/heroku_rack/heroku.ru:11:in `new'
-/home/heroku_rack/heroku.ru:11
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
-/home/slugs/383546_33d563e_3e66-74464ddc-4e7a-4146-9957-23a1630c5024/mnt/.bundle/gems/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
-/home/heroku_rack/heroku.ru:1:in `new'
-/home/heroku_rack/heroku.ru:1
-================================================================================
+>> Listening on 0.0.0.0:15283, CTRL+C to stop
+/disk1/home/slugs/383546_c71a818_3e66-0a1cd5c0-125b-4037-b12e-06edf29fb3eb/mnt/app/views/shared/_hidden_map_inline_edit.html.erb:6: warning: don't put space before argument parentheses
+
+==> production.log <==
+
+Started GET "/" for 122.167.105.253 at Wed Dec 29 08:39:27 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered registrations/_sign_up_form.html.erb (365.4ms)
+Rendered devise/sessions/_sign_in_form.html.erb (2.0ms)
+Rendered layouts/_stylesheets.html.erb (1.9ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered pages/home.html.erb within layouts/application (378.1ms)
+Completed 200 OK in 383ms (Views: 382.3ms | ActiveRecord: 33.4ms)
+
+
+Started POST "/users/sign_in" for 122.167.105.253 at Wed Dec 29 08:40:11 -0800 2010
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"beah3pVHtzF1BBqOLGCPIk179rrxnSywPgUgRnDXwFk=", "utf8"=>"\342\234\223", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"ved.antani+fb@gmail.com"}}
+Redirected to http://morning-autumn-487.heroku.com/
+Completed 302 Found in 219ms
+
+
+Started GET "/" for 122.167.105.253 at Wed Dec 29 08:40:12 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (76.2ms)
+Rendered shared/_feed_item.html.erb (5.5ms)
+Rendered calendars/_form.html.erb (2.9ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (5.7ms)
+Rendered shared/_feed_item.html.erb (2.2ms)
+Rendered calendars/_form.html.erb (2.5ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.8ms)
+Rendered shared/_feed.html.erb (32.3ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 158ms (Views: 115.5ms | ActiveRecord: 162.2ms)
+
+
+Started POST "/calendars" for 122.167.105.253 at Wed Dec 29 08:40:40 -0800 2010
+  Processing by CalendarsController#create as HTML
+  Parameters: {"authenticity_token"=>"beah3pVHtzF1BBqOLGCPIk179rrxnSywPgUgRnDXwFk=", "utf8"=>"\342\234\223", "calendar"=>{"event"=>"Test the upgraded UI ", "when"=>"tomorrow", "where"=>"Bangalore"}}
+Redirected to http://morning-autumn-487.heroku.com/
+Completed 302 Found in 255ms
+
+
+Started GET "/" for 122.167.105.253 at Wed Dec 29 08:40:40 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (2.9ms)
+Rendered shared/_feed_item.html.erb (2.5ms)
+Rendered calendars/_form.html.erb (2.3ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.6ms)
+Rendered shared/_feed_item.html.erb (2.1ms)
+Rendered calendars/_form.html.erb (2.2ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.5ms)
+Rendered shared/_feed_item.html.erb (1.8ms)
+Rendered calendars/_form.html.erb (2.2ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.4ms)
+Rendered shared/_feed.html.erb (18.2ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 46ms (Views: 26.4ms | ActiveRecord: 203.2ms)
+
+
+Started POST "/calendars/591" for 122.167.105.253 at Wed Dec 29 08:41:19 -0800 2010
+  Processing by CalendarsController#update as HTML
+  Parameters: {"authenticity_token"=>"beah3pVHtzF1BBqOLGCPIk179rrxnSywPgUgRnDXwFk=", "utf8"=>"\342\234\223", "id"=>"591", "calendar"=>{"done"=>"1", "important"=>"0", "event"=>"Test the upgraded UI ", "when"=>"2010-12-30 17:30:00 +0530", "where"=>"Bangalore"}}
+Redirected to http://morning-autumn-487.heroku.com/
+Completed 302 Found in 20ms
+
+
+Started GET "/" for 122.167.105.253 at Wed Dec 29 08:41:19 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (2.7ms)
+Rendered shared/_feed_item.html.erb (2.0ms)
+Rendered calendars/_form.html.erb (2.1ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.4ms)
+Rendered shared/_feed_item.html.erb (1.8ms)
+Rendered calendars/_form.html.erb (2.1ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.3ms)
+Rendered shared/_feed_item.html.erb (1.8ms)
+Rendered calendars/_form.html.erb (2.1ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.4ms)
+Rendered shared/_feed.html.erb (16.8ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 48ms (Views: 24.8ms | ActiveRecord: 53.6ms)
+
+
+Started GET "/" for 122.167.105.253 at Wed Dec 29 08:41:25 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (2.9ms)
+Rendered shared/_feed_item.html.erb (2.2ms)
+Rendered calendars/_form.html.erb (2.4ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.7ms)
+Rendered shared/_feed_item.html.erb (1.9ms)
+Rendered calendars/_form.html.erb (2.4ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.6ms)
+Rendered shared/_feed_item.html.erb (1.8ms)
+Rendered calendars/_form.html.erb (2.3ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.6ms)
+Rendered shared/_feed.html.erb (18.2ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 43ms (Views: 26.5ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/calendars/591/toggle_done" for 122.167.105.253 at Wed Dec 29 08:41:31 -0800 2010
+  Processing by CalendarsController#toggle_done as JS
+  Parameters: {"id"=>"591"}
+Rendered calendars/toggle_done.js.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 12.1ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/calendars/588/toggle_done" for 122.167.105.253 at Wed Dec 29 08:41:36 -0800 2010
+  Processing by CalendarsController#toggle_done as JS
+  Parameters: {"id"=>"588"}
+Rendered calendars/toggle_done.js.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/calendars/587/toggle_done" for 122.167.105.253 at Wed Dec 29 08:41:46 -0800 2010
+  Processing by CalendarsController#toggle_done as JS
+  Parameters: {"id"=>"587"}
+Rendered calendars/toggle_done.js.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 0.9ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/" for 122.167.105.253 at Wed Dec 29 08:41:48 -0800 2010
+  Processing by PagesController#home as HTML
+Rendered shared/_calendar_form.html.erb (3.1ms)
+Rendered shared/_feed_item.html.erb (2.3ms)
+Rendered calendars/_form.html.erb (3.5ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (4.9ms)
+Rendered shared/_feed_item.html.erb (2.2ms)
+Rendered calendars/_form.html.erb (2.4ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.8ms)
+Rendered shared/_feed_item.html.erb (1.9ms)
+Rendered calendars/_form.html.erb (2.4ms)
+Rendered shared/_hidden_map_inline_edit.html.erb (3.8ms)
+Rendered shared/_feed.html.erb (20.1ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 153ms (Views: 28.7ms | ActiveRecord: 39.2ms)
+
+
+Started GET "/calendars/587/toggle_done" for 122.167.105.253 at Wed Dec 29 08:41:58 -0800 2010
+  Processing by CalendarsController#toggle_done as JS
+  Parameters: {"id"=>"587"}
+Rendered calendars/toggle_done.js.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 9.3ms)
 

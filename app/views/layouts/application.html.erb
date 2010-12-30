@@ -6,26 +6,20 @@
     <title><%= title %></title>
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
-    <link rel="stylesheet" href="stylesheets/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
     <link href='http://fonts.googleapis.com/css?family=Lato:100,100italic,light,lightitalic,regular,regularitalic,bold,bolditalic,900,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:lightitalic,regular,bold' rel='stylesheet' type='text/css'>
 
-    <%= javascript_include_tag :defaults %>
-    <%= javascript_include_tag "humanmsg" %>
-    <%= javascript_include_tag "jquery.styleSelect.min" %>
-    <%= javascript_include_tag "jquery.jscrollpane.min" %>
-    <%= javascript_include_tag "jquery.mousewheel" %>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+    <%= javascript_include_tag :all, :cache=>true %>
+
     <!-- Dev Key
     <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAO1AbdOVt9zN5lJwJyNcDuhTX2XchcwgyHzp4Xo0DHRAzt2aLjhRSFPmH2rpNoXYunPWQ2jCi3aZflA"></script> -->
      <!-- Production Key -->
      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAO1AbdOVt9zN5lJwJyNcDuhRrqw-yyShTtPaJJx2neDYyeC-GKhQvPNxYEXKvyFx9eWlUior7ZL8Nsw" type="text/javascript"></script>
 
     <script type="text/javascript" charset="utf-8" src="http://mapstraction.googlecode.com/svn/trunk/source/mxn.js?(google)"></script>
-
-    <%= javascript_include_tag "fancybox/jquery.fancybox-1.3.4.pack" %>
-    <%= javascript_include_tag "jquerymaps" %>
-    <%= javascript_include_tag "jquery.colorbox-min" %>
-    <%= javascript_include_tag "jquery.pnotify.min" %>
 
 
 

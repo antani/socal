@@ -34,23 +34,23 @@ $(document).ready(function() {
         $(this).closest('tr').fadeOut("linear", showDeletePost);
     });
     $('#feed_item_today,#feed_item_past,#feed_item_tomorrow').find('tbody tr').each(function() {
-        if($(this).attr('rel')=='true'){
+        if($(this).attr('class')=='true'){
               $(this).fadeTo("slow",0.4);
               $(this).find(".event-span").find("a").css("textDecoration","line-through");
 
         }
     });
     $('.done-icon').bind('ajax:success', function() {
-        var currentVal = $(this).closest('tr').attr('rel');
-
-        if (currentVal=='false')
+        var currentVal = $(this).closest('tr').attr('class');
+//        alert(currentVal);
+        if (currentVal=='' || currentVal=='false')
         {
-            $(this).closest('tr').attr('rel','true');
+            $(this).closest('tr').attr('class','true');
             $(this).closest('tr').fadeTo("slow", 0.4).find(".event-span").find("a").css("textDecoration","line-through");;
         }
         else
         {
-            $(this).closest('tr').attr('rel','false');
+            $(this).closest('tr').attr('class','false');
             $(this).closest('tr').fadeTo("slow", 1).find(".event-span").find("a").css("textDecoration","none");;
         }
     });
