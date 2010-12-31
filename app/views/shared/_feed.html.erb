@@ -12,7 +12,6 @@
             <%= will_paginate @feed_items_today, :container => false %>
       </div>
     </div>
-    <div id="profile-bevel"><hr></div>
     <% end %>
     <% if @feed_items_tomorrow.count > 0 %>
     <div>
@@ -26,7 +25,6 @@
             <%= will_paginate @feed_items_tomorrow, :container => false %>
       </div>
     </div>
-    <div id="profile-bevel"><hr></div>
     <% end %>
      <% if @feed_items_future.count > 0 %>
     <div>
@@ -41,7 +39,6 @@
       </div>
 
     </div>
-    <div id="profile-bevel"><hr></div>
     <%end %>
     <% if @feed_items_last_week.count > 0 %>
     <div>
