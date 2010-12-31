@@ -2,12 +2,11 @@ require 'openid/store/filesystem'
 Rails.application.config.middleware.use OmniAuth::Builder do
    #Production
    provider :twitter, 'LkNRuATCSidM7rF63NnUYw', '96cdM22QKD5ZeGuI2jv7wYXm7SuT1lBdj2hxWD1kwgA'
-   provider :facebook, '186287734721301', '8e54e8433363b98d59457fe42118fe5c',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+   provider :facebook, '181816611843055', 'eaf9afe8ad70a9626dfd488ec882c237',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
 
    provider :open_id, nil
      use OmniAuth::Strategies::OpenID, nil, :name => 'yahoo', :identifier => 'yahoo.com'
      use OmniAuth::Strategies::OpenID, nil, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
-
 
    #Development key
    # provider :twitter, 'vm1CDPRNqXHXseMnUKHxDA', 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
