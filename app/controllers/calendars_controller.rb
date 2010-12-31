@@ -1,7 +1,7 @@
 class CalendarsController < ApplicationController
 #  include Twitter::AuthenticationHelpers
 #  rescue_from Twitter::Unauthorized, :with => :force_sign_in
-
+  caches_page :index, :show
 
   #-----------------------------Nasty Bug !
   #Time.zone = "UTC"

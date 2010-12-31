@@ -13,7 +13,11 @@ class AuthenticationsController < ApplicationController
       logger.debug "----------------------------------------------------------------"
 
       authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+      provider = omniauth['provider']
       user = User.find_by_email(omniauth['user_info']['email'])
+      if provider=='facebook'
+        user=User.find_by_email(omniauth['extra']['user_hash']['email'])
+      end
 
       #Condition 1 : If authentication is found with current provider and UID, simply signin the user.
       if authentication
@@ -21,7 +25,7 @@ class AuthenticationsController < ApplicationController
       #Condition 2 : If there is a user with the email id associated with this authentication,
       #just create the authentication and sign her in
       elsif user
-            provider = omniauth['provider']
+
             if (provider=='twitter' or provider=='facebook' or provider=='foursquare')
                   user.authentications.create!(:provider => omniauth['provider'],
                                                :uid => omniauth['uid'],

@@ -31,6 +31,9 @@ Socal::Application.configure do
   #Devise mailer settings
   #require 'tlsmail'
   #Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+  config.cache_store = :dalli_store
+  config.action_controller.perform_caching = true
+
 
 
 

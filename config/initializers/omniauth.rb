@@ -2,13 +2,20 @@ require 'openid/store/filesystem'
 Rails.application.config.middleware.use OmniAuth::Builder do
    #Production
    provider :twitter, 'LkNRuATCSidM7rF63NnUYw', '96cdM22QKD5ZeGuI2jv7wYXm7SuT1lBdj2hxWD1kwgA'
-   #provider :facebook, '186287734721301', '8e54e8433363b98d59457fe42118fe5c',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+   provider :facebook, '186287734721301', '8e54e8433363b98d59457fe42118fe5c',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+
+   provider :open_id, nil
+     use OmniAuth::Strategies::OpenID, nil, :name => 'yahoo', :identifier => 'yahoo.com'
+     use OmniAuth::Strategies::OpenID, nil, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
+
+
    #Development key
-#   provider :twitter, 'vm1CDPRNqXHXseMnUKHxDA', 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
-    provider :facebook, '142425905811019', '3874b30930835eb3c48ad3ec09da4056',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
-    provider :open_id, OpenID::Store::Filesystem.new('/tmp')
-      use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'yahoo', :identifier => 'yahoo.com'
-      use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
+   # provider :twitter, 'vm1CDPRNqXHXseMnUKHxDA', 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
+   # provider :facebook, '139636279427129', '66c2c368cb6b472e5dcf71407353261e',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+    #provider :open_id, OpenID::Store::Filesystem.new('/tmp')
+    #  use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'yahoo', :identifier => 'yahoo.com'
+    #  use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
+
 
 
 
