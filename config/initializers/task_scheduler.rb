@@ -1,14 +1,14 @@
 require 'rufus/scheduler'
 require 'twitter'
+require 'gdata'
 
 scheduler = Rufus::Scheduler.start_new
 
 scheduler.every("1m") do
-
    noise
 end
 
- def noise
+   def noise
     Rails.logger.debug "Starting to create noise---------------------------------------------------------------"
     #Find all calendars that have 'when' = now.
     @mail_calendar = Calendar.where(:when => (Time.now+5.minutes)..(Time.now+6.minutes))
@@ -18,7 +18,7 @@ end
       facebook_noise(c.user,c)
     end
     Rails.logger.debug "Noised---------------------------------------------------------------------------------"
-  end
+   end
 
 
   def twitter_noise(user,calendar)
@@ -41,7 +41,7 @@ end
         end
     #    @client ||= Twitter::Client.new
         Twitter.update("From Socal -" + calendar.event)
-     end
+    end
   end
 
   def facebook_noise(user,calendar)

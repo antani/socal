@@ -3,6 +3,14 @@
 
 $(document).ready(function() {
 
+    $(".input-tip").tipTip({activation:"focus",defaultPosition:"right"});
+    $(".setting-icon").tipTip({activation:"hover",defaultPosition:"right"});
+    $('.input-tip-bottom').tipTip({activation:"hover",defaultPosition:"bottom"});
+    $("#user_timezone").tipTip({activation:"focus",defaultPosition:"right"});
+    $('.setting-icon').click(function () {
+         $(this).replaceWith('<p><strong>Please wait...</strong></p>'); // optional: change "Sending..." to something else
+    });
+    $("#tour").colorbox({iframe:true, innerWidth:425, innerHeight:344});
 
     function showDeletePost()
     {
@@ -75,7 +83,7 @@ $(document).ready(function() {
     //Hide the error messages automatically
     setTimeout(hideFlashMessages, 10000);
     function hideFlashMessages() {
-      $('#flash_alert,#flash_success').fadeOut(2000)
+      $('#flash_alert,#flash_success,#flash_notice').fadeOut(2000)
     }
 
     //Add jqueryUI dialog on edit calendar form

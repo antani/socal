@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
 
      if current_user
-       @user = User.find(current_user.id, :limit=>50)
+       @user = User.find(current_user.id)
        @calendar = Calendar.new if user_signed_in?
        @feed_items = @user.calendars.all.paginate(:page => params[:page])
        @feed_items_last_week = @user.calendars.where("whendate<?",(Time.now.to_date)).paginate(:page => params[:page])

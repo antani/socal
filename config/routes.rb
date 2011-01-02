@@ -2,9 +2,14 @@ Socal::Application.routes.draw do
   resources :authentications
 
   resources :calendars
+  resources :g_data
+
   resources :calendars do
-    get 'toggle_done', :on => :member
+      get 'toggle_done', :on => :member
   end
+
+
+#  match :google_calendar_noise => "calendars#google_calendar_noise"
 
   #, :only => [:create, :destroy, :edit, :update]
   #, :only => [:create, :destroy, :edit]
@@ -19,6 +24,8 @@ Socal::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
+
+
 
 
   # The priority is based upon order of creation:

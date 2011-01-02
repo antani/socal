@@ -23,6 +23,7 @@ gem "koala"
 gem "jammit", :git => "git://github.com/documentcloud/jammit.git"
 gem "mongrel"
 gem 'dalli'
+gem 'gdata_19'
 
 
 #gem "faraday"

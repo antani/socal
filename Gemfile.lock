@@ -58,6 +58,7 @@ GEM
       rack (>= 1.1.0, < 2)
     faraday_middleware (0.3.1)
       faraday (~> 0.5.3)
+    gdata_19 (1.1.2)
     gem_plugin (0.2.3)
     hashie (0.4.0)
     i18n (0.4.2)
@@ -177,6 +178,7 @@ DEPENDENCIES
   dalli
   devise
   faker
+  gdata_19
   jammit!
   jquery-rails (>= 0.2.6)
   koala

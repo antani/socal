@@ -4,16 +4,17 @@ Sign Up<hr/>
 
 
   <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+  <%= f.text_field :email  , :title=>"Enter your email. Do not worry - we hate spam more than you do.", :class => "input-tip" %></p>
 
   <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+  <%= f.password_field :password, :title=>"Enter a secured password.", :class => "input-tip" %></p>
 
 <!--  <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p> -->
-
-  <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.us_zones %>
-
+  <div title="Please select your timezone - this is important unless you want a really screwed notification system.", class = "input-tip"  >
+  <p><%= f.label :timezone %><br />
+  <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.us_zones%>
+  </div>
   <p><%= f.submit "Sign up" %></p>
 <% end %>
 

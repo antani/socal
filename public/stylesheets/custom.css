@@ -144,15 +144,15 @@ footer nav {
   background: #fff;
   border: none;
 }
-#flash_alert, #flash_success
+#flash_alert, #flash_success, #flash_notice
 {
 /*    background: #fff url(../images/SymbolDelete.png) repeat-x;*/
 /*    background: #fff url(../images/SymbolDelete-small.png);
     color: rgba(255,255,0,0.5);
-    font-size: 18px;
+
   	background-color: rgba(255,0,0,.25);*/
   	 background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.4) 100%);
-
+    font-size: 18px;
 /*    border: 1px solid #ff5c00;*/
 }
 .alert
@@ -275,8 +275,12 @@ footer nav {
 #feed_item_today, #feed_item_future, #feed_item_tomorrow, #feed_item_past
 {
     padding:1px;
+    background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.2) 100%);
+    background-image: -webkit-gradient(linear,left top, left bottom, from(#272727), to(rgba(44, 38, 63, 0.2)));
     -moz-border-radius: 7px 7px 7px 7px;
     -moz-box-shadow: 0 0 7px #171C1E;
+    -webkit-border-radius:7px 7px 7px 7px;
+    -webkit-box-shadow: 0 0 7px #171C1E;
  /*   background-color: #1A2F36;
     background-image: url("/images/addon-item-background-default.png");
     background-position: center top;
@@ -286,8 +290,6 @@ footer nav {
     overflow: hidden;
     padding: 14px;
     position: relative;
-    background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.2) 100%);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2C263F), to(rgba(44, 38, 63, 0.398438)));
 }
 #feed_item_today a, #feed_item_future a, #feed_item_tomorrow a, #feed_item_past a
 {
@@ -662,9 +664,11 @@ color: #2daebf;
 .main-background
 {
     background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.4) 100%);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2C263F), to(rgba(44, 38, 63, 0.398438)));
+    background-image: -webkit-gradient(linear,left top, left bottom, from(#272727), to(rgba(44, 38, 63, 0.4)));
     -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius:14px 14px 14px 14px;
     -moz-box-shadow: 2px 2px 7px 0 #151515;
+    -webkit-box-shadow: 2px 2px 7px 0 #151515;
     border: 1px solid #373553;
     color: #BFB8E5;
     width: 400px;
@@ -763,5 +767,32 @@ div[id^=map-]
 {
     float:left;
 
+}
+.setting-icon
+{
+    float: right;
+    padding: 3px;
+}
+#tour
+{
+    text-align: center;
+    font-style: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    font-size: 23px;
+    background-image: -moz-linear-gradient(center top , #272727 0%, rgba(44, 38, 63, 0.4) 100%);
+    background-image: -webkit-gradient(linear,top left, top  bottom, from(#272727), to(rgba(44, 38, 63, 0.398438)));
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius:14px 14px 14px 14px;
+    -moz-box-shadow: 2px 2px 7px 0 #151515;
+    -webkit-box-shadow: 2px 2px 7px 0 #151515;
+    border: 1px solid #373553;
+    color: #BFB8E5;
+    font-family: 'Lato',league, Helvetica, Verdana, Sans-Serif;
+    margin: 2px;
+    padding-left:4px;
+    padding-right:4px;
+}
+#tour a:hover{
+text-decoration: none;
 }
 

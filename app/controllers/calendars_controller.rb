@@ -1,7 +1,13 @@
 class CalendarsController < ApplicationController
 #  include Twitter::AuthenticationHelpers
 #  rescue_from Twitter::Unauthorized, :with => :force_sign_in
-  caches_page :index, :show
+#  caches_page :index, :show
+  PRIVATE_KEY = '/public/socal.pem'
+  DOCLIST_SCOPE = 'http://docs.google.com/feeds/'
+  CONTACTS_SCOPE = 'http://www.google.com/m8/feeds/'
+  SPREADSHEETS_SCOPE = 'http://spreadsheets.google.com/feeds/'
+  DOCLIST_DOWNLOD_SCOPE = 'http://docs.googleusercontent.com/'
+  DOCLIST_FEED = DOCLIST_SCOPE + 'default/private/full'
 
   #-----------------------------Nasty Bug !
   #Time.zone = "UTC"
@@ -11,8 +17,15 @@ class CalendarsController < ApplicationController
   # GET /calendars
   # GET /calendars.xml
   def index
-    @calendars = Calendar.all
+    logger.debug "........................Calendars.index"
+    if params[:token] and session[:token].nil?
+      @client.authsub_token = params[:token]
+      session[:token] = @client.auth_handler.upgrade()
+    end
+    @client.authsub_token = session[:token] if session[:token]
+    fetch_feed
 
+    @calendars = Calendar.all
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @calendars }
@@ -22,6 +35,7 @@ class CalendarsController < ApplicationController
   # GET /calendars/1
   # GET /calendars/1.xml
   def show
+        logger.debug "........................Calendars.show"
     @calendar = Calendar.find(params[:id], :order => '"calendars.when"')
 
     respond_to do |format|
