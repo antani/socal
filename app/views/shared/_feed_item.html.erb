@@ -32,8 +32,29 @@
 
     </span>
   </td>
+
   <% if current_user == feed_item.user %>
-      <td>
+
+      <%
+        title_text = ""
+        if feed_item.twitter_shared == true
+           title_text = title_text + " <img src='/images/twitter.png'/>"
+        end
+        if feed_item.facebook_shared ==true
+           title_text = title_text + " <img src='/images/facebook.png'/>"
+        end
+        if feed_item.foursquare_shared ==true
+           title_text = title_text + " <img src='/images/foursquare.png'/>"
+        end
+        if feed_item.sync ==true
+           title_text = title_text + " <img src='/images/google.png'/>"
+        end
+      %>
+
+      <td style="padding:0px;">
+        <img title="<%=title_text%>" rel="<%=feed_item.twitter_shared or feed_item.facebook_shared or feed_item.foursquare_shared%>" src="/images/Chat2.png" class="twitter-shared"/>
+      </td>
+      <td style="padding:0px;">
           <%= link_to image_tag("delete.png"),
                       feed_item,
                      :method => :delete,

@@ -17,7 +17,6 @@ class CalendarsController < ApplicationController
   # GET /calendars
   # GET /calendars.xml
   def index
-    logger.debug "........................Calendars.index"
     if params[:token] and session[:token].nil?
       @client.authsub_token = params[:token]
       session[:token] = @client.auth_handler.upgrade()
@@ -73,10 +72,15 @@ class CalendarsController < ApplicationController
       lon =nil
     else
       co_ords=Geocoder.fetch_coordinates(whereStr)
-      logger.debug co_ords[0]
-      logger.debug co_ords[1]
-      lat = co_ords[0]
-      lon = co_ords[1]
+      if co_ords
+        logger.debug co_ords[0]
+        logger.debug co_ords[1]
+        lat = co_ords[0]
+        lon = co_ords[1]
+      else
+        lat = 0.0
+        lon = 0.0
+      end
     end
     #guess the timining of the event
     if !whenStr.empty? && whenStr != nil
@@ -179,7 +183,6 @@ class CalendarsController < ApplicationController
       format.js
     end
   end
-
 
 
 

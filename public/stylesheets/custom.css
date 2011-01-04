@@ -796,3 +796,8 @@ div[id^=map-]
 text-decoration: none;
 }
 
+.twitter-shared
+{
+ display:inline;
+}
+

@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :set_user_time_zone
+
+
   def show
     @user = current_user
     @microposts = @user.calendars.paginate(:page => params[:page])
@@ -10,11 +12,6 @@ class ApplicationController < ActionController::Base
   def setup_google
     logger.debug "Start google_calendar_noise"
     @client = GData::Client::Calendar.new
-      logger.debug "Inside fetch_feed"
-
-
-
-
     #@client = GData::Client::Calendar.new
     if params[:token].nil? and session[:token].nil?
       #next_url = url_for :controller => self.controller_name, :action => 'fetch_feed' #self.action_name
@@ -37,7 +34,6 @@ class ApplicationController < ActionController::Base
     @client.authsub_token = session[:token] if session[:token]
 
   end
-
 
   private
 

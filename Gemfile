@@ -16,6 +16,7 @@ gem 'jquery-rails', '>= 0.2.6'
 gem 'chronic'
 gem "rails-geocoder", :require => "geocoder"
 gem "multi_json"
+gem "json"
 gem "rufus-scheduler"
 gem 'omniauth', '~> 0.1.6'
 gem 'twitter', '~> 1.0.0'
@@ -24,6 +25,7 @@ gem "jammit", :git => "git://github.com/documentcloud/jammit.git"
 gem "mongrel"
 gem 'dalli'
 gem 'gdata_19'
+gem 'foursquare'
 
 
 #gem "faraday"

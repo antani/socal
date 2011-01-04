@@ -166,3 +166,71 @@ divid = feed_item_counter+1
         //$(this).gMap(options);
       });
 
+  def consumer
+      logger.debug "In consumer"
+      return @consumer if @consumer
+      @consumer = ::OAuth::Consumer.new(FOURSQUARE_OAUTH_KEY,FOURSQUARE_OAUTH_SECRET, {
+        :site => "http://foursquare.com",
+        :scheme => :header,
+        :http_method => :post,
+        :request_token_path => "/oauth/request_token",
+        :access_token_path => "/oauth/access_token",
+        :authorize_path => "/oauth/authorize",
+        :proxy => (ENV['HTTP_PROXY'] || ENV['http_proxy'])
+      })
+  end
+
+  def access_token
+      logger.debug "In access_token"
+      auths=current_user.authentications.find_by_provider("foursquare")
+      @access_token ||= ::OAuth::AccessToken.new(consumer, auths.token, auths.secret)
+  end
+
+  def venue_search
+      access_token
+      response=@access_token.get(BASE_URL+"/venues/search?ll=40.7,-74")
+  end
+
+
+
+  def foursquare_user_details
+    logger.debug "Start - foursquare_user_details"
+    create_access_token
+    user_info = @access_token.get("http://api.foursquare.com/v2/users.json")
+    JSON.parse(user_info.body)
+  end
+
+  def venue_search(query, lat, lng)
+    create_access_token
+    results = @access_token.get("http://api.foursquare.com/v2/venues.json?q=#{URI.escape(query)}&l=1&geolat=#{lat}&geolong=#{lng}")
+    response = JSON.parse(results.body)
+  end
+
+  def checkin(options)
+    create_access_token
+    response = @access_token.post("http://api.foursquare.com/v2/checkin.json", options)
+    response = JSON.parse(response.body)
+  end
+
+  def tip(options)
+    create_access_token
+    response = @access_token.post("http://api.foursquare.com/v2/addtip", options)
+  end
+
+  def create_access_token
+    logger.debug "Start - create_access_token"
+    load_consumer
+    auths=current_user.authentications.find_by_provider("foursquare")
+    @access_token = OAuth::AccessToken.new(@consumer, auths.token, auths.secret)
+  end
+  def load_consumer
+    logger.debug "Start - load_consumer"
+    @consumer = OAuth::Consumer.new(FOURSQUARE_OAUTH_KEY,FOURSQUARE_OAUTH_SECRET,
+    {:site => 'https://api.foursquare.com'})
+  end
+
+
+
+
+<object width="400" height="293"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=6999927&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=1&amp;loop=0" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=6999927&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=1&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="293"></embed></object><p><a href="http://vimeo.com/6999927">Welcome to Vim</a> from <a href="http://vimeo.com/user1690209">Derek Wyatt</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+

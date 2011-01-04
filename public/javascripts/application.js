@@ -3,7 +3,9 @@
 
 $(document).ready(function() {
 
-    $(".input-tip").tipTip({activation:"focus",defaultPosition:"right"});
+    $(".input-tip").tipTip({activation:"hover",defaultPosition:"right"});
+    $(".twitter-shared").tipTip({activation:"hover",defaultPosition:"right"});
+
     $(".setting-icon").tipTip({activation:"hover",defaultPosition:"right"});
     $('.input-tip-bottom').tipTip({activation:"hover",defaultPosition:"bottom"});
     $("#user_timezone").tipTip({activation:"focus",defaultPosition:"right"});
@@ -11,6 +13,7 @@ $(document).ready(function() {
          $(this).replaceWith('<p><strong>Please wait...</strong></p>'); // optional: change "Sending..." to something else
     });
     $("#tour").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+    $(".facebook-shared, .twitter-shared, .foursquare-shared").hide();
 
     function showDeletePost()
     {
@@ -124,6 +127,15 @@ $(document).ready(function() {
 					});
                 }
          });
+         //also show the shared icons
+         $(".foursquare-shared,.facebook-shared,.twitter-shared").each( function() {
+
+            if($(this).attr('rel')=='true')
+            {
+                $(this).show('slow');
+            }
+         });
+
      }, 1000); //Bug - run Every second to make sure miliseconds are in sync
 
 

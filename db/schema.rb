@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110101123024) do
+ActiveRecord::Schema.define(:version => 20110102175836) do
 
   create_table "authentications", :force => true do |t|
     t.integer   "user_id"
@@ -30,11 +30,14 @@ ActiveRecord::Schema.define(:version => 20110101123024) do
     t.datetime "updated_at"
     t.datetime "when"
     t.date     "whendate"
-    t.boolean  "important",  :default => false
+    t.boolean  "important",         :default => false
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "done",       :default => false
-    t.boolean  "sync",       :default => false
+    t.boolean  "done",              :default => false
+    t.boolean  "sync",              :default => false
+    t.boolean  "twitter_shared",    :default => false
+    t.boolean  "facebook_shared",   :default => false
+    t.boolean  "foursquare_shared", :default => false
   end
 
   create_table "users", :force => true do |t|
