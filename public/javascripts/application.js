@@ -18,7 +18,7 @@ $(document).ready(function() {
         return false;
     }
 
-    $('#signin-link').colorbox({inline:true, href: function() {
+    $('#signin-link').colorbox({opacity:0.1,inline:true, href: function() {
                                                return $(this).attr('href');
                                                }});
 

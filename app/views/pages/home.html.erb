@@ -11,32 +11,20 @@
     </tr>
   </table>
   <% else %>
+     <div class="clear"></div>
      <div id="sign-up" class="main-background">
-
           <%= render :partial => "registrations/sign_up_form" %>
-
+          <p>or <a id="tour" href="http://vimeo.com/6999927">Take a tour of the features</a></p>
      </div>
-     <div id="sign-in" class="main-background">
 
-          <a href="#signin-form" id="signin-link">Sign-in</a>  or signin using...<br/>
-          <a href="/auth/twitter" class="auth_provider"><%= image_tag "social/twitter.png", :size => "32x32",:alt => "Twitter" %></a>
-          <a href="/auth/facebook" class="auth_provider"><%= image_tag "social/facebook.png", :size => "32x32", :alt => "Facebook" %></a>
-          <a href="/auth/google" class="auth_provider"><%= image_tag "social/google.png", :size => "32x32", :alt => "Google" %></a>
-          <a href="/auth/yahoo" class="auth_provider"><%= image_tag "social/yahoo.png", :size => "32x32", :alt => "Yahoo" %></a>
-          <a href="/auth/open_id" class="auth_provider"><%= image_tag "open_id_32.png", :size => "32x32",:alt => "OpenID" %></a>
-          <a href="/auth/foursquare" class="auth_provider"><%= image_tag "foursquare_32.png", :size => "32x32",:alt => "foursquare" %></a>
-          <a href="/auth/gowalla" class="auth_provider"><%= image_tag "gowalla_32.png", :size => "32x32",:alt => "gowalla" %></a>
+     <%= render :partial => "pages/signin_links" %>
+    <div id="details" class="main-background">
+    <p>Socl is the soc<del>ia</del>l calendar and to-do list. Your calendar events will be posted to your social world(only if you wish). You can easily share your calendar events to Twitter, Facebook, Foursquare and Google Calendar to make sure your social circle is aware of what you are up to. A sophisticated reminder system makes sure that you are always aware of your schedule.</p>
+    <p style="font-fize:19px; text-decoration: underline;text-align:center;">Socl is free and will always remain free. </p>
+    <div class="clear"></div>
+    </div>
 
-         <div class="clear"></div>
-     </div>
-     <div id="details" class="main-background">
-
-      <p>Socl is the soc<del>ia</del>l calendar and to-do list. Your calendar events will be posted to your social world(only if you wish). You can easily share your calendar events to Twitter, Facebook, Foursquare and Google Calendar to make sure your social circle is aware of what you are up to. A sophisticated reminder system makes sure that you are always aware of your schedule.</p>
-      <p style="font-fize:19px; text-decoration: underline;text-align:center;">Socl is free and will always remain free. </p>
-      <p><a id="tour" href="http://vimeo.com/6999927">Take a tour of the features</a></p>
-
-      <div class="clear"></div>
-     </div>
+     <div class="clear"></div>
      <div style="display:none">
        <div id="signin-form">
        <%= render :partial => "devise/sessions/sign_in_form" %>
