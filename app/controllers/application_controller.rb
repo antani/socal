@@ -35,8 +35,7 @@ class ApplicationController < ActionController::Base
 
   end
 
-<<<<<<< HEAD
-=======
+
   ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
 
     if html_tag.include? "label for"
@@ -51,7 +50,9 @@ class ApplicationController < ActionController::Base
 
 end
 
->>>>>>> css-changes
+
+
+
   private
 
   def set_user_time_zone
