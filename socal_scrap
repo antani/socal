@@ -234,3 +234,18 @@ divid = feed_item_counter+1
 
 <object width="400" height="293"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=6999927&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=1&amp;loop=0" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=6999927&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=1&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="293"></embed></object><p><a href="http://vimeo.com/6999927">Welcome to Vim</a> from <a href="http://vimeo.com/user1690209">Derek Wyatt</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
+
+
+
+h1 { font-family: 'Yanone Kaffeesatz', arial, serif; }
+h1 { font-family: 'Droid Sans', arial, serif; }
+h1 { font-family: 'Cuprum', arial, serif; }
+
+
+
+<p>Welcome <%= @resource.email %>!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+

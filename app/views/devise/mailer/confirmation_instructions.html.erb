@@ -1,5 +1,231 @@
-<p>Welcome <%= @resource.email %>!</p>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Socl.in</title>
+<style type="text/css">
+h1 { color: #4c545b; font-family: Helvetica,Georgia, serif; font-size: 41px; font-weight: bold; font-style: italic; margin-top: 0px; margin-bottom: 0px; }
+h2 { text-transform: uppercase; font-family: Helvetica,Georgia, serif; font-size: 16px; color: #2b2b2b !important; font-style: italic; border-bottom: 1px solid #c1c1c1; padding: 5px 0 5px 0; font-weight: normal; margin: 0 0 20px 0; }
+a { font-weight: bold; color: #4a5359; text-decoration: none; font-style: italic; padding: 0; }
+p, li { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #2b2b2b; line-height: 18px; margin-top: 0px; margin-bottom: 12px; padding: 0; }
+li a { text-decoration: underline; padding: 0px; }
+.footer p { margin: 0; color: #2b2b2b; }
+</style>
+</head>
+<body style="background-image: url('http://i.imgur.com/sXOdh.gif'); background-color: #fafafa;" marginheight="0" topmargin="0" marginwidth="0" bgcolor="#fafafa" leftmargin="0">
+<table cellspacing="0" border="0" height="100%" style="background-image: url('http://i.imgur.com/sXOdh.gif'); background-color: #fafafa;" cellpadding="0" width="100%">
+    <tr>
+        <td valign="top">
+            <!-- main table -->
+            <table cellspacing="0" border="0" align="center" cellpadding="0" width="675">
+                <!-- note -->
+                <tr>
+                    <td valign="top">
+                        <table cellspacing="0" border="0" align="center" cellpadding="10" width="500">
+                            <tr>
+                                <td class="note" valign="top" style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #2b2b2b; line-height: 18px;">Having trouble reading
+                                    this email? You can
+                                        <webversion style="color: #3b464f; font-weight: bold; text-decoration: none;">view it in your web browser</webversion>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- / note -->
+                <!-- header -->
+                <tr>
+                    <td valign="top">
+                        <table cellspacing="0" border="0" align="center" cellpadding="0" width="675">
+                            <!-- top -->
+                            <tr>
+                                <td height="9" valign="top"> <img src="http://i.imgur.com/iEYEa.gif" alt="" style="display: block;" /> </td>
+                            </tr>
+                            <!-- / top -->
+                            <!-- middle -->
+                            <tr>
+                                <td valign="top">
+                                    <table cellspacing="0" border="0" cellpadding="0" width="675">
+                                        <tr>
+                                            <td valign="top" width="5"> <img src="images/mailer-img/header-side.gif" alt="" style="display: block;" /> </td>
+                                            <td height="90" valign="top">
+                                                <table cellspacing="0" border="0" height="90" cellpadding="0" width="665">
+                                                    <tr>
+                                                        <td class="header-content" height="90" valign="top" style="background-color: #bbcedd; background-image: url('images/mailer-img/header-content.gif');">
+                                                            <table cellspacing="0" border="0" height="90" cellpadding="0" width="665">
+                                                                <tr>
+                                                                    <td valign="top"> <img src="images/mailer-img/spacer.gif" height="1" alt="" style="display: block;" width="20" /> </td>
+                                                                    <td align="left" valign="middle" width="545">
+                                                                        <h1>Yeah! you are on Socl now...</h1>
+                                                                    </td>
+                                                                    <!-- circle -->
+                                                                    <td height="81" align="right" valign="middle" width="81">
+                                                                        <table cellspacing="0" border="0" height="81" cellpadding="0" width="101">
+                                                                            <tr>
+                                                                                <td height="56" align="left" valign="top" width="81" style="color: #fff; text-transform: uppercase; font-size: 9px; text-align: center; font-family: Arial, Helvetica, sans-serif; width: 81px; height: 56px; background-image: url('http://i.imgur.com/WoDRX.jpg'); padding: 20px 0 0 0; background-repeat: no-repeat;">
+                                                                                    <p style="color: #fff; text-transform: uppercase; font-size: 9px; text-align: center; font-family: Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding: 0px; -webkit-text-size-adjust: none; clear: both;">
+                                                                                        <%=Time.now.strftime('%B')%>
 
-<p>You can confirm your account through the link below:</p>
+                                                                                    </p>
+                                                                                    <strong style="font-size: 24px;"><%=Time.now.strftime('%d')%></strong>
+                                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                    <td height="15"></td>
+                                                                                    </tr>
+                                                                                    </table>
+                                                                                    </td>
+                                                                                <td rowspan="3"> <img src="images/mailer-img/spacer.gif" height="1" style="display: block;" width="19" /> </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                    <!-- / circle -->
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="5"> <img src="images/mailer-img/header-side.gif" alt="" style="display: block;" /> </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- / middle -->
+                            <!-- botom -->
+                            <tr>
+                                <td height="35" valign="top"> <img src="images/mailer-img/header-bottom-left.png" alt="" style="display: block;" /> </td>
+                            </tr>
+                            <!-- / bottom -->
+                        </table>
+                    </td>
+                </tr>
+                <!-- / header -->
+                <!-- content -->
+                <tr>
+                    <td valign="top">
+                        <table cellspacing="0" border="0" cellpadding="0">
+                            <tr>
+                                <td valign="top" width="415">
+                                    <repeater toc='true'>
+                                        <table cellspacing="0" border="0" cellpadding="0">
+                                            <!-- article title -->
+                                            <tr>
+                                                <td valign="top"> <img src="images/mailer-img/double-line-small.gif" alt="" style="display: block;" /> </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" valign="middle">
+                                                    <h2>You are confirmed...but not just yet !</h2>
+                                                </td>
+                                            </tr>
+                                            <!-- / article title -->
+                                            <!-- article -->
+                                            <tr>
+                                                <td valign="top"> <img src="images/mailer-img/logo-white.png" align="right" alt="Sample"  style="padding-left: 10px; padding-bottom: 10px;" />
+                                            <p>Welcome <%= @resource.email %>!</p>
+                                            <p>You can confirm your account through the link below:</p>
+                                            <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td valign="top" height="20"></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </repeater>
+                                </td>
+                                <!-- sidebar -->
+                                <td valign="top" width="260">
+                                    <table cellspacing="0" border="0" cellpadding="0">
+                                        <tr>
+                                            <td valign="top"> <img src="images/mailer-img/spacer.gif" height="1" alt="" style="display: block;" width="35" /> </td>
+                                            <!-- in this issue box -->
+                                            <td valign="top">
+                                                <table cellspacing="0" border="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td> <img src="images/mailer-img/in-this-issue.gif" alt="" style="display: block;" /> </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <table cellspacing="0" border="0" cellpadding="0">
+                                                                            <tr>
+                                                                                <td width="10" valign="top" style="background: url(images/mailer-img/box-side.gif) repeat-y;" bgcolor="#dadada"></td>
+                                                                                <td valign="top">
+                                                                                    <table cellspacing="0" border="0" cellpadding="0" width="206" style="background-color: #e6e6e6; background-image: url('http://i.imgur.com/z1Cba.gif');">
+                                                                                        <tr>
+                                                                                            <td valign="top">
+                                                                                                <table cellspacing="0" border="0" cellpadding="10" width="206">
+                                                                                                    <tr>
+                                                                                                        <td valign="top" width="20">
+                                                                                                        <ul style="list-style: decimal-leading-zero; margin: 0px; padding: 0 0 0 25px;">
+                                                                                                        <tableofcontents>
+                                                                    <li>
+                                                                    Awesomeness
+                                                                     </li>
+                                                                </tableofcontents>
+                                                                                                        </ul>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                                <td width="10" style="background: url(images/mailer-img/box-side.gif) repeat-y;" valign="top" bgcolor="#dadada"> </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> <img src="images/mailer-img/box-bottom.gif" alt="" style="display: block;" /> </td>
+                                                                </tr>
+                                                            </table>
+                                            </td>
+                                            <!-- / in this issue box -->
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"> <img src="images/mailer-img/spacer.gif" height="20" alt="" style="display: block;" width="1" /> </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"> <img src="images/mailer-img/spacer.gif" height="1" alt="" style="display: block;" width="35" /> </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <!-- / sidebar -->
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- / content -->
+                <!-- footer -->
+                <tr>
+                    <td valign="top">
+                        <table class="footer" cellspacing="0" border="0" cellpadding="0" width="675">
+                            <tr>
+                                <td valign="top"> </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="footer" valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #2b2b2b; line-height: 18px;"> <img src="images/mailer-img/double-line.gif" alt="" width="675" style="display: block;" />
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td height="15"></td>
+                                        </tr>
+                                    </table>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td height="15"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- / footer -->
+            </table>
+            <!-- / main table -->
+        </td>
+    </tr>
+</table>
+</body>
+</html>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

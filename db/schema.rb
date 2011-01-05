@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110102175836) do
+ActiveRecord::Schema.define(:version => 20110105135838) do
 
   create_table "authentications", :force => true do |t|
     t.integer   "user_id"
@@ -23,21 +23,21 @@ ActiveRecord::Schema.define(:version => 20110102175836) do
   end
 
   create_table "calendars", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "event"
-    t.string   "where"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "when"
-    t.date     "whendate"
-    t.boolean  "important",         :default => false
-    t.float    "latitude"
-    t.float    "longitude"
-    t.boolean  "done",              :default => false
-    t.boolean  "sync",              :default => false
-    t.boolean  "twitter_shared",    :default => false
-    t.boolean  "facebook_shared",   :default => false
-    t.boolean  "foursquare_shared", :default => false
+    t.integer   "user_id"
+    t.string    "event"
+    t.string    "where"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.timestamp "when"
+    t.date      "whendate"
+    t.boolean   "important",         :default => false
+    t.float     "latitude"
+    t.float     "longitude"
+    t.boolean   "done",              :default => false
+    t.boolean   "sync",              :default => false
+    t.boolean   "twitter_shared",    :default => false
+    t.boolean   "facebook_shared",   :default => false
+    t.boolean   "foursquare_shared", :default => false
   end
 
   create_table "users", :force => true do |t|
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(:version => 20110102175836) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
     t.string    "timezone"
+    t.string    "confirmation_token"
+    t.datetime  "confirmed_at"
+    t.datetime  "confirmation_sent_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

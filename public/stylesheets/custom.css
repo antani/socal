@@ -22,7 +22,8 @@ a {
 #tour
 {
     border-bottom: 2px solid #39B2E5;
-    font-size: 20px;
+    font-size: 26px;
+    font-family: "Allan","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 #user_nav
 {
@@ -30,11 +31,15 @@ a {
     text-align: right;
     padding-right:50px;
     color: #474747;
+    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 #user_nav a
 {
-    color: #fff;
+    color: white;
     font-weight: bold;
+    font-size: 18px;
+    font-family: "Allan","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
 }
 
 #input-form-left
@@ -48,6 +53,7 @@ a {
 #input-form-left,#input-form-middle,#input-form-right label
 {
     font-size: 16px;
+    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 #input-form-left input
 {
@@ -85,13 +91,15 @@ a {
     display: block;
     text-align: center;
     margin:0 auto;
-
     -moz-border-radius: 5px 5px 5px 5px;
     background: none repeat scroll 0 0 #E6EFF2;
     border: 1px solid #C1D5DB;
     margin-bottom: 20px;
     margin-top: 25px;
     padding: 10px;
+    -moz-box-shadow: inset 0 0 2px #5CB3FF;
+    -webkit-box-shadow: inset 0 0 2px #5CB3FF;
+    box-shadow: inner 0 0 2px #5CB3FF;
 }
 #table-container
 {
@@ -115,7 +123,30 @@ a {
     text-align: center;
     text-decoration: none;
     width: 310px;
+    text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
+    font-size: 15px;
+
+
 }
+
+.duration-h2{
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    padding:10px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    background: none repeat scroll 0 0 #0CBADF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
+    font-family:'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+   /*  background: -moz-linear-gradient(-90deg,#003471,#448CCB);
+     background: -webkit-gradient(linear, left top, left bottom, from(#003471), to(#448CCB));*/
+
+}
+
+
 #feed_item_today_container,#feed_item_tomorrow_container,#feed_item_future_container,#feed_item_past_container
 {
    /*-moz-box-shadow: 0 2px 5px 0 #DDDDDD;
@@ -129,6 +160,7 @@ a {
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
     background-color: #F9F9F9;
+    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 
 }
@@ -139,17 +171,6 @@ a {
 .item-container{
     border-bottom: 2px solid #F3F3F3;
     padding: 10px 15px;
-}
-.duration-h2{
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: bold;
-    padding:10px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    background: none repeat scroll 0 0 #0CBADF;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 .logo a
 {
@@ -191,7 +212,7 @@ input[type="submit"] {
     color: #202020;
     cursor: pointer;
     display: block;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:'Yanone Kaffeesatz', "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: bold !important;
     height: 31px;
     line-height: 18px;
@@ -242,6 +263,9 @@ Navigation Header
     height: 50px;
     padding-top: 5px;
     position: relative;
+    background: -moz-linear-gradient(-90deg,#4DB8E0,#4DB8E9);
+    background: -webkit-gradient(linear, left top, left bottom, from(#4DB8E0), to(#4DB8E9));
+
 }
 #header div {
     margin: 0 auto;
@@ -271,15 +295,20 @@ Navigation Header
     margin-bottom: 10px;
     overflow: hidden;
     padding: 40px 0 15px 35px;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1
+{
+    font-family: "Yanone Kaffeesatz","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 #sign-up h1 strong {
-    font-family: "Miso","Helvetica Neue",Helvetica,Arial,sans-serif
+    font-family: "Yanone Kaffeesatz","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #202020;
     font-weight: bold;
     font-size: 30px;
 }
 #sign-up h1 {
-    font-family: 'Miso',"Helvetica Neue",Helvetica,Arial,sans-serif
+    font-family: 'Yanone Kaffeesatz',"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #838383;
     font-size: 30px;
 }
@@ -293,7 +322,15 @@ Navigation Header
   overflow: hidden;
   padding: 10px;
   position: relative;
+  font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+#free
+{
+   text-size: 24px !important;
+   font-family: 'Yanone Kaffeesatz',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+   text-align: center;
+}
+
 #details
 {
   float: right;
@@ -303,28 +340,24 @@ Navigation Header
   -moz-border-radius-bottomright: 4px;
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   font-size: 16px;
+  font-family: "Cuprum","Helvetica Neue",Helvetica,Arial,sans-serif;
+
 
 }
 #calendar_submit {
-    -moz-border-radius: 5px 5px 5px 5px;
+    width: 250px;
+   -moz-border-radius: 5px 5px 5px 5px;
     background: -moz-linear-gradient(center top , #A7E300, #99D100) repeat scroll 0 0 transparent;
     border: 1px solid #87B800;
     color: #FFFFFF;
-    cursor: pointer;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 11px;
-    font-weight: bold;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 10px;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:18px;
+    text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
     text-align: center;
-   /* text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);*/
-    text-transform: uppercase;
+   /* text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;*/
     display: block;
     margin: 5px auto;
-    padding: 10px 18px 3px;
-
-
 
 }
 .inline-edit-form
@@ -333,6 +366,11 @@ Navigation Header
     background: none repeat scroll 0 0 #E6EFF2;
     border: 1px solid #C1D5DB;
     margin-bottom: 20px;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: block;
+    -moz-box-shadow: inset 0 0 2px #5CB3FF;
+    -webkit-box-shadow: inset 0 0 2px #5CB3FF;
+    box-shadow: inner 0 0 2px #5CB3FF;
 }
 #calendar_done
 {
@@ -360,6 +398,10 @@ Navigation Header
     background: -moz-linear-gradient(center top , #A7E300, #99D100) repeat scroll 0 0 transparent;
     border: 1px solid #87B800;
     color: #FFFFFF;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:18px;
+    text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
+
 
 }
 .ribbon {
@@ -371,5 +413,22 @@ Navigation Header
 .twitter-shared
 {
  display:inline;
+}
+#signin-form h1
+{
+    font-family: "Allan","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:#39B2E5;
+}
+#signin-form
+{
+   font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.when
+{
+    font-weight: bold;
+}
+.when-date
+{
+    font-weight: bold;
 }
 
