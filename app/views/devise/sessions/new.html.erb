@@ -1,5 +1,5 @@
-<h2 class="signin-h2 round">Sign in</h2>
-<%= render :partial => "sign_in_form" %>  ...or signin using
+<div id="sign-up">
+     <%= render :partial => "sign_in_form" %>  ...or signin using
      <div class="login-using">
       <a href="/auth/twitter" class="auth_provider"><%= image_tag "social/twitter.png", :size => "32x32",:alt => "Twitter" %></a>
       <a href="/auth/facebook" class="auth_provider"><%= image_tag "social/facebook.png", :size => "32x32", :alt => "Facebook" %></a>
@@ -10,4 +10,5 @@
      <div class="clear"></div>
      </div>
 <%= render :partial => "devise/shared/links" %>
+</div>
 

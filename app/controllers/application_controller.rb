@@ -35,6 +35,23 @@ class ApplicationController < ActionController::Base
 
   end
 
+<<<<<<< HEAD
+=======
+  ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+
+    if html_tag.include? "label for"
+        if instance.error_message.kind_of?(Array)
+          %(#{html_tag}<span class="validation-error">&nbsp;#{instance.error_message.join(',')}</span>).html_safe
+        else
+          %(#{html_tag}<span class="validation-error">&nbsp;#{instance.error_message}</span>).html_safe
+        end
+    else
+        %(<div class='errored'>#{html_tag}</div>).html_safe
+    end
+
+end
+
+>>>>>>> css-changes
   private
 
   def set_user_time_zone

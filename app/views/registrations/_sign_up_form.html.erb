@@ -1,8 +1,6 @@
-Sign Up<hr/>
+<h1><strong>Join Socl,</strong> It's easy.</h1>
 <%= set_focus_to_id 'user_email' %>
 <%= form_for(:user, @user, :url => registration_path(:user)) do |f| %>
-
-
   <p><%= f.label :email %><br />
   <%= f.text_field :email  , :title=>"Enter your email. Do not worry - we hate spam more than you do.", :class => "input-tip" %></p>
 
@@ -15,6 +13,6 @@ Sign Up<hr/>
   <p><%= f.label :timezone %><br />
   <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.us_zones%>
   </div>
-  <p><%= f.submit "Sign up" %></p>
+  <p><%= f.submit "Sign up", :class=>"large"%></p>
 <% end %>
 
