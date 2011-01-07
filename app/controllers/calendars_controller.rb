@@ -57,7 +57,6 @@ class CalendarsController < ApplicationController
   # GET /calendars/1/edit
   def edit
     @calendar = Calendar.find(params[:id])
-
   end
 
   def create

@@ -23,7 +23,18 @@
   <div>
     <%= f.submit "     Submit     " %>
   </div>
+  <div>
+    <% if current_user.share_twitter==true  %>
+     <img src="images/twitter.png" title="Twitter Share is enabled" class="input-tip-bottom" style="opacity: 0.3"/>
+    <% end %>
+    <% if current_user.share_facebook==true  %>
+     <img src="images/facebook.png" title="Facebook Share is enabled", class="input-tip-bottom" style="opacity: 0.3"/>
+    <% end %>
+    <% if current_user.share_foursquare==true  %>
+     <img src="images/foursquare.png" title="Foursquare Share is enabled", class="input-tip-bottom" style="opacity: 0.3"/>
+    <% end %>
 
+  </div>
 
 <% end %>
 </div>

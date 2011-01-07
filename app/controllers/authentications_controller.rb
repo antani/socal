@@ -51,13 +51,15 @@ class AuthenticationsController < ApplicationController
         redirect_to authentications_url
       else
         #Condition : 4, This is a new user
+        logger.debug "Just signin using twitter"
+
         user = User.new
         user.apply_omniauth(omniauth)
         if user.save
           flash[:notice] = "Signed in successfully."
           sign_in_and_redirect(:user, user)
         else
-          flash[:notice] = "Signed up successfully."
+          flash[:notice] = "We could not find any existing login associated with you. If you are a new user, please sign-up. If you are a registered user, login normally and associate additional login services via <Setings> page."
           session[:omniauth] = omniauth.except('extra')
           redirect_to new_user_registration_url
         end

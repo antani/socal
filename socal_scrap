@@ -249,3 +249,10 @@ h1 { font-family: 'Cuprum', arial, serif; }
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
 
+
+
+   <%=check_box("users", "share_twitter", {}, "true", "false") %>
+   <%=check_box("users", "share_facebook", {}, "true", "false")%>
+   <%=check_box("users", "share_foursquare", {}, "true", "false")%>
+<%= form_for :user, @user, :url => settings_path(:user), :remote=>true do |f| %>
+

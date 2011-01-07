@@ -140,7 +140,7 @@ $(document).ready(function() {
 
 
      //Step: 1 set hover event on all the 'where' class divs
-     $('a[rel^="map-"]').colorbox({inline:true, href: function() {
+     $('a[rel^="map-"]').colorbox({opacity:0.2,inline:true, href: function() {
                                                return "#"+$(this).attr('rel');
                                                }});
      $(".map-icon").hide();
@@ -151,6 +151,7 @@ $(document).ready(function() {
      );
 
      $('div[id^="map-"]').each(function() {
+            $(this).css("z-index", "1");
             var relStr = $(this).attr('title');
             var co_ords = relStr.split(',');
             lat = co_ords[0];
@@ -162,15 +163,16 @@ $(document).ready(function() {
             var mapstraction;
             mapstraction = new mxn.Mapstraction($(this).attr('id'),'google');
             var myPoint = new mxn.LatLonPoint(lat,lon);
-            mapstraction.setCenterAndZoom(myPoint, 15);
+            mapstraction.setCenterAndZoom(myPoint, 16);
             mapstraction.addControls({
                                         pan: true,
-                                        zoom: 'small',
+                                        zoom: 'large',
                                         map_type: true
                                     });
             // create a marker positioned at a lat/lon
             my_marker = new mxn.Marker(myPoint);
-            my_marker.setIcon('http://mapstraction.com/icon.gif');
+            var text = loc;
+            my_marker.setInfoBubble(text);
             // display marker
             mapstraction.addMarker(my_marker);
      }
@@ -183,6 +185,8 @@ $(document).ready(function() {
        $('div[id^="inline-edit-form-"]').css("padding","6px");
        $('div[id^="inline-edit-form-"]').find('label').css("padding","5px");
        $('div[id^="inline-edit-form-"]').find('input').css("float","left");
+/*       $( "#feed_item_today" ).accordion();*/
+
 
 
 });

@@ -1,4 +1,4 @@
-/*----------------Fonts------------------*/
+/*----------------Fonts------------------
 @font-face {
   font-family: Yanone;
   src: url('/fonts/YanoneKaffeesatz-Bold.otf') format("opentype");
@@ -6,7 +6,7 @@
 @font-face {
 font-family: Miso;
     src: url("/fonts/miso.otf") format("opentype");
-}
+}*/
 /*--------------------------------------------------------------------*/
 
 body {
@@ -340,7 +340,7 @@ h1
   -moz-border-radius-bottomright: 4px;
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  font-family: "Cuprum","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 
 }
@@ -391,6 +391,11 @@ h1
     padding: 15px;
 
 }
+#forget-password-container input[type=submit]
+{
+    font-size: 12px;
+}
+
 #user_submit
 {
     width: 250px;
@@ -430,5 +435,54 @@ h1
 .when-date
 {
     font-weight: bold;
+}
+#auths,#change_pwd
+{
+    float:left;
+    width: 291px;
+    margin-top:15px;
+    margin-bottom:10px;
+    border: 1px solid #DEDEDE;
+    color: #838383;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    background-color: #F9F9F9;
+    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-right:10px;
+    padding: 10px;
+}
+#user_settings
+{
+    float:right;
+    width:280px;
+    margin-top:15px;
+    margin-bottom:10px;
+    border: 1px solid #DEDEDE;
+    color: #838383;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    background-color: #F9F9F9;
+    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    padding: 10px;
+
+}
+.authentication
+{
+    border: 1px solid #DEDEDE;
+    color: #838383;
+
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+}
+.provider
+{
+    padding-left: 5px;
 }
 

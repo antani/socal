@@ -1,6 +1,12 @@
 
  <div id="user_nav">
    <% if user_signed_in? %>
+    <%= link_to image_tag("refresh.png"),
+               { :controller => :g_data, :method =>:index },
+               { :title => "Sync with Google Calendar", :class =>"setting-icon" } %>
+
+    <% logo_cog = image_tag("cog.png", :alt => "Settings") %>
+    <%= link_to logo_cog, settings_home_path %>
      Signed in as <%= current_user.email %>. Not you?
      <%= link_to "Sign out", destroy_user_session_path %>
    <% else %>

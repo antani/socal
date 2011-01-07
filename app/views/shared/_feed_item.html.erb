@@ -53,7 +53,7 @@
       %>
 
       <td style="padding:0px;">
-        <img title="<%=title_text%>" rel="<%=feed_item.twitter_shared or feed_item.facebook_shared or feed_item.foursquare_shared%>" src="/images/Chat2.png" class="twitter-shared"/>
+        <img title="<%=title_text%>" rel="<%=feed_item.sync or feed_item.twitter_shared or feed_item.facebook_shared or feed_item.foursquare_shared%>" src="/images/Chat2.png" class="twitter-shared"/>
       </td>
       <td style="padding:0px;">
           <%= link_to image_tag("delete.png"),

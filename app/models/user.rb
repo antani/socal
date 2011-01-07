@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :confirmable,:trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :timezone,:reminder_duration,:share_twitter, :share_facebook,:share_foursquare
 
 
    def feed

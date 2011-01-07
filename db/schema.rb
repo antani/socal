@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110105135838) do
+ActiveRecord::Schema.define(:version => 20110107153224) do
 
   create_table "authentications", :force => true do |t|
     t.integer   "user_id"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(:version => 20110105135838) do
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email",                               :default => "", :null => false
-    t.string    "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string    "password_salt",                       :default => "", :null => false
+    t.string    "email",                               :default => "",    :null => false
+    t.string    "encrypted_password",   :limit => 128, :default => "",    :null => false
+    t.string    "password_salt",                       :default => "",    :null => false
     t.string    "reset_password_token"
     t.string    "remember_token"
     t.timestamp "remember_created_at"
@@ -58,6 +58,10 @@ ActiveRecord::Schema.define(:version => 20110105135838) do
     t.string    "confirmation_token"
     t.datetime  "confirmed_at"
     t.datetime  "confirmation_sent_at"
+    t.integer   "reminder_duration"
+    t.boolean   "share_twitter",                       :default => false
+    t.boolean   "share_facebook",                      :default => false
+    t.boolean   "share_foursquare",                    :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

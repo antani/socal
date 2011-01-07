@@ -120,9 +120,9 @@ li a { text-decoration: underline; padding: 0px; }
                                             <!-- article -->
                                             <tr>
                                                 <td valign="top"> <img src="images/mailer-img/logo-white.png" align="right" alt="Sample"  style="padding-left: 10px; padding-bottom: 10px;" />
-                                            <p>Welcome <%= @resource.email %>!</p>
+                                            <p>Welcome <%= @user.email %>!</p>
                                             <p>You can confirm your account through the link below:</p>
-                                            <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+                                            <p><%= link_to 'Confirm my account', confirmation_url(@user, :confirmation_token => @user.confirmation_token) %></p>
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td valign="top" height="20"></td>
@@ -158,9 +158,7 @@ li a { text-decoration: underline; padding: 0px; }
                                                                                                         <td valign="top" width="20">
                                                                                                         <ul style="list-style: decimal-leading-zero; margin: 0px; padding: 0 0 0 25px;">
                                                                                                         <tableofcontents>
-                                                                    <li>
-                                                                    Awesomeness
-                                                                     </li>
+
                                                                 </tableofcontents>
                                                                                                         </ul>
                                                                                                         </td>
