@@ -12,7 +12,18 @@ class AuthenticationsController < ApplicationController
       logger.debug current_user.inspect
       logger.debug "----------------------------------------------------------------"
 
-      authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+#      authentication = Authentication.find_by_provider(omniauth['provider']).where("uid = ? ", omniauth['uid'])
+
+      #Due to heroku Postgres datatype strictness
+      #authentication = Authentication.where(:provider=>omniauth['provider'], :uid=>omniauth['uid'])
+      authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'].to_s)
+  #    authentication = Authentication.find :all, :conditions => ["provider = ? and uid = ?", omniauth['provider'], omniauth['uid']]
+
+
+      logger.debug omniauth['provider']
+      logger.debug omniauth['uid']
+      logger.debug authentication.user.email
+      #authentication = authentication_provider
       provider = omniauth['provider']
       user = User.find_by_email(omniauth['user_info']['email'])
       if provider=='facebook'
