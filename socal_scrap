@@ -256,3 +256,27 @@ h1 { font-family: 'Cuprum', arial, serif; }
    <%=check_box("users", "share_foursquare", {}, "true", "false")%>
 <%= form_for :user, @user, :url => settings_path(:user), :remote=>true do |f| %>
 
+<%= form_for(@user, :as => :user, :url => password_path(@user), :html => {:method => :put }) do |f| %>
+
+
+
+<%= devise_error_messages! %>
+
+
+
+<div id="change_pwd">
+
+<%= form_for(@user, :as => :user, :url => setting_path(@user), :html => {:method => :put }, :remote=>true) do |f| %>
+
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <% end %>
+
+
+
+  <p><%= f.submit "Change my password" %></p>
+<% end %>
+
+</div>
+<%= form_for(@user, :as => :user, :url => settings_path) do |f| %>
+

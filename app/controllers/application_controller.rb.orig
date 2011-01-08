@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def show
     @user = current_user
     @microposts = @user.calendars.paginate(:page => params[:page])
-    @title = @user.email
+    @title = @user.name
   end
 
   def setup_google
@@ -35,8 +35,9 @@ class ApplicationController < ActionController::Base
 
   end
 
-
-ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+<<<<<<< HEAD
+=======
+  ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
 
     if html_tag.include? "label for"
         if instance.error_message.kind_of?(Array)
@@ -50,9 +51,7 @@ ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
 
 end
 
-
-
-
+>>>>>>> css-changes
   private
 
   def set_user_time_zone

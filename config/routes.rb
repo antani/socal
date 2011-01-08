@@ -1,10 +1,9 @@
 Socal::Application.routes.draw do
+
   get "settings/home"
-
   resources :authentications
-
   resources :calendars
-  resources :settings
+  resources :settings, :only => [:create, :edit, :update]
   resources :g_data
 
   resources :calendars do

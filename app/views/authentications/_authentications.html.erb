@@ -1,0 +1,32 @@
+<div id="auths">
+   <% if current_user.authentications %>
+    <% unless current_user.authentications.empty? %>
+       <p><strong>You can sign in to this account using:</strong></p>
+         <div class="authentications">
+              <% for authentication in current_user.authentications %>
+                <div class="authentication">
+                     <%= image_tag "social/#{authentication.provider.capitalize!}_72.png" %>
+                        <div class="provider"><%= authentication.provider.titleize%></div>
+      <!--<div class="uid"><%= authentication.uid %></div> -->
+                        <%= link_to "(Remove)", authentication, :confirm =>'Are you sure you want to remove this authentication option?', :method => :delete, :class => "remove" %>
+                </div>
+               <% end %>
+              <div class="clear"></div>
+         </div>
+    <% end %>
+    <br/>
+    <p><strong>Add another service to sign in with:</strong></p>
+    <% else %>
+     <p><strong>You can configure the following services to sign-in with:</strong></p>
+    <% end %>
+     <a href="/auth/twitter" class="auth_provider">
+          <%= image_tag "social/Twitter_72.png", :size => "64x64",:alt => "Twitter" %></a>
+     <a href="/auth/facebook" class="auth_provider">
+          <%= image_tag "social/Facebook_72.png", :size => "64x64", :alt => "Facebook" %></a>
+     <a href="/auth/google_apps" class="auth_provider">
+          <%= image_tag "social/Google_72.png", :size => "64x64", :alt => "Google" %></a>
+     <a href="/auth/foursquare" class="auth_provider">
+          <%= image_tag "social/Foursquare_72.png", :size => "64x64",:alt => "Foursquare" %></a>
+     <div class="clear"></div>
+</div>
+

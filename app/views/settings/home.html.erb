@@ -1,0 +1,54 @@
+
+<%= render :partial => "authentications/authentications" %>
+
+<div id="user_settings">
+<%= form_for(:user, @user, :url => settings_path, :remote=>true) do |f| %>
+<% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><%= value %></div>
+<% end %>
+  <p><%= f.label :reminder_duration %>(Minutes)<br />
+  <%= f.text_field :reminder_duration  , :title=>"Enter duration before you want the default reminder. Just add minutes like 5 or 10", :class => "input-tip" %></p>
+
+  <div title="Please select your timezone - this is important unless you want a really screwed notification system.", class = "input-tip"  >
+  <p><%= f.label :timezone %><br />
+  <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.us_zones%>
+  </div>
+  <div>Share on :<br/>
+  <%
+  twit_auth = current_user.authentications.find_by_provider('twitter')
+  fb_auth = current_user.authentications.find_by_provider('facebook')
+  fs_auth = current_user.authentications.find_by_provider('foursquare')
+  %>
+  <% if twit_auth %>
+     <%=check_box_tag 'share_twitter', 'yes', current_user.share_twitter %><img src="/images/twitter.png"/><br/>
+  <% end %>
+  <% if fb_auth %>
+    <%=check_box_tag 'share_facebook', 'yes', current_user.share_facebook %><img src="/images/facebook-tiny.png"/><br/>
+  <%else%>
+    <img src="/images/facebook-tiny.png"/> not authorized.<br/>
+  <%end%>
+  <% if fs_auth %>
+     <%= check_box_tag 'share_foursquare', 'yes', current_user.share_foursquare %><img src="/images/foursquare.png"/><br/>
+  <%else%>
+    <img src="/images/foursquare.png"/> not authorized.<br/>
+  <% end %>
+  </div>
+  <p><%= f.submit "Save Preferences", :class=>"large"%></p>
+<%end%>
+</div>
+
+<div id="change_pwd">
+ <%= form_for(:user, @user, :url => settings_path) do |f| %>
+<% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><%= value %></div>
+<% end %>
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></p>
+
+  <p><%= f.submit "Change my password" %></p>
+<% end %>
+</div>
+
