@@ -2,7 +2,7 @@
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 <% end %>
-
+<br/>
 <%= form_for(:user, @user, :url => session_path(:user)) do |f| %>
   <p><%= f.label :email %><br /><%= f.text_field :email %> <br/></p>
   <p><%= f.label :password %><br /><%= f.password_field :password %></p>

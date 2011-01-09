@@ -282,7 +282,8 @@ Navigation Header
     background-color: #F05931;
     font-weight: bold;
     color: white;
-        float:left;
+    float:left;
+    text-align:center;
     width: 200px;
 
 }
