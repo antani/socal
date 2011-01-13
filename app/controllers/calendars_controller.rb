@@ -35,7 +35,7 @@ class CalendarsController < ApplicationController
   # GET /calendars/1.xml
   def show
         logger.debug "........................Calendars.show"
-    @calendar = Calendar.find(params[:id], :order => '"calendars.when"')
+    @calendar = Calendar.find(params[:id], :order => '"calendars.event_time"')
 
     respond_to do |format|
       format.html # show.html.erb
@@ -61,8 +61,8 @@ class CalendarsController < ApplicationController
 
   def create
     eventStr =  params['calendar']['event']
-    whereStr =  params['calendar']['where']
-    whenStr  =  params['calendar']['when']
+    whereStr =  params['calendar']['event_location']
+    whenStr  =  params['calendar']['event_time']
     logger.debug "whenStr : "
     logger.debug whenStr
     #Get geo location
@@ -112,8 +112,12 @@ class CalendarsController < ApplicationController
     if eventStr
       #Automatically flag an event important
       importantEvent = eventStr.include? 'important'
+      reminder_duration = current_user.reminder_duration
+      reminder_duration_what = current_user.remind_before_what
+      
+      reminder_time_s = guessed_when - reminder_duration.to_i.send(reminder_duration_what.downcase.to_sym)
 
-      @calendar  = current_user.calendars.build(:event=>eventStr, :where=>whereStr, :when => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => lat, :longitude => lon)
+      @calendar  = current_user.calendars.build(:event=>eventStr, :event_location=>whereStr, :event_time => guessed_when, :whendate => guessed_when.to_date, :important => importantEvent, :latitude => lat, :longitude => lon, :remind_before => reminder_duration, :remind_before_what => reminder_duration_what, :reminder_time => reminder_time_s)
       if @calendar
         if @calendar.save
           #post_to_twitter(@calendar)
@@ -152,8 +156,14 @@ class CalendarsController < ApplicationController
 
    respond_to do |format|
      if @calendar.update_attributes(params[:calendar])
-      when_date = @calendar.when.to_date
-      @calendar.update_attributes(:whendate => when_date)
+      when_s = params[:calendar][:event_time]
+      when_date = when_s.to_date
+      remind_what = params[:reminder_before_what]
+      remind_before = params[:calendar][:remind_before]
+
+      
+      reminder_time_s = when_s.to_datetime - remind_before.to_i.send(remind_what.downcase.to_sym)
+      @calendar.update_attributes(:whendate => when_date, :remind_before_what => remind_what, :reminder_time => reminder_time_s )
       #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
       format.html {
         #flash[:success] = "Calendar updated"

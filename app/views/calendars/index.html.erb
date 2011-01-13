@@ -7,8 +7,8 @@
     <th>Id</th>
     <th>User</th>
     <th>Event</th>
-    <th>Where</th>
-    <th>When</th>
+    <th>Event Location</th>
+    <th>Event Time</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,8 +19,8 @@
     <td><%= calendar.id %></td>
     <td><%= calendar.user_id %></td>
     <td><%= calendar.event %></td>
-    <td><%= calendar.where %></td>
-    <td><%= calendar.when %></td>
+    <td><%= calendar.event_location %></td>
+    <td><%= calendar.event_time %></td>
     <td><%= link_to 'Show', calendar %></td>
     <td><%= link_to 'Edit', edit_calendar_path(calendar) %></td>
     <td><%= link_to 'Destroy', calendar, :confirm => 'Are you sure?', :method => :delete %></td>

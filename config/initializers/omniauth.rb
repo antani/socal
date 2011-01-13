@@ -5,7 +5,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
    provider :facebook, '181816611843055', 'eaf9afe8ad70a9626dfd488ec882c237',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
  #  provider :foursquare, 'Q00C0YHNLKLGGKLK2ZLLWY2YDPWDTZ2DSYJ1G2BQ1NAAL542', 'HAOZ1JEHPHKLNHFXUG5ZUGQJM3BVJ10OAJC5QUOFGJCOHH0V'
    provider :open_id, nil
-     use OmniAuth::Strategies::OpenID, nil, :name => 'yahoo', :identifier => 'yahoo.com'
+     use OmniAuth::Strategies::OpenID, nil, :name => 'yahoo', :identifier => "https://me.yahoo.com"
      use OmniAuth::Strategies::OpenID, nil, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
 
    #Development key

@@ -26,7 +26,7 @@ gem "mongrel"
 gem 'dalli'
 gem 'gdata_19'
 gem 'foursquare'
-
+#gem 'chronic_duration'
 
 #gem "faraday"
 #gem "twitter", '>= 1.0.0'

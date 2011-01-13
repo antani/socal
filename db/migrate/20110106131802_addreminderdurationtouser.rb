@@ -1,6 +1,6 @@
 class Addreminderdurationtouser < ActiveRecord::Migration
   def self.up
-    add_column :users, :reminder_duration, :integer
+    add_column :users, :reminder_duration, :integer, :default => 10
   end
 
   def self.down

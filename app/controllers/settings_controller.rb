@@ -24,6 +24,7 @@ class SettingsController < ApplicationController
         new_cnf_pwd = params[:user][:password_confirmation]
         reminder = params[:user][:reminder_duration]
         tz = params[:user][:timezone]
+        remind_before = params[:reminder_before_what]
         if params[:share_twitter] != nil
           st = true
         else
@@ -47,6 +48,7 @@ class SettingsController < ApplicationController
         @user.share_twitter = st
         @user.share_facebook = sf
         @user.share_foursquare = sff
+        @user.remind_before_what = remind_before
         if @user.save
            logger.debug "Settings saved....................................................."
            #flash[:success] = "Settings updated"

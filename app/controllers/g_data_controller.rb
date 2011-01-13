@@ -24,7 +24,7 @@ class GDataController < ApplicationController
        end
        @missing_calendar.each do |m|
 
-           cal_entry = "<entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>"+"<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>"+"<title type='text'>"+m.event+"</title><content type='text'>"+m.event+"</content>"+"<gd:transparency value='http://schemas.google.com/g/2005#event.opaque'></gd:transparency><gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus><gd:where valueString='"+m.where+"'></gd:where><gd:when startTime='"+(m.when).strftime("%Y-%m-%dT%H:%M:%S")+"' endTime='"+ (m.when+1.hour).strftime("%Y-%m-%dT%H:%M:%S")+"'><gd:reminder minutes='5'/></gd:when></entry>"
+           cal_entry = "<entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>"+"<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>"+"<title type='text'>"+m.event+"</title><content type='text'>"+m.event+"</content>"+"<gd:transparency value='http://schemas.google.com/g/2005#event.opaque'></gd:transparency><gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus><gd:where valueString='"+m.event_location+"'></gd:where><gd:when startTime='"+(m.event_time).strftime("%Y-%m-%dT%H:%M:%S")+"' endTime='"+ (m.event_time+1.hour).strftime("%Y-%m-%dT%H:%M:%S")+"'><gd:reminder minutes='5'/></gd:when></entry>"
 
 
             response = @client.post(uri, cal_entry)

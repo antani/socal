@@ -16,13 +16,20 @@ end
 
    def noise
     Rails.logger.debug "Starting to create noise---------------------------------------------------------------"
-    #Find all calendars that have 'when' = now.
-    @mail_calendar = Calendar.where(:when => (Time.now+5.minutes)..(Time.now+6.minutes))
-    @mail_calendar.each do |c|
-      UserMailer.registration_confirmation(c.user,c).deliver
-      twitter_noise(c.user,c)
-      facebook_noise(c.user,c)
-      foursquare_noise(c.user,c)
+    @mail_calendar_for_reminder=Calendar.where(:reminder_time => Time.now-30.seconds..Time.now+30.seconds)
+    @mail_calendar_for_reminder.each do |cal_inner|
+    Rails.logger.debug "Going to noise now on google etc---------------------------------------------------------"          
+    UserMailer.registration_confirmation(cal_inner.user,cal_inner).deliver
+      
+      if cal_inner.user.share_twitter
+        twitter_noise(cal_inner.user,cal_inner)
+      end
+      if cal_inner.user.share_facebook
+        facebook_noise(cal_inner.user,cal_inner)
+      end
+      if cal_inner.user.share_foursquare
+        foursquare_noise(cal_inner.user,cal_inner)
+      end
     end
     Rails.logger.debug "Noised---------------------------------------------------------------------------------"
    end
@@ -104,7 +111,7 @@ end
        # Rails.logger.debug calendar.where.downcase
        # Rails.logger.debug "checkin ----------------------------------------------------------"
 
-     if calendar.where.downcase.include? key.downcase
+     if calendar.event_location.downcase.include? key.downcase
       # Rails.logger.debug "Found the exact venue"
        venue_id = value
       # Rails.logger.debug venue_id
@@ -121,7 +128,7 @@ end
     options = {
     :vid => venue_id,
     :shout => calendar.event,
-    :venue => calendar.where,
+    :venue => calendar.event_location,
     :private => 0,
     :twitter => 0,
     :geolat => calendar.latitude,
@@ -163,6 +170,9 @@ end
     @foursquare = Foursquare::Base.new(oauth)
   end
 
-
   #-------------------------------------------Foursquare helper methods - end
+def remind_before_from_now(cal)
+  cal.remind_before.to_i.send(cal.remind_before_what.downcase.to_sym).from_now 
+  
+end
 

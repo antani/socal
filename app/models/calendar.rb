@@ -1,6 +1,6 @@
 class Calendar < ActiveRecord::Base
   belongs_to :user
-  attr_accessible :event, :where, :when, :whendate, :important, :latitude, :longitude, :done
+  attr_accessible :event, :event_location, :event_time, :whendate, :important, :latitude, :longitude, :done, :remind_before, :remind_before_what, :reminder_time
   #Validation
   validates :event, :presence => true, :length => {:maximum => 140}
 
@@ -11,7 +11,7 @@ class Calendar < ActiveRecord::Base
    def noise
      logger.debug "---------Trying to create noise-----------------------------"
     #Find all calendars that have 'when' = now.
-    @mail_calendar = Calendar.where(:when => (Time.now+5.minutes)..(Time.now+6.minutes))
+    @mail_calendar = Calendar.where(:event_time => (Time.now+5.minutes)..(Time.now+6.minutes))
     @mail_calendar.each do |c|
       UserMailer.registration_confirmation(c.user,c).deliver
     end

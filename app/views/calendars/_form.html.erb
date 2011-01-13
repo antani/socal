@@ -5,14 +5,14 @@
   <br />
   <div class="clear"></div>
   <div>
-    <%= f.label :where %><br />
-    <%= f.text_field :where %>
+    <%= f.label :event_location %><br />
+    <%= f.text_field :event_location %>
   </div>
   <br />
   <div class="clear"></div>
   <div>
-    <%= f.label :when %><br />
-    <%= f.text_field :when %>
+    <%= f.label :event_time %><br />
+    <%= f.text_field :event_time %>
   </div>
   <br />
   <div class="clear"></div>
@@ -22,5 +22,12 @@
     <div class="clear"></div>
   <div>
   <%= f.check_box :done %><b>Completed ?</b>
+  </div>
+  <div>
+
+  <div class="clear"></div>
+  <%= f.label :remind_before , :class=>"label-remind-before"%><br/>  <div class="clear"></div>
+  <%= f.text_field :remind_before  , :title=>"Enter duration before you want the default reminder. Just add minutes like 5 or 10", :class => "input-tip" %>
+  <%= select_tag "reminder_before_what", options_for_select([ "Minutes","Hours","Days" ], "Minutes") %>
   </div>
 

@@ -27,7 +27,7 @@ module ApplicationHelper
   def noise
      logger.debug "---------Trying to create noise-----------------------------"
     #Find all calendars that have 'when' = now.
-    @mail_calendar = Calendar.where(:when => (Time.now+5.minutes)..(Time.now+6.minutes))
+    @mail_calendar = Calendar.where(:event_time => (Time.now+5.minutes)..(Time.now+6.minutes))
     @mail_calendar.each do |c|
       UserMailer.registration_confirmation(c.user,c).deliver
     end

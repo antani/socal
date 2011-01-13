@@ -1,5 +1,5 @@
       <div style="display:none">
-         <div id="map-<%=hidden_map_inline_edit.id%>" title="<%=hidden_map_inline_edit.latitude%>,<%=hidden_map_inline_edit.longitude%>,<%=hidden_map_inline_edit.where%>" style="width: 500px; height: 500px">
+         <div id="map-<%=hidden_map_inline_edit.id%>" title="<%=hidden_map_inline_edit.latitude%>,<%=hidden_map_inline_edit.longitude%>,<%=hidden_map_inline_edit.event_location%>" style="width: 500px; height: 500px">
          <div>
           Foursquare Details
         </div>
@@ -10,7 +10,7 @@
           <div id="inline-edit-form-<%=hidden_map_inline_edit.id%>" class="inline-edit-form">
             <%= form_for (hidden_map_inline_edit) do |f| %>
                   <%=render :partial => 'calendars/form', :locals => { :f => f }%>
-                  <div>
+                  <div id="edit-submit">
                     <%= f.submit %>
                   </div>
             <%end%>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110107153224) do
+ActiveRecord::Schema.define(:version => 20110113082414) do
 
   create_table "authentications", :force => true do |t|
     t.integer   "user_id"
@@ -23,45 +23,49 @@ ActiveRecord::Schema.define(:version => 20110107153224) do
   end
 
   create_table "calendars", :force => true do |t|
-    t.integer   "user_id"
-    t.string    "event"
-    t.string    "where"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.timestamp "when"
-    t.date      "whendate"
-    t.boolean   "important",         :default => false
-    t.float     "latitude"
-    t.float     "longitude"
-    t.boolean   "done",              :default => false
-    t.boolean   "sync",              :default => false
-    t.boolean   "twitter_shared",    :default => false
-    t.boolean   "facebook_shared",   :default => false
-    t.boolean   "foursquare_shared", :default => false
+    t.integer  "user_id"
+    t.string   "event"
+    t.string   "event_location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "event_time"
+    t.date     "whendate"
+    t.boolean  "important",          :default => false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "done",               :default => false
+    t.boolean  "sync",               :default => false
+    t.boolean  "twitter_shared",     :default => false
+    t.boolean  "facebook_shared",    :default => false
+    t.boolean  "foursquare_shared",  :default => false
+    t.integer  "remind_before",      :default => 10
+    t.string   "remind_before_what", :default => "Minutes"
+    t.time     "reminder_time"
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email",                               :default => "",    :null => false
-    t.string    "encrypted_password",   :limit => 128, :default => "",    :null => false
-    t.string    "password_salt",                       :default => "",    :null => false
-    t.string    "reset_password_token"
-    t.string    "remember_token"
-    t.timestamp "remember_created_at"
-    t.integer   "sign_in_count",                       :default => 0
-    t.timestamp "current_sign_in_at"
-    t.timestamp "last_sign_in_at"
-    t.string    "current_sign_in_ip"
-    t.string    "last_sign_in_ip"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "timezone"
-    t.string    "confirmation_token"
-    t.datetime  "confirmed_at"
-    t.datetime  "confirmation_sent_at"
-    t.integer   "reminder_duration"
-    t.boolean   "share_twitter",                       :default => false
-    t.boolean   "share_facebook",                      :default => false
-    t.boolean   "share_foursquare",                    :default => false
+    t.string   "email",                               :default => "",        :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "",        :null => false
+    t.string   "password_salt",                       :default => "",        :null => false
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "timezone"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.integer  "reminder_duration",                   :default => 10
+    t.boolean  "share_twitter",                       :default => false
+    t.boolean  "share_facebook",                      :default => false
+    t.boolean  "share_foursquare",                    :default => false
+    t.string   "remind_before_what",   :limit => nil, :default => "Minutes"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -8,20 +8,20 @@
     </div>
 
     <div id="input-form-middle">
-    <%= f.label :when, :id => "input-form-middle-label" %>
-    <%= f.text_field :when ,:title=>"e.g.:In 5 minutes, Next Tuesday 5pm, Now, Today 5pm",:class=>"input-tip-bottom"%>
+    <%= f.label :event_time, :id => "input-form-middle-label" %>
+    <%= f.text_field :event_time ,:title=>"e.g.:In 5 minutes, Next Tuesday 5pm, Now, Today 5pm",:class=>"input-tip-bottom"%>
     </div>
 
    <div id="input-form-right">
-    <%= f.label :where, :id => "input-form-where-label" %>
-    <%= f.text_field :where,:title=>"e.g.:White House Washington, Taj Mahal India",:class=>"input-tip-bottom" %>
+    <%= f.label :event_location, :id => "input-form-where-label" %>
+    <%= f.text_field :event_location,:title=>"e.g.:White House Washington, Taj Mahal India",:class=>"input-tip-bottom" %>
     </div>
   </div>
   <br/>
   <br/>
   <div class="clear"></div>
   <div>
-    <%= f.submit "     Submit     " %>
+    <%= f.submit "Add Event" %>
   </div>
   <div>
     <% if current_user.share_twitter==true  %>

@@ -142,7 +142,37 @@ $(document).ready(function() {
      //Step: 1 set hover event on all the 'where' class divs
      $('a[rel^="map-"]').colorbox({opacity:0.2,inline:true, href: function() {
                                                return "#"+$(this).attr('rel');
-                                               }});
+                                               },
+                                               onComplete: function(){
+                                                   $("#"+$(this).attr('rel')).each(function() {
+                                                                                        $(this).css("z-index", "1");
+                                                                                        var relStr = $(this).attr('title');
+                                                                                        var co_ords = relStr.split(',');
+                                                                                        lat = co_ords[0];
+                                                                                        lon = co_ords[1];
+                                                                                        loc = co_ords[2];
+                                                                                        var a = [loc];
+
+
+                                                                                        var mapstraction;
+                                                                                        mapstraction = new mxn.Mapstraction($(this).attr('id'),'google');
+                                                                                        var myPoint = new mxn.LatLonPoint(lat,lon);
+                                                                                        mapstraction.setCenterAndZoom(myPoint, 16);
+                                                                                        mapstraction.addControls({
+                                                                                                                    pan: true,
+                                                                                                                    zoom: 'large',
+                                                                                                                    map_type: true
+                                                                                                                });
+                                                                                        // create a marker positioned at a lat/lon
+                                                                                        my_marker = new mxn.Marker(myPoint);
+                                                                                        var text = loc;
+                                                                                        my_marker.setInfoBubble(text);
+                                                                                        // display marker
+                                                                                        mapstraction.addMarker(my_marker);
+                                                                                 })
+                                                }});
+
+
      $(".map-icon").hide();
      $('a[rel^="map-"]').hover(
 
@@ -150,7 +180,7 @@ $(document).ready(function() {
         function() { $(this).next('.map-icon').hide(slow);}
      );
 
-     $('div[id^="map-"]').each(function() {
+/*     $('div[id^="map-"]').each(function() {
             $(this).css("z-index", "1");
             var relStr = $(this).attr('title');
             var co_ords = relStr.split(',');
@@ -176,7 +206,7 @@ $(document).ready(function() {
             // display marker
             mapstraction.addMarker(my_marker);
      }
-     );
+     );*/
 //     $('a[id^="edit-form-link-"]').fancybox(); transition:'fade', speed:500}
        $('a[id^="edit-form-link-"]').colorbox({title:'Edit Calendar Entry',transition:'elastic',opacity:0.3,inline:true, href: function() {
                                                return $(this).attr('href');

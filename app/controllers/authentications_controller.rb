@@ -21,7 +21,7 @@ class AuthenticationsController < ApplicationController
 
       logger.debug omniauth['provider']
       logger.debug omniauth['uid']
-      logger.debug authentication.user.email
+#      logger.debug authentication.user.email
       #authentication = authentication_provider
       provider = omniauth['provider']
       user = User.find_by_email(omniauth['user_info']['email'])
