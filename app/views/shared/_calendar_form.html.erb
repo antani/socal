@@ -1,4 +1,4 @@
-<div id="calendar-container">
+<div id="calendar-container" class="Museo-500">
 <%= form_for @calendar do |f| %>
 
   <div class="input-form">
@@ -21,7 +21,7 @@
   <br/>
   <div class="clear"></div>
   <div>
-    <%= f.submit "Add Event" %>
+    <%= f.submit "Add Event", :class=>"Museo-500" %>
   </div>
   <div>
     <% if current_user.share_twitter==true  %>

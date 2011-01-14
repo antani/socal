@@ -1,7 +1,7 @@
 
 <%= render :partial => "authentications/authentications" %>
 
-<div id="user_settings">
+<div id="user_settings" class="Museo-300">
 <%= form_for(:user, @user, :url => settings_path, :remote=>true) do |f| %>
 <% flash.each do |key, value| %>
     <div class="flash <%= key %>"><%= value %></div>
@@ -33,11 +33,11 @@
     <img src="/images/foursquare.png"/> not authorized.<br/>
   <% end %>
   </div>
-  <p><%= f.submit "Save Preferences", :class=>"large"%></p>
+  <p><%= f.submit "Save Preferences", :class=>"large Museo-300"%></p>
 <%end%>
 </div>
 
-<div id="change_pwd">
+<div id="change_pwd" class="Museo-300">
  <%= form_for(:user, @user, :url => settings_path) do |f| %>
 <% flash.each do |key, value| %>
     <div class="flash <%= key %>"><%= value %></div>
@@ -48,7 +48,7 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.submit "Change my password" %></p>
+  <p><%= f.submit "Change my password",:class=>"Museo-300" %></p>
 <% end %>
 </div>
 

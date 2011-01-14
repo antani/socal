@@ -7,6 +7,7 @@ class AuthenticationsController < ApplicationController
 
   def create
       omniauth = request.env["omniauth.auth"]
+      @from_outside = false
       logger.debug omniauth.to_yaml
       logger.debug "----------------------------------------------------------------"
       logger.debug current_user.inspect
@@ -69,7 +70,7 @@ class AuthenticationsController < ApplicationController
           flash[:notice] = "Signed in successfully."
           sign_in_and_redirect(:user, user)
         else
-          flash[:notice] = "We could not find any existing login associated with you. If you are a new user, please sign-up. If you are a registered user, login normally and associate additional login services via <Setings> page."
+          @from_outside=true
           session[:omniauth] = omniauth.except('extra')
           redirect_to new_user_registration_url
         end

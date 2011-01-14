@@ -8,6 +8,8 @@ font-family: Miso;
     src: url("/fonts/miso.otf") format("opentype");
 }*/
 /*--------------------------------------------------------------------*/
+.Museo-300 { font-family: Museo-300; }
+.Museo-500 { font-family: Museo-500; }
 
 body {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -24,6 +26,7 @@ a {
     border-bottom: 2px solid #39B2E5;
     font-size: 26px;
     font-family: "Allan","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 0 1px 0 #FFFFFF;
 }
 #user_nav
 {
@@ -31,7 +34,9 @@ a {
     text-align: right;
     padding-right:50px;
     color: #474747;
-    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    text-shadow: 0 1px 0 white;
+    
 }
 #user_nav a
 {
@@ -53,7 +58,8 @@ a {
 #input-form-left,#input-form-middle,#input-form-right label
 {
     font-size: 16px;
-    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*  font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    text-shadow: 0 1px 0 #FFFFFF;
 }
 #input-form-left input
 {
@@ -140,7 +146,7 @@ a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
     text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
-    font-family:'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    font-family:'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;*/
    /*  background: -moz-linear-gradient(-90deg,#003471,#448CCB);
      background: -webkit-gradient(linear, left top, left bottom, from(#003471), to(#448CCB));*/
 
@@ -160,7 +166,8 @@ a {
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
     background-color: #F9F9F9;
-    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    text-shadow: 0 1px 0 white;
 
 
 }
@@ -233,7 +240,7 @@ input[type="submit"] {
     color: #202020;
     cursor: pointer;
     display: block;
-    font-family:'Yanone Kaffeesatz', "Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    font-family:'Yanone Kaffeesatz', "Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-weight: bold !important;
     height: 31px;
     line-height: 18px;
@@ -320,7 +327,7 @@ Navigation Header
     margin-bottom: 10px;
     overflow: hidden;
     padding: 40px 0 15px 35px;
-    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+ /*   font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
 h1
 {
@@ -347,7 +354,7 @@ h1
   overflow: hidden;
   padding: 10px;
   position: relative;
-  font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
 #free
 {
@@ -365,8 +372,9 @@ h1
   -moz-border-radius-bottomright: 4px;
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  /*font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal; */
+  text-shadow: 0 1px 0 #FFFFFF;
 
 }
 #calendar_submit {
@@ -375,7 +383,7 @@ h1
     background: -moz-linear-gradient(center top , #A7E300, #99D100) repeat scroll 0 0 transparent;
     border: 1px solid #87B800;
     color: #FFFFFF;
-    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-size:18px;
     text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
     text-align: center;
@@ -389,6 +397,11 @@ h1
 {
     padding: 3px;
 }
+.event-span, .timestamp
+{
+    text-shadow: 0 1px 0 white;
+      font-size: 14px;
+}
 .inline-edit-form
 {
     -moz-border-radius: 5px 5px 5px 5px;
@@ -400,6 +413,8 @@ h1
     -moz-box-shadow: inset 0 0 2px #5CB3FF;
     -webkit-box-shadow: inset 0 0 2px #5CB3FF;
     box-shadow: inner 0 0 2px #5CB3FF;
+    text-shadow: 0 1px 0 #FFFFFF;
+
 }
 #calendar_done
 {
@@ -432,7 +447,7 @@ h1
     background: -moz-linear-gradient(center top , #A7E300, #99D100) repeat scroll 0 0 transparent;
     border: 1px solid #87B800;
     color: #FFFFFF;
-    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*  font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-size:18px;
     text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
 
@@ -455,7 +470,7 @@ h1
 }
 #signin-form
 {
-   font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+/*   font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
    padding:15px;
 }
 .when
@@ -479,7 +494,7 @@ h1
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
     background-color: #F9F9F9;
-    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;*/
     margin-right:10px;
     padding: 10px;
 }
@@ -496,7 +511,7 @@ h1
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
     background-color: #F9F9F9;
-    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    font-family:'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;*/
 
     padding: 10px;
 
@@ -545,4 +560,8 @@ h1
     font-size: 13px;
     float: none;
 }
-
+#content-top {
+    background-image: url("/images/content-top-bg.png");
+    background-repeat: repeat-x;
+    height: 5px;
+}

@@ -1,5 +1,5 @@
 /*
- * MyFonts Webfont Build ID 235764, 2011-01-03T09:58:43-0500
+ * MyFonts Webfont Build ID 317081, 2011-01-13T10:38:44-0500
  * 
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are 
@@ -7,31 +7,22 @@
  * 
  * You may obtain a valid license at the urls below.
  * 
- * Webfont: Anivers Regular
- * Url: http://new.myfonts.com/fonts/exljbris/anivers/regular/
+ * Webfont: Museo 300
+ * Url: http://new.myfonts.com/fonts/exljbris/museo/300/
  * Foundry: exljbris
- * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
  * License: http://www.myfonts.com/viewlicense?1056
  * Licensed pageviews: unlimited/month
- * CSS font-family: Anivers-Regular
+ * CSS font-family: Museo-300
  * CSS font-weight: normal
  * 
- * Webfont: Museo Slab 500
- * Url: http://new.myfonts.com/fonts/exljbris/museo-slab/500/
+ * Webfont: Museo 500
+ * Url: http://new.myfonts.com/fonts/exljbris/museo/500/
  * Foundry: exljbris
- * Copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
+ * Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
  * License: http://www.myfonts.com/viewlicense?1056
  * Licensed pageviews: unlimited/month
- * CSS font-family: MuseoSlab-500
- * CSS font-weight: normal
- * 
- * Webfont: Museo Slab 500 Italic
- * Url: http://new.myfonts.com/fonts/exljbris/museo-slab/500-italic/
- * Foundry: exljbris
- * Copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
- * License: http://www.myfonts.com/viewlicense?1056
- * Licensed pageviews: unlimited/month
- * CSS font-family: MuseoSlab-500Italic
+ * CSS font-family: Museo-500
  * CSS font-weight: normal
  * 
  * (c) 2011 Bitstream, Inc
@@ -42,7 +33,7 @@
 // change this to false if you're having trouble with WOFFs
 var woffEnabled = true;
 // uncomment this and set it to the path of your webfont directory
-//var customPath = "/themes/fonts"; 
+//var customPath = "/fonts"; 
 
 var scripts = document.getElementsByTagName("SCRIPT");
 var script = scripts[scripts.length-1].src;
@@ -108,6 +99,18 @@ else if (/Chrome\/(\d+\.\d+)/.test(navigator.userAgent)) // must check before sa
 		webfontType = 'data-css';
 }
 
+else if (/Mozilla.*(iPhone|iPad).* OS (\d+)_(\d+).* AppleWebKit.*Safari/.test(navigator.userAgent))
+{
+        browserName = 'MobileSafari';
+        browserVersion = new Number(RegExp.$2) + (new Number(RegExp.$3) / 10)
+
+	if(browserVersion >= 4.2)
+		webfontType = 'data-css';
+
+	else
+		webfontType = 'svg';
+}
+
 else if (/Mozilla.*(iPhone|iPad).*AppleWebKit.*Safari/.test(navigator.userAgent))
 {
 	browserName = 'MobileSafari';
@@ -148,29 +151,26 @@ switch (webfontType)
 {
 		case 'eot':
 		document.write("<style>\n");
-				document.write("@font-face {font-family:\"Anivers-Regular\";src:url(\"" + path + "/webfonts/eot/style_157479.eot\");}\n");
-				document.write("@font-face {font-family:\"MuseoSlab-500\";src:url(\"" + path + "/webfonts/eot/style_183117.eot\");}\n");
-				document.write("@font-face {font-family:\"MuseoSlab-500Italic\";src:url(\"" + path + "/webfonts/eot/style_183120.eot\");}\n");
+				document.write("@font-face {font-family:\"Museo-300\";src:url(\"" + path + "/webfonts/eot/style_154926.eot\");}\n");
+				document.write("@font-face {font-family:\"Museo-500\";src:url(\"" + path + "/webfonts/eot/style_154928.eot\");}\n");
 				document.write("</style>");
 		break;
 		
 		case 'woff':
 		document.write("<style>\n");
-				document.write("@font-face {font-family:\"Anivers-Regular\";src:url(\"" + path + "/webfonts/woff/style_157479.woff\") format(\"woff\");}\n");
-				document.write("@font-face {font-family:\"MuseoSlab-500\";src:url(\"" + path + "/webfonts/woff/style_183117.woff\") format(\"woff\");}\n");
-				document.write("@font-face {font-family:\"MuseoSlab-500Italic\";src:url(\"" + path + "/webfonts/woff/style_183120.woff\") format(\"woff\");}\n");
+				document.write("@font-face {font-family:\"Museo-300\";src:url(\"" + path + "/webfonts/woff/style_154926.woff\") format(\"woff\");}\n");
+				document.write("@font-face {font-family:\"Museo-500\";src:url(\"" + path + "/webfonts/woff/style_154928.woff\") format(\"woff\");}\n");
 				document.write("</style>");
 		break;
 	
 		case 'data-css':
-		document.write("<link rel='stylesheet' type='text/css' href='" + path + "/webfonts/datacss/MyFonts Webfonts Order M2633869.css'>");
+		document.write("<link rel='stylesheet' type='text/css' href='" + path + "/webfonts/datacss/MyFonts Webfonts Order M2658772.css'>");
 		break;
 	
 		case 'svg':
 		document.write("<style>\n");
-				document.write("@font-face {font-family:\"Anivers-Regular\";src:url(\"" + path + "/webfonts/svg/style_157479.svg#Anivers-Regular\") format(\"svg\");}\n");
-				document.write("@font-face {font-family:\"MuseoSlab-500\";src:url(\"" + path + "/webfonts/svg/style_183117.svg#MuseoSlab-500\") format(\"svg\");}\n");
-				document.write("@font-face {font-family:\"MuseoSlab-500Italic\";src:url(\"" + path + "/webfonts/svg/style_183120.svg#MuseoSlab-500Italic\") format(\"svg\");}\n");
+				document.write("@font-face {font-family:\"Museo-300\";src:url(\"" + path + "/webfonts/svg/style_154926.svg#Museo-300\") format(\"svg\");}\n");
+				document.write("@font-face {font-family:\"Museo-500\";src:url(\"" + path + "/webfonts/svg/style_154928.svg#Museo-500\") format(\"svg\");}\n");
 				document.write("</style>");
 		break;
 		

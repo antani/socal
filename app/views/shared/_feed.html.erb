@@ -3,7 +3,7 @@
   <% unless @feed_items.empty? %>
     <% if @feed_items_today.count > 0 %>
     <div id="feed_item_today_container">
-    <h2 class="duration-h2">Today</h2>
+    <h2 class="duration-h2 Museo-500">Today</h2>
       <table id="feed_item_today" class="round" summary="User microposts">
             <%= render :partial => 'shared/feed_item', :collection => @feed_items_today %>
       </table>
@@ -16,7 +16,7 @@
     <% end %>
     <% if @feed_items_tomorrow.count > 0 %>
     <div id="feed_item_tomorrow_container">
-    <h2 class="duration-h2">Tomorrow</h2>
+    <h2 class="duration-h2 Museo-500">Tomorrow</h2>
       <table id="feed_item_tomorrow" class="round" summary="User microposts">
             <%= render :partial => 'shared/feed_item', :collection => @feed_items_tomorrow %>
       </table>
@@ -29,7 +29,7 @@
     <% end %>
      <% if @feed_items_future.count > 0 %>
     <div id="feed_item_future_container">
-    <h2 class="duration-h2">Near Future</h2>
+    <h2 class="duration-h2 Museo-500">Near Future</h2>
       <table id="feed_item_future" class="round" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_future %>
       </table>
@@ -43,7 +43,7 @@
     <%end %>
     <% if @feed_items_last_week.count > 0 %>
     <div id="feed_item_past_container">
-    <h2 class="duration-h2">Past</h2>
+    <h2 class="duration-h2 Museo-500">Past</h2>
       <table id="feed_item_past" class="round" summary="User microposts">
         <%= render :partial => 'shared/feed_item', :collection => @feed_items_last_week %>
       </table>

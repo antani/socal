@@ -7,7 +7,7 @@
   <p><%= f.label :email %><br /><%= f.text_field :email %> <br/></p>
   <p><%= f.label :password %><br /><%= f.password_field :password %></p>
   <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <p><%= f.submit "Sign in" %></p>
+  <p><%= f.submit "Sign in", :class=>"Museo-300" %></p>
   <%= link_to "Forgot your password?", new_password_path(:user), :class=>"signin-notice" %><br />
 <% end %>
 

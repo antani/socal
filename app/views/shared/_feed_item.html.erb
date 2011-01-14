@@ -1,13 +1,13 @@
 <tr class='<%=feed_item.done%>'>
 
   <td>
-    <span class="event-span">
+    <span class="event-span Museo-300">
           <%= link_to image_tag("done.png"),
             { :controller => :calendars, :action =>:toggle_done, :id => feed_item.id },
             { :title => "Mark as done", :remote => true, :class =>"done-icon" } %>
 
          <% if feed_item.important %>
-             <span class="important-event">
+             <span class="important-event Museo-300">
          <% end %>
            <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.event_time.to_i%>">
            <a id="edit-form-link-<%=feed_item.id%>" href="#inline-edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>
@@ -15,15 +15,15 @@
            </span>
           <% end %>
     </span>
-     <span class="timestamp">
+     <span class="timestamp Museo-300">
 
       <% if feed_item.event_time != nil %>
                  Scheduled at around <span class="when"><%= feed_item.event_time.strftime("%I:%M %p") %></span>&nbsp;on
-                 <span class="when-date"><%= feed_item.event_time.strftime("%x") %></span>
+                 <span class="when-date Museo-300"><%= feed_item.event_time.strftime("%x") %></span>
       and at
       <% end %>
       <% if feed_item.event_location != nil %>
-        <span class="where"><a id="map-link<%=feed_item.id%>" rel="map-<%=feed_item.id%>" href="#map-<%=feed_item.id%>" ><%=feed_item.event_location %>.</a><img id="img-<%=feed_item.id%>" class="map-icon" src="/images/gmap_pin_orange.png"/></span>
+        <span class="where Museo-300"><a id="map-link<%=feed_item.id%>" rel="map-<%=feed_item.id%>" href="#map-<%=feed_item.id%>" ><%=feed_item.event_location %>.</a><img id="img-<%=feed_item.id%>" class="map-icon" src="/images/gmap_pin_orange.png"/></span>
       <%end%>
 
     </span>
