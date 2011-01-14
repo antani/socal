@@ -2,3 +2,4 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run Socal::Application
+Rails::Rack::Static

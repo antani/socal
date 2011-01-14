@@ -8,13 +8,21 @@ font-family: Miso;
     src: url("/fonts/miso.otf") format("opentype");
 }*/
 /*--------------------------------------------------------------------*/
+@font-face {
+  font-family: "ChunkFive";
+  src: url("style_154926.eot");
+  src: local("?"),
+  url("style_154926.woff") format("woff"),
+  url("style_154926.svg") format("svg");
+}
+
 .Museo-300 { font-family: Museo-300; }
 .Museo-500 { font-family: Museo-500; }
 
 body {
     background: none repeat scroll 0 0 #FFFFFF;
     color: #838383;
-    font: 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font: 13px/20px "ChunkFive","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 a {
     color: #39B2E5;
