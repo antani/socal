@@ -259,7 +259,6 @@ h1 { font-family: 'Cuprum', arial, serif; }
 <%= form_for(@user, :as => :user, :url => password_path(@user), :html => {:method => :put }) do |f| %>
 
 
-
 <%= devise_error_messages! %>
 
 

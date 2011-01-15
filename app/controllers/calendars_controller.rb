@@ -11,8 +11,8 @@ class CalendarsController < ApplicationController
 
   #-----------------------------Nasty Bug !
   #Time.zone = "UTC"
-  Chronic.time_class = Time.zone
-  #Chronic.time_class = current_user.timezone
+  #Chronic.time_class = Time.zone
+
 
   # GET /calendars
   # GET /calendars.xml
@@ -82,6 +82,8 @@ class CalendarsController < ApplicationController
       end
     end
     #guess the timining of the event
+    #Chronic.time_class = @current_user.timezone
+    
     if !whenStr.empty? && whenStr != nil
       begin
           guessed_when = Chronic.parse(whenStr)
