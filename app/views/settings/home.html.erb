@@ -3,9 +3,7 @@
 
 <div id="user_settings" class="Museo-300">
 <%= form_for(:user, @user, :url => settings_path, :remote=>true) do |f| %>
-<% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-<% end %>
+<%= flash[:alert] %>
   <p><%= f.label :reminder_duration %><br />
   <%= f.text_field :reminder_duration  , :title=>"Enter duration before you want the default reminder. Just add minutes like 5 or 10", :class => "input-tip" %>
   <%= select_tag "reminder_before_what", options_for_select([ "Minutes","Hours","Days" ], "Minutes") %></p>
@@ -20,15 +18,17 @@
   fs_auth = current_user.authentications.find_by_provider('foursquare')
   %>
   <% if twit_auth %>
-     <%=check_box_tag 'share_twitter', 'yes', current_user.share_twitter %><img src="/images/twitter.png"/><br/>
-  <% end %>
+     <img src="/images/twitter.png"/><%=check_box_tag 'share_twitter', 'yes', current_user.share_twitter %><br/>
+  <%else%>
+    <img src="/images/twitter.png"/> not authorized.<br/>
+  <%end%>
   <% if fb_auth %>
-    <%=check_box_tag 'share_facebook', 'yes', current_user.share_facebook %><img src="/images/facebook-tiny.png"/><br/>
+    <img src="/images/facebook-tiny.png"/><%=check_box_tag 'share_facebook', 'yes', current_user.share_facebook %><br/>
   <%else%>
     <img src="/images/facebook-tiny.png"/> not authorized.<br/>
   <%end%>
   <% if fs_auth %>
-     <%= check_box_tag 'share_foursquare', 'yes', current_user.share_foursquare %><img src="/images/foursquare.png"/><br/>
+     <img src="/images/foursquare.png"/><%= check_box_tag 'share_foursquare', 'yes', current_user.share_foursquare %><br/>
   <%else%>
     <img src="/images/foursquare.png"/> not authorized.<br/>
   <% end %>
@@ -39,9 +39,9 @@
 
 <div id="change_pwd" class="Museo-300">
  <%= form_for(:user, @user, :url => settings_path) do |f| %>
-<% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-<% end %>
+ <%= flash[:error] %>
+ <%= flash[:warning] %>
+ <%= flash[:alert] %> 
   <p><%= f.label :password %><br />
   <%= f.password_field :password %></p>
 

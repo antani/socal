@@ -57,7 +57,7 @@ class SettingsController < ApplicationController
 
        else
            logger.debug "Settings failed....................................................."
-           #flash[:error] = "Settings cant be saved"
+           flash[:error] = "Settings cant be saved"
            format.html { redirect_to settings_home_url }
            format.js
 

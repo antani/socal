@@ -50,7 +50,6 @@ a {
     padding-right:50px;
     color: #474747;
     font-family:  "ChunkThree","Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
-    text-shadow: 0 1px 0 white;
     
 }
 #user_nav a
@@ -317,8 +316,20 @@ Navigation Header
     height: 50px;
     padding-top: 5px;
     position: relative;
-    background: -moz-linear-gradient(-90deg,#4DB8E0,#4DB8E9);
-    background: -webkit-gradient(linear, left top, left bottom, from(#4DB8E0), to(#4DB8E9));
+    background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left 5,
+    color-stop(0.2, #0DB9E0),
+    color-stop(0.75, #0A96AB)
+    );
+    background-image: -moz-linear-gradient(
+    center bottom,
+    #0DB9E0 20%,
+    #0A96AB 75%
+    );
+
+    
 
 }
 #header div {
