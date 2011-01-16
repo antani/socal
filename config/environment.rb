@@ -6,5 +6,5 @@ Socal::Application.initialize!
 
 
 # config/environment.rb
-Time.zone= "Pacific Time (US & Canada)"
+#Time.zone= "Pacific Time (US & Canada)"
 

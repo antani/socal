@@ -1,4 +1,5 @@
 class CalendarsController < ApplicationController
+  before_filter :set_chronic_time_zone
 #  include Twitter::AuthenticationHelpers
 #  rescue_from Twitter::Unauthorized, :with => :force_sign_in
 #  caches_page :index, :show
@@ -65,6 +66,8 @@ class CalendarsController < ApplicationController
     whenStr  =  params['calendar']['event_time']
     logger.debug "whenStr : "
     logger.debug whenStr
+    logger.debug "User timezone : ---------------" || Chronic.time_class = Time.zone
+    
     #Get geo location
     if whereStr.empty?
       lat =nil
@@ -86,7 +89,7 @@ class CalendarsController < ApplicationController
     
     if !whenStr.empty? && whenStr != nil
       begin
-          guessed_when = Chronic.parse(whenStr)
+          guessed_when = Chronic.parse(whenStr,:now => Time.now)
           logger.debug "guessed_when 1: "
           logger.debug guessed_when
           if guessed_when.nil?
@@ -202,6 +205,9 @@ class CalendarsController < ApplicationController
  def send_mail
    UserMailer.registration_confirmation(@current_user,@calendar).deliver
  end
-
+ 
+ def set_chronic_time_zone
+  Chronic.time_class = Time.zone
+ end
 end
 

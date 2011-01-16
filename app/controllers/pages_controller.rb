@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
   before_filter :authenticate_user!, :except => [:home, :contact]
-
+  before_filter :set_user_time_zone
+  
   def home
 
      if current_user
        #logger.debug list_venues(12.9566921,77.6407258,current_user).to_yaml
+       
        @user = User.find(current_user.id)
        @calendar = Calendar.new if user_signed_in?
        @feed_items = @user.calendars.all.paginate(:page => params[:page])
@@ -18,6 +20,12 @@ class PagesController < ApplicationController
   def contact
     @title= "Contact"
   end
-
+  def set_user_time_zone
+    if current_user
+      @user = User.find(current_user.id)
+      Time.zone = @user.timezone if user_signed_in?
+      logger.debug "Timezone -- " || Time.zone 
+    end  
+  end
 end
 
