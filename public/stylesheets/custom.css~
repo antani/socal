@@ -624,7 +624,6 @@ h1
     border: 1px solid #DEDEDE;
    -moz-border-radius: 5px 5px 5px 5px;
    -webkit-border-radius: 5px 5px 5px 5px;
-    font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
         
 }
 .error-field

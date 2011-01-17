@@ -78,13 +78,6 @@ class SettingsController < ApplicationController
                end	                                                                     #-3
                         
        else    
-		            @user.reminder_duration = reminder
-        				@user.timezone = tz
-        				@user.share_twitter = st
-        				@user.share_facebook = sf
-        				@user.share_foursquare = sff
-        				@user.remind_before_what = remind_before
-  
                if @user.save                                                              #4 
                    logger.debug "Settings saved....................................................."
                    flash[:success] = "Settings updated"

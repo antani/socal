@@ -35,7 +35,7 @@ module ApplicationHelper
     	logger.debug 'Inside error_field' 
     	logger.debug  id
     	javascript_tag("$('##{id}').after('<img src=/images/warning_16.png></img>')"); 
-    	#javascript_tag("$('##{id}').prev('label').css('color','red')");
+    	javascript_tag("$('##{id}').prev('label').css('color','red')");
     	#javascript_tag ("$('label[for='##{id}']').css('color','red')")
     end
   end

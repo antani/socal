@@ -9,9 +9,6 @@ Socal::Application.routes.draw do
   resources :calendars do
       get 'toggle_done', :on => :member
   end
-  resources :settings do
-  		get 'update_other_settings', :on => :member
-  end		
 
 
 #  match :google_calendar_noise => "calendars#google_calendar_noise"
