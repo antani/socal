@@ -1,7 +1,8 @@
 class Calendar < ActiveRecord::Base
   belongs_to :user
-  has_many :categories
-  attr_accessible :event, :event_location, :event_time, :whendate, :important, :latitude, :longitude, :done, :remind_before, :remind_before_what, :reminder_time
+  #has_many :categories
+  has_many :calendar_categories
+  attr_accessible :event, :event_location, :event_time, :whendate, :important, :latitude, :longitude, :done, :remind_before, :remind_before_what, :reminder_time, :category_str
   #Validation
   validates :event, :presence => true, :length => {:maximum => 140}
 

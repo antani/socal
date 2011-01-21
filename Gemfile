@@ -26,6 +26,9 @@ gem "mongrel"
 gem 'dalli'
 gem 'gdata_19'
 gem 'foursquare'
+gem 'meta_search'
+
+
 #gem 'foursquare-api'
 #gem 'chronic_duration'
 

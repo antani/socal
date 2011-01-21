@@ -1,24 +1,8 @@
 <div id="table-container">
 <!--<% if @feed_items %> -->
   <% unless @feed_items.empty? %>
- <% if @search_result%>
-		 <% if @search_result.count > 0 %>
-		 
-		    <div id="feed_item_today_container">
-		    	
-		    <h2 class="duration-h2 Museo-500">Search Results | <%= link_to "All Results", root_path, :id=>"all-results",:class=>"Museo-500"%></h2> 
-		      <table id="feed_item_today" class="round" summary="User microposts">
-		            <%= render :partial => 'shared/feed_item', :collection => @search_result %>
-		      </table>
-		      <%= render :partial => "shared/hidden_map_inline_edit", :collection => @search_result %>
-		      <div class="apple_pagination" id="pageinfo">
-		            <!--<%= sanitize(page_entries_info @feed_items_today)%> -->
-		            <%= will_paginate @search_result, :container => false %>
-		      </div>
-		    </div>
-		    <% end %>
- <%else%>
-     <% if @feed_items_today.count > 0 %>
+
+    <% if @feed_items_today.count > 0 %>
     <div id="feed_item_today_container">
     <h2 class="duration-h2 Museo-500">Today</h2>
       <table id="feed_item_today" class="round" summary="User microposts">
@@ -31,7 +15,7 @@
       </div>
     </div>
     <% end %>
-    <% if @feed_items_tomorrow.count > 0  %>
+    <% if @feed_items_tomorrow.count > 0 %>
     <div id="feed_item_tomorrow_container">
     <h2 class="duration-h2 Museo-500">Tomorrow</h2>
       <table id="feed_item_tomorrow" class="round" summary="User microposts">
@@ -44,7 +28,7 @@
       </div>
     </div>
     <% end %>
-     <% if @feed_items_future.count > 0  %>
+     <% if @feed_items_future.count > 0 %>
     <div id="feed_item_future_container">
     <h2 class="duration-h2 Museo-500">Near Future</h2>
       <table id="feed_item_future" class="round" summary="User microposts">
@@ -58,7 +42,7 @@
 
     </div>
     <%end %>
-    <% if @feed_items_last_week.count > 0   %>
+    <% if @feed_items_last_week.count > 0 %>
     <div id="feed_item_past_container">
     <h2 class="duration-h2 Museo-500">Past</h2>
       <table id="feed_item_past" class="round" summary="User microposts">
@@ -72,7 +56,7 @@
 
     </div>
     <% end %>
-   <%end%>
+
   <% end %>
 <!--<%end %> -->
 </div>

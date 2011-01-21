@@ -35,7 +35,7 @@
                 cats=get_categories(feed_item.id)
                 cats.each do |cat|
             %>
-			<span class="event-highlight"><%= cat.cat_name %></span>
+			<span class="event-highlight"><%= cat.name %></span>
             <%
                 end  
             %>

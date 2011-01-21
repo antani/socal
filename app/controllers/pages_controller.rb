@@ -6,7 +6,15 @@ class PagesController < ApplicationController
 
      if current_user
        #logger.debug list_venues(12.9566921,77.6407258,current_user).to_yaml
-       
+       #@search
+       @search=@user.calendars.search(params[:search])
+       if params[:search]
+         logger.debug "Inside search)))))))))))))))))))))))))))))))))))))))))))))))))))"
+         logger.debug params[:search]
+         #@search=@user.calendars.event_or_event_location_or_category_str_like(params[:search].to_s.split)
+         @search=@user.calendars.search(params[:search])
+         @search_result = @search.paginate(:page => params[:page])
+       end
        @user = User.find(current_user.id)
        @calendar = Calendar.new if user_signed_in?
        @feed_items = @user.calendars.all.paginate(:page => params[:page])
