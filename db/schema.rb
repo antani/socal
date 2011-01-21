@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110113082414) do
+ActiveRecord::Schema.define(:version => 20110120135309) do
 
   create_table "authentications", :force => true do |t|
     t.integer   "user_id"
@@ -41,6 +41,12 @@ ActiveRecord::Schema.define(:version => 20110113082414) do
     t.integer  "remind_before",      :default => 10
     t.string   "remind_before_what", :default => "Minutes"
     t.time     "reminder_time"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

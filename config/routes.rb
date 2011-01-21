@@ -1,5 +1,7 @@
 Socal::Application.routes.draw do
 
+  resources :categories
+
   get "settings/home"
   resources :authentications
   resources :calendars
