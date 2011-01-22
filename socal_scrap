@@ -291,3 +291,4 @@ h1 { font-family: 'Cuprum', arial, serif; }
 
 
 
+ <script type="text/javascript" charset="utf-8" src="http://mapstraction.googlecode.com/svn/trunk/source/mxn.js?(google)"></script>

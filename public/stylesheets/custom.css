@@ -27,9 +27,19 @@ font-family: Miso;
 .Museo-500 { font-family: Museo-500; }
 */
 body {
-    background: none repeat scroll 0 0 #FFFFFF;
-    color: #838383;
+    /*background: none repeat scroll 0 0 #FFFFFF;*/
+	background: url("/images/tile.gif") repeat scroll -70% 0 #F0F0F0;
+    color: #333333;
     font: 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.container
+{
+	
+}
+#container-wrap
+{
+	background: url("/images/big-fade.png") repeat-x scroll -70% 0 transparent;
+	padding: 25px 0 30px;
 }
 a {
     color: #39B2E5;
@@ -405,9 +415,9 @@ h1
   float: right;
   width: 500px;
   padding: 10px;
-  -moz-border-radius-bottomleft: 4px;
+  /*-moz-border-radius-bottomleft: 4px;
   -moz-border-radius-bottomright: 4px;
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);*/
   font-size: 16px;
   font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal; 
@@ -697,4 +707,21 @@ h1
 {
 	color: white;
 	text-decoration:none;
+}
+#free
+{
+	float: left;
+	margin-top: 400px;
+	/*-webkit-transform: rotate(30deg); 
+    -moz-transform: rotate(30deg);*/		
+}
+hr{
+	background: url("/images/border-2px.gif") repeat-x scroll left bottom transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.898);
+    font-size: 0.8em;
+    line-height: 1;
+    margin: 0 0 15px;
+    overflow: hidden;
+    padding: 0 0 8px;
+    text-transform: uppercase;
 }

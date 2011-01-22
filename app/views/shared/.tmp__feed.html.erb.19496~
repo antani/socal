@@ -1,5 +1,4 @@
 <div id="table-container">
-	  	
 <!--<% if @feed_items %> -->
   <% unless @feed_items.empty? %>
  <% if @search_result%>
@@ -17,15 +16,7 @@
 		            <%= will_paginate @search_result, :container => false %>
 		      </div>
 		    </div>
-		  <%else%>
-		   <div id="feed_item_today_container">		    	
-		    <h2 class="duration-h2 Museo-500">Search Results | <%= link_to "All Results", root_path, :id=>"all-results",:class=>"Museo-500"%></h2> 
-		      <table id="feed_item_today" class="round" summary="User microposts">
-		            <tr><td><p>Nothing found.</p></td></tr>
-		      </table>
-		    </div>
-		  		
-		  <% end %>
+		    <% end %>
  <%else%>
      <% if @feed_items_today.count > 0 %>
     <div id="feed_item_today_container">

@@ -7,7 +7,7 @@
   <% if @from_outside == false%>
   <%=devise_error_messages! %>
   <%else%>
-   <p>We could not find any existing login associated with you. If you are a new user, please sign-up. If you are a registered user, login normally and associate additional login services via <Settings> page.</p>
+   <p>We could not find any existing login associated with you. If you are a new user, please sign-up. If you are a registered user, login normally and associate additional login services via <Setings> page.</p>
   <% end %>
   <p><%= f.label :email %><br />
   <%= f.text_field :email %></p>

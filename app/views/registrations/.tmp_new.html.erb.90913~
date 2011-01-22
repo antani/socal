@@ -1,0 +1,25 @@
+<div id="sign-up">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <% end %>  
+ 
+  <% if @from_outside == false %>
+      <%=devise_error_messages! %>
+  <% else %>
+   <p>We could not find any existing login associated with you. If you are a new user, please sign-up. If you are a registered user, login normally and associate additional login services via <b>Settings</b> page.</p>
+  <% end %>
+  <%= render :partial => "sign_up_form" %>
+  <%= render :partial => "devise/shared/links" %>
+</div>
+
+     <%= render :partial => "pages/signin_links" %>
+     <div id="details">
+      <p>Socal is the soc<del>i</del>al calendar and a to-do list. Your calendar events will be posted to your social world(only if you wish). You can easily share your calendar events to Twitter, Facebook, Foursquare, Gowalla to make sure your social circle is aware of what you are up to. A sophisticated reminder system makes sure that you are always aware of your schedule.</p>
+      <div class="clear"></div>
+     </div>
+     <div style="display:none">
+       <div id="signin-form">
+       <%= render :partial => "devise/sessions/sign_in_form" %>
+       </div>
+     </div>
+

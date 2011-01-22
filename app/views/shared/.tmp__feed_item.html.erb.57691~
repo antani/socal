@@ -36,7 +36,7 @@
                 cats.each do |cat|
             %>
 			<span class="event-highlight"><%= cat.cat_name %></span>
-			<%
+            <%
                 end  
             %>
 		</span>
