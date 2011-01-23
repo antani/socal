@@ -21,6 +21,8 @@ $(document).ready(function() {
     function showDeletePost()
     {
         $('#pageinfo').load("/ #pageinfo");
+		$('#pageinfo').load("/ #feed_item_today_container");
+		 
         return false;
     }
 
@@ -211,7 +213,7 @@ $(document).ready(function() {
      }
      );*/
 //     $('a[id^="edit-form-link-"]').fancybox(); transition:'fade', speed:500}
-       $('a[id^="edit-form-link-"]').colorbox({title:'Edit Calendar Entry',transition:'elastic',opacity:0.3,inline:true, href: function() {
+       $('a[id^="edit-form-link-"],a[id^="inline-edit-note-link-"]').colorbox({transition:'elastic',opacity:0.3,inline:true, href: function() {
                                                return $(this).attr('href');
                                                }});
 
@@ -220,6 +222,50 @@ $(document).ready(function() {
        $('div[id^="inline-edit-form-"]').find('input').css("float","left");
 /*       $( "#feed_item_today" ).accordion();*/
 
+/*-----------------------------Drop down menu---------------------------------------------------------------------------------*/
+ /* for keeping track of what's "open" */
+  var activeClass = 'dropdown-active', showingDropdown, showingMenu, showingParent;
+  /* hides the current menu */
+  var hideMenu = function() {
+    if(showingDropdown) {
+      showingDropdown.removeClass(activeClass);
+      showingMenu.hide();
+    }
+  };
+  
+  /* recurse through dropdown menus */
+  $('.dropdown').each(function() {
+    /* track elements: menu, parent */
+    var dropdown = $(this);
+    var menu = dropdown.next('div.dropdown-menu'), parent = dropdown.parent();
+    /* function that shows THIS menu */
+    var showMenu = function() {
+      hideMenu();
+      showingDropdown = dropdown.addClass('dropdown-active');
+      showingMenu = menu.show();
+      showingParent = parent;
+    };
+    /* function to show menu when clicked */
+    dropdown.bind('click',function(e) {
+      if(e) e.stopPropagation();
+      if(e) e.preventDefault();
+      showMenu();
+    });
+    /* function to show menu when someone tabs to the box */
+    dropdown.bind('focus',function() {
+      showMenu();
+    });
+  });
+  
+  /* hide when clicked outside */
+  $(document.body).bind('click',function(e) {
+    if(showingParent) {
+      var parentElement = showingParent[0];
+      if(!$.contains(parentElement,e.target) || !parentElement == e.target) {
+        hideMenu();
+      }
+    }
+  });
 
 
 });

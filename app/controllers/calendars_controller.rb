@@ -177,27 +177,35 @@ class CalendarsController < ApplicationController
     @calendar = Calendar.find(params[:id])
 
    respond_to do |format|
-     if @calendar.update_attributes(params[:calendar])
-      when_s = params[:calendar][:event_time]
-      when_date = when_s.to_date
-      remind_what = params[:reminder_before_what]
-      remind_before = params[:calendar][:remind_before]
-
-      
-      reminder_time_s = when_s.to_datetime - remind_before.to_i.send(remind_what.downcase.to_sym)
-      @calendar.update_attributes(:whendate => when_date, :remind_before_what => remind_what, :reminder_time => reminder_time_s )
-      #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
-      format.html {
-        #flash[:success] = "Calendar updated"
-        redirect_to root_path
-      }
-      format.js
-      format.xml  { head :ok }
-     else
-      format.html { render :action => "edit" }
-      format.js
-      format.xml  { render :xml => @calendar.errors, :status => :unprocessable_entity }
-     end
+     if params[:note_form] == "true"
+       logger.debug "update 1"
+        @calendar.update_attributes(:note => params[:calendar][:note])
+        format.html {
+              logger.debug "update 1.1"
+              redirect_to root_path
+        }     
+     
+   elsif @calendar.update_attributes(params[:calendar])
+            logger.debug "update 2"
+            when_s = params[:calendar][:event_time]
+            when_date = when_s.to_date
+            remind_what = params[:reminder_before_what]
+            remind_before = params[:calendar][:remind_before]      
+            reminder_time_s = when_s.to_datetime - remind_before.to_i.send(remind_what.downcase.to_sym)
+            @calendar.update_attributes(:whendate => when_date, :remind_before_what => remind_what, :reminder_time => reminder_time_s )
+            #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
+            format.html {
+            logger.debug "update 2.1"
+              #flash[:success] = "Calendar updated"
+              redirect_to root_path
+            }
+            format.js
+            format.xml  { head :ok }
+      else
+            format.html { render :action => "edit" }
+            format.js
+            format.xml  { render :xml => @calendar.errors, :status => :unprocessable_entity }
+      end
    end
  end
 
@@ -237,5 +245,8 @@ class CalendarsController < ApplicationController
     cats    # return the guessed categories
   end
 
+  def note_add
+    logger.debug 'Note Add'
+  end
 end
 

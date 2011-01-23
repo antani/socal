@@ -59,7 +59,11 @@
            title_text = title_text + " <img src='/images/google.png'/>"
         end
       %>
-
+	  
+      <td style="padding:0px;">
+	  <a id="inline-edit-note-link-<%=feed_item.id%>" href="#inline-edit-note-<%=feed_item.id%>"><img src="/images/note.png" /></a>
+			
+      </td>
       <td style="padding:0px;">
         <img title="<%=title_text%>" rel="<%=feed_item.sync or feed_item.twitter_shared or feed_item.facebook_shared or feed_item.foursquare_shared%>" src="/images/Chat2.png" class="twitter-shared"/>
       </td>

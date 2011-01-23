@@ -1,21 +1,31 @@
       <div style="display:none">
          <div id="map-<%=hidden_map_inline_edit.id%>" title="<%=hidden_map_inline_edit.latitude%>,<%=hidden_map_inline_edit.longitude%>,<%=hidden_map_inline_edit.event_location%>" style="width: 500px; height: 500px">
-         <div>
-          Foursquare Details
-        </div>
-       </div>
+         </div>
      </div>
       </div>
       <div style="display:none">
           <div id="inline-edit-form-<%=hidden_map_inline_edit.id%>" class="inline-edit-form">
             <%= form_for (hidden_map_inline_edit) do |f| %>
                   <%=render :partial => 'calendars/form', :locals => { :f => f }%>
+				  <br/>
                   <div id="edit-submit">
                     <%= f.submit %>
                   </div>
             <%end%>
            </div>
       </div>
-
+	  <div style="display:none">
+          <div id="inline-edit-note-<%=hidden_map_inline_edit.id%>" class="inline-edit-note">
+          	Event: <%=hidden_map_inline_edit.event %><br/>
+			Event Time: <%= hidden_map_inline_edit.event_time.strftime("%x")%> at <%=hidden_map_inline_edit.event_time.strftime("%I:%M %p") %><br/>
+			<hr/>
+            <%= form_for (hidden_map_inline_edit) do |f| %>
+                  <%=render :partial => 'calendars/note_form', :locals => { :f => f }%>
+                  <div id="edit-submit">
+                    <%= f.submit 'Add Note'%>
+                  </div>
+            <%end%>
+           </div>
+      </div>
       <div>
 

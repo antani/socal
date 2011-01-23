@@ -1,3 +1,4 @@
+
            <div id="pageinfo" class="flickr_pagination">
             <%= sanitize(page_entries_info @feed_items)%>
             <div >
@@ -292,3 +293,33 @@ h1 { font-family: 'Cuprum', arial, serif; }
 
 
  <script type="text/javascript" charset="utf-8" src="http://mapstraction.googlecode.com/svn/trunk/source/mxn.js?(google)"></script>
+ 
+ 
+ Signed in as <%= current_user.email %>. Not you?
+ 
+ 
+ 
+ 
+ <%= link_to image_tag("note.png"),
+            { :controller => :calendars, :action =>:note_add, :id => feed_item.id },
+            { :title => "Add Note", :remote => true, :class =>"done-icon" } %>
+            
+            
+            
+            
+<% logo_cog = image_tag("cog.png", :alt => "Settings") %>
+    <%= link_to logo_cog, settings_home_path %>
+     
+     <%= link_to "Sign out", destroy_user_session_path %>
+   <% else %>
+     <% if @title != 'Home'
+        link_to "Sign up", new_user_registration_path or link_to "Sign in", new_user_session_path
+        end%>
+   <% end %>
+               
+               
+               
+               
+<%= link_to image_tag("refresh.png"),
+               { :controller => :g_data, :method =>:index },
+               { :title => "Sync with Google Calendar", :class =>"setting-icon" } %>               

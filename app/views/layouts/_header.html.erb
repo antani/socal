@@ -2,27 +2,33 @@
  <div id="user_nav" class="Museo-300">
    	
    <% if user_signed_in? %>
+      
       <% if ! current_page?(:controller => 'settings', :action => 'home') %>
+	     <div id="search-form">  		
 	      <%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
 		  	<p id="search-form-p">
 	    		<%= f.text_field :event_or_event_location_or_category_str_contains, :class=>"search-box" ,:tabindex => '19'%>
 	        	<%= submit_tag "Search", :name => nil, :id=>"search-submit" %>
 	    	</p>
-	  <%end%>		
-   <% end %>
-
-    <%= link_to image_tag("refresh.png"),
-               { :controller => :g_data, :method =>:index },
-               { :title => "Sync with Google Calendar", :class =>"setting-icon" } %>
-
-    <% logo_cog = image_tag("cog.png", :alt => "Settings") %>
-    <%= link_to logo_cog, settings_home_path %>
-     Signed in as <%= current_user.email %>. Not you?
-     <%= link_to "Sign out", destroy_user_session_path %>
-   <% else %>
-     <% if @title != 'Home'
-        link_to "Sign up", new_user_registration_path or link_to "Sign in", new_user_session_path
-        end%>
+          <%end%>
+		  </div>	
+		  
+		  
+		  
+		  
+		  <div id="menu1">
+		  	<div class="relative">
+  		     	<a href="/demos" id="dd1" class="dropdown" style="width:170px;text-decoration:none;"><span><%= current_user.email%></span></a>
+			  	<div id="dropdown1" class="dropdown-menu">
+				    <a href="<%=settings_home_path%>" >Settings</a>
+				    <a href="<%= destroy_user_session_path %>" >Logout</a>    
+			  </div>
+			</div>
+		  </div>
+	     
+    	
+          
+   	  <% end %>
    <% end %>
    
  </div>

@@ -10,6 +10,7 @@ Socal::Application.routes.draw do
 
   resources :calendars do
       get 'toggle_done', :on => :member
+      get 'note_add', :on => :member
   end
   resources :settings do
   		get 'update_other_settings', :on => :member
