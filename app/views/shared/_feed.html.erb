@@ -1,7 +1,25 @@
 <div id="table-container">
-	  	
 <!--<% if @feed_items %> -->
-  <% unless @feed_items.empty? %>
+<% unless @feed_items.empty? %>
+<div id="search-form-p-container1">
+    <%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
+        <%= f.hidden_field :event_or_category_str_contains, :value=>"Important" %>
+    	<%= submit_tag "Important", :name => nil, :id=>"search-submit-1" %>			
+    <%end%>	
+</div>    
+<div id="search-form-p-container2">
+    <%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
+        <%= f.hidden_field :whendate_equals, :value=>Time.now.to_date %>
+    	<%= submit_tag "Today", :name => nil, :id=>"search-submit-1" %>		
+    <%end%>
+</div>
+<div id="search-form-p-container3">		
+    <%= form_for @search, :url => root_path, :html => {:method => :get} do |f| %>
+     	<%= f.hidden_field :whendate_equals, :value=>Time.now.to_date + 1.day %>
+    	<%= submit_tag "Tomorrow", :name => nil, :id=>"search-submit-1" %>  	
+    <%end %>
+</div>
+  <div class="clear"></div>
  <% if @search_result%>
 		 <% if @search_result.count > 0 %>
 		 

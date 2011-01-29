@@ -4,20 +4,17 @@
      </div>
       </div>
       <div style="display:none">
-          <div id="inline-edit-form-<%=hidden_map_inline_edit.id%>" class="inline-edit-form">
+          <div id="inline-edit-form-<%=hidden_map_inline_edit.id%>" class="inline-edit-form" style="width: 540px; height: 380px">
             <%= form_for (hidden_map_inline_edit) do |f| %>
                   <%=render :partial => 'calendars/form', :locals => { :f => f }%>
 				  <br/>
-                  <div id="edit-submit">
-                    <%= f.submit %>
-                  </div>
-            <%end%>
+           <%end%>
            </div>
       </div>
 	  <div style="display:none">
           <div id="inline-edit-note-<%=hidden_map_inline_edit.id%>" class="inline-edit-note">
-          	Event: <%=hidden_map_inline_edit.event %><br/>
-			Event Time: <%= hidden_map_inline_edit.event_time.strftime("%x")%> at <%=hidden_map_inline_edit.event_time.strftime("%I:%M %p") %><br/>
+          	<p class="event-note">Event: <%=hidden_map_inline_edit.event %></p>
+			<p class="event-note">Event Time: <%= hidden_map_inline_edit.event_time.strftime("%x")%> at <%=hidden_map_inline_edit.event_time.strftime("%I:%M %p") %></p>
 			<hr/>
             <%= form_for (hidden_map_inline_edit) do |f| %>
                   <%=render :partial => 'calendars/note_form', :locals => { :f => f }%>

@@ -1,4 +1,1 @@
-#page.insert_html "Thanks for deleting the post"
-#page.insert_html :bottom, 'list', "<li>Hello</li>"
-#page.select(".flickr_pagination").hide
 

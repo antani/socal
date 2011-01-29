@@ -8,10 +8,10 @@ class PagesController < ApplicationController
        #logger.debug list_venues(12.9566921,77.6407258,current_user).to_yaml
        #@search
        @search=@user.calendars.search(params[:search])
-       if params[:search]
-         logger.debug "Inside search)))))))))))))))))))))))))))))))))))))))))))))))))))"
+         logger.debug "Searching with...................."
          logger.debug params[:search]
-         #@search=@user.calendars.event_or_event_location_or_category_str_like(params[:search].to_s.split)
+       
+       if params[:search]
          @search=@user.calendars.search(params[:search])
          @search_result = @search.paginate(:page => params[:page])
        end

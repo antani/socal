@@ -248,5 +248,33 @@ class CalendarsController < ApplicationController
   def note_add
     logger.debug 'Note Add'
   end
+  def up_priority
+      @calendar = Calendar.find(params[:id])
+      if @calendar
+        current_priority = @calendar.priority
+        if current_priority < 5
+           current_priority = current_priority +1 
+           @calendar.update_attributes(:priority => current_priority)
+        end
+      end
+      respond_to do |format|
+        format.js
+      end
+  end
+
+  def down_priority
+      @calendar = Calendar.find(params[:id])
+      if @calendar
+        current_priority = @calendar.priority
+        if current_priority > 0
+           current_priority = current_priority - 1
+           @calendar.update_attributes(:priority => current_priority)
+        end
+      end
+      respond_to do |format|
+        format.js
+      end
+  end
+
 end
 

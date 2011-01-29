@@ -13,16 +13,10 @@ class AuthenticationsController < ApplicationController
       logger.debug current_user.inspect
       logger.debug "----------------------------------------------------------------"
 
-#      authentication = Authentication.find_by_provider(omniauth['provider']).where("uid = ? ", omniauth['uid'])
-
       #Due to heroku Postgres datatype strictness
       authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'].to_s)
-  #    authentication = Authentication.find :all, :conditions => ["provider = ? and uid = ?", omniauth['provider'], omniauth['uid']]
-
-
       logger.debug omniauth['provider']
       logger.debug omniauth['uid']
-#      logger.debug authentication.user.email
       #authentication = authentication_provider
       provider = omniauth['provider']
       user = User.find_by_email(omniauth['user_info']['email'])
@@ -92,7 +86,7 @@ class AuthenticationsController < ApplicationController
      @authentication = current_user.authentications.find(params[:id])
      @authentication.destroy
      #flash[:notice] = "Successfully destroyed authentication."
-     redirect_to authentications_url
+     redirect_to settings_home_url
   end
 end
 

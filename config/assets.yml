@@ -6,9 +6,6 @@ gzip_assets: on # (on, off)
 javascripts:
   js:
     - public/javascripts/*.js
-    - public/javascripts/mxn/mxn-min.js
-    - public/javascripts/mxn/mxn.core-min.js
-    - public/javascripts/mxn/mxn.googlev3.core-min.js
 
 
 stylesheets:

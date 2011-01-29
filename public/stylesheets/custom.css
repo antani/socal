@@ -39,7 +39,7 @@ body {
 #container-wrap
 {
 	background: url("/images/big-fade.png") repeat-x scroll -70% 0 transparent;
-	padding: 25px 0 30px;
+	padding: 5px 0 30px;
 }
 a {
     color: #39B2E5;
@@ -70,13 +70,17 @@ a {
     font-size: 12px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
-	
+	top : 10px;
 }
 .setting-icon
 {
-	float: left;
-	top: 10px;
+    float: left;	
+	top: 30px;
 	padding-left: 30px;
+}
+.setting-icon img
+{
+    top: 10px;
 }
 #input-form-left
 {
@@ -245,7 +249,7 @@ input[type="text"], input[type="password"] {
 #calendar_remind_before
 {
     width: 20px;
-	height: 13px;
+	height: 15px;
 
 }
 #calendar_remind_before_what
@@ -255,7 +259,6 @@ input[type="text"], input[type="password"] {
 #reminder_before_what
 {
     padding:3px;
-
 }
 /*-------------Submit Button--------------------------------*/
 .container
@@ -606,13 +609,12 @@ h1
 }
 #edit-submit
 {
-   padding:5px;
 }
 #edit-submit input[type="submit"]
 {
     width: 200px;
     font-size: 13px;
-    float: none;
+    float:right;
 }
 #content-top {
     background-image: url("/images/content-top-bg.png");
@@ -655,7 +657,29 @@ h1
 	background-color: green;
 	opacity: 0.4;	
 }
-.event-highlight
+#search-form-p-container1,#search-form-p-container2,#search-form-p-container3
+{
+    width: 100px;
+    float: right;    
+    display: block;
+}
+#search-submit-1
+{
+	-moz-border-radius: 40px 40px 40px 40px;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;    
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    line-height: 1em;
+    font-weight: normal !important;
+    margin-bottom: 4px; 
+    height: 25px !important;
+    margin-right: 2px;
+    padding: 2px 8px;
+	color: #E64B50 !important;
+	font-size: 12px;
+}
+.event-highlight, #search-form-p-container input[type="submit"]
 {
 	-moz-border-radius: 40px 40px 40px 40px;
     background-color: #FFFFFF;
@@ -739,11 +763,11 @@ hr{
 #note-label
 {
 	font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
-	   color: #39B2E5;	
+	color: #39B2E5;	
 }
-#edit-submit input[type="submit"]ddeef6
+#edit-submit input[type="submit"]
 {
-	width: 100px;
+	width: 200px;
 	margin: 5px auto;
     text-align: center;
 }
@@ -761,8 +785,103 @@ hr{
 	height: 11px;
 	top: 0px;
 }
+.event-note
+{
+    font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #39B2E5;	
 
+}
+#edit-form-title
+{
+  font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  display: block;
+  text-shadow: 0 1px 0 #FFFFFF;
+  font-weight: bold;
+  font-size:16px;
+  color: #E64B50;
 
+}
+#slider-container
+{
+  padding: 10px !important;
+}
+#pri
+{
+  border:0; 
+  color:#f6931f; 
+  font-weight:bold; 
+  background-color: transparent;
+}
+#edit-cal-note
+{
+    height: 50px;
+    padding: 5px;
+    width: 238px;
+    border: 1px solid #b3b3b3;
+   -moz-border-radius: 5px 5px 5px 5px;
+   -webkit-border-radius: 5px 5px 5px 5px;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	
+}
+#calendar_category_str
+{
+    width: 180px;
+}
+#edit-form-left
+{
+  width: 300px;
+  float:left;
+  padding: 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  background: none repeat scroll 0 0 #E6EFF2;
+  border: 1px solid #C1D5DB;
+
+}
+#edit-form-right
+{
+  width: 200px;
+  float: right;
+    padding: 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    background: none repeat scroll 0 0 #E6EFF2;
+    border: 1px solid #C1D5DB;
+ 
+}
+#check-container
+{
+  width:350px;
+  text-align: left;
+  padding: 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  background: none repeat scroll 0 0 #E6EFF2;
+  border: 1px solid #C1D5DB;
+
+}
+#important-check
+{
+  display:block;
+  float:left; 
+  width:170px;
+}
+#done-check
+
+{
+  display:block;
+  width:170px;
+  float: left;
+}
+#edit-form-inside
+{
+    padding: 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    background: none repeat scroll 0 0 #E6EFF2;
+    border: 1px solid #C1D5DB;
+    
+}
 /*----------------------------------------------------------------------------------------------------*/
 /* dropdowns: general 88bbd4*/
 a.dropdown { text-align:left; background: transparent; padding: 4px 6px 6px; text-decoration: none; font-weight: bold; color: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
@@ -771,7 +890,7 @@ a.dropdown { position: relative; margin-left: 3px; }
 a.dropdown span { background-image: url(/images/toggle_down_light.png); background-repeat: no-repeat; background-position: 100% 50%; padding: 4px 16px 6px 0; }
 a.dropdown.dropdown-active { color:#4DB8E0; background-color:#4DB8E0; padding-bottom: 2px; }
 a.dropdown.dropdown-active span { background:url(/images/toggle_up_dark.png) 100% 50% no-repeat; }
-.dropdown-menu  { background:#4DB8E0; padding:7px 12px; position:absolute; top:16px; right:0; display:none; z-index:5000; -moz-border-radius-topleft: 5px; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; }
+.dropdown-menu  { background:#4DB8E0; padding:7px 12px; position:absolute; top:30px; right:0; display:none; z-index:5000; -moz-border-radius-topleft: 5px; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; }
   .dropdown-menu p { font-size:11px; }
 .dropdown-menu a:link, .dropdown-menu a:visited { font-weight:bold; color:#4DB8E0; text-decoration:none; line-height:1.7em; }
 .dropdown-menu a:active, .dropdown-menu a:hover { color:#555; }
@@ -785,4 +904,4 @@ a.dropdown.dropdown-active span { background:url(/images/toggle_up_dark.png) 100
   #dropdown1 a  { display:block; }
 #menu2      { float:left; }
   #dropdown2  { width:150px; font-size:11px; }
-.relative   { position:absolute;right:0;left:0; top:10px; }
+.relative   { position:absolute;right:0;left:0;  }

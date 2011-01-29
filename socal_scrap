@@ -307,7 +307,7 @@ h1 { font-family: 'Cuprum', arial, serif; }
             
             
             
-<% logo_cog = image_tag("cog.png", :alt => "Settings") %>
+    <% logo_cog = image_tag("cog.png", :alt => "Settings") %>
     <%= link_to logo_cog, settings_home_path %>
      
      <%= link_to "Sign out", destroy_user_session_path %>
@@ -319,7 +319,6 @@ h1 { font-family: 'Cuprum', arial, serif; }
                
                
                
-               
-<%= link_to image_tag("refresh.png"),
-               { :controller => :g_data, :method =>:index },
-               { :title => "Sync with Google Calendar", :class =>"setting-icon" } %>               
+                            <%= link_to image_tag("refresh.png"),
+       { :controller => :g_data, :method =>:index },
+       { :title => "Sync with Google Calendar", :class =>"setting-icon" } %> 

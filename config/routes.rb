@@ -11,9 +11,12 @@ Socal::Application.routes.draw do
   resources :calendars do
       get 'toggle_done', :on => :member
       get 'note_add', :on => :member
+      get 'up_priority', :on => :member
+      get 'down_priority', :on => :member
+
   end
   resources :settings do
-  		get 'update_other_settings', :on => :member
+	get 'update_other_settings', :on => :member
   end		
 
 

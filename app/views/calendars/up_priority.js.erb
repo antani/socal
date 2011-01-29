@@ -1,0 +1,25 @@
+var colors = new Array();
+colors[0] = "#99FF99"
+colors[1] = "#99FF00"
+colors[2] = "#FFCC66"
+colors[3] = "#FF6600"
+colors[4] = "#FF3300"
+colors[5] = "#FF0000"
+
+curr_pri = <%= @calendar.priority %>;
+/*
+col = "#99FF00";
+
+if (curr_pri >= 0 && curr_pri < 3)
+{
+  col = "#99FF00";
+}
+else if (curr_pri >=3 && curr_pri < 5)
+{
+  col = "#FFCC00";
+}
+else
+{
+  col ="#FF0000";
+}*/
+$("#important-event-<%=@calendar.id%>").css("background-color", colors[curr_pri]);

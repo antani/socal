@@ -1,3 +1,5 @@
+<div id="edit-form-title"><p>Edit...</p></div> 
+<div id="edit-form-left"> 
   <div>
     <%= f.label :event%><br />
     <%= f.text_field :event, :class=>"inline-edit-input" %>
@@ -14,20 +16,46 @@
     <%= f.label :event_time %><br />
     <%= f.text_field :event_time %>
   </div>
+  <div class="clear"></div>
+  <div>
+    <%= f.label :note %><br/>
+    <%= f.text_area :note, :id=>"edit-cal-note",:rows=>2, :cols=>10%>
+  </div>
   <br />
   <div class="clear"></div>
-  <div>
-  <%= f.check_box :important %><b>  Important Event ?</b>
-  </div>
-    <div class="clear"></div>
-  <div>
-  <%= f.check_box :done %><b>  Completed ?</b>
-  </div>
-  <div>
+</div>
+<div id="edit-form-right">
+      <div id="important-check">
+      <%= f.check_box :important %><b>  Important Event ?</b>
+      </div>
+      <div id="done-check">
+      <%= f.check_box :done %><b>  Completed ?</b>
+      </div>
 
   <div class="clear"></div>
-  <%= f.label :remind_before , :class=>"label-remind-before"%><br/>  <div class="clear"></div>
-  <%= f.text_field :remind_before  , :title=>"Enter duration before you want the default reminder. Just add minutes like 5 or 10", :class => "input-tip" %>
-  <%= select_tag "reminder_before_what", options_for_select([ "Minutes","Hours","Days" ], "Minutes") %>
-  </div>
+      <div id="edit-form-inside">
+        <%= f.label :remind_before , :class=>"label-remind-before"%><br/>  <div class="clear"></div>
+        <%= f.text_field :remind_before  , :title=>"Enter duration before you want the default reminder. Just add minutes like 5 or 10", :class => "input-tip" %>
+        <%= select_tag "reminder_before_what", options_for_select([ "Minutes","Hours","Days" ], "Minutes") %>
+      </div>
+  <div class="clear"></div>
+      <div id="slider-container">
+	<%= f.label :priority %>
+	<%= f.text_field :priority, :id=>"pri" %>
+        <div id="slider"></div>
+      </div>
+  <div class="clear"></div>
+      <div>
+        <%= f.label "Tags" %><br />
+        <%= f.text_field :category_str %>
+      </div>
+       <div id="edit-submit">
+        <%= f.submit %>
+      </div>
+
+    
+   </div>
+  <div class="clear"></div>
+
+</div>
 

@@ -1,17 +1,21 @@
 <tr class='<%=feed_item.done%>'>
+<%
+colors = ['#99ff99','#99ff00','#ffcc66','#ff6600','#ff3300','#ff0000']
+curr_pri = feed_item.priority
+%>
         
   <td>
-  	<% if feed_item.important %>
-     <span class="important-event" title="Important Event">&nbsp;&nbsp;</span>
-	<%else%>
-	  <span class="normal-event" title="Normal Event">&nbsp;&nbsp;</span>
-    <% end %>
+     <span id="important-event-<%=feed_item.id%>" title="Event Priority"  style="background-color:<%=colors[curr_pri] %>">&nbsp;&nbsp;</span>
+	 <!-- <span class="normal-event" title="Normal Event">&nbsp;&nbsp;</span> -->
     <span class="event-span Museo-300">
-          <%= link_to image_tag("done.png"),
-            { :controller => :calendars, :action =>:toggle_done, :id => feed_item.id },
-            { :title => "Mark as done", :remote => true, :class =>"done-icon" } %>
 
-         
+          <%= link_to image_tag("toggle_up_dark.png"), 
+            { :controller => :calendars, :action =>:up_priority, :id => feed_item.id },
+            { :title => "Increase Priority", :remote => true, :class =>"done-icon-1" } %>
+	  <%= link_to image_tag("toggle_down_dark.png"), 
+	    { :controller => :calendars, :action =>:down_priority, :id => feed_item.id },
+            { :title => "Decrease Priority", :remote => true, :class =>"done-icon-2" } %>
+
            <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.event_time.to_i%>">
            <a id="edit-form-link-<%=feed_item.id%>" href="#inline-edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>
           <% if feed_item.important %>
@@ -68,6 +72,10 @@
         <img title="<%=title_text%>" rel="<%=feed_item.sync or feed_item.twitter_shared or feed_item.facebook_shared or feed_item.foursquare_shared%>" src="/images/Chat2.png" class="twitter-shared"/>
       </td>
       <td style="padding:0px;">
+          <%= link_to image_tag("done.png"),
+            { :controller => :calendars, :action =>:toggle_done, :id => feed_item.id },
+            { :title => "Mark as done", :remote => true, :class =>"done-icon" } %>
+       </td><td> 
           <%= link_to image_tag("delete.png"),
                       feed_item,
                      :method => :delete,
