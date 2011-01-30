@@ -1,6 +1,6 @@
 package_assets: on # (on, off, always)
 embed_assets: on # (on, off, datauri)
-compress_assets: off # (on, off)
+compress_assets: on # (on, off)
 gzip_assets: on # (on, off)
 
 javascripts:
