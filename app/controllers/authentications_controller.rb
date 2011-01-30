@@ -53,7 +53,8 @@ class AuthenticationsController < ApplicationController
               current_user.authentications.create!(:provider => omniauth['provider'],
                                                    :uid => omniauth['uid'])
        end
-        redirect_to authentications_url
+        #redirect_to authentications_url
+        redirect_to settings_home_path
       else
         #Condition : 4, This is a new user
         logger.debug "Just signin using twitter"

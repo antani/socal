@@ -34,18 +34,22 @@ $(document).ready(function() {
             }
  
      });
+     var toggleLoading = function() { $("#loading").toggle() };
 
+      $("#settings-user-form").bind("ajax:loading", $("#loading").show())
+                        .bind("ajax:complete", $("#loading").hide())
+                        .bind("ajax:success", function() { $("#setting-user-saved").html("Settings saved.");});
 
-    //Handle the Ajax Delete post request	
-    function showDeletePost()
-    {
-        $('#pageinfo').load("/ #pageinfo");
-		$('#pageinfo').load("/ #feed_item_today_container");
-		 
-        return false;
-    }
+      //Handle the Ajax Delete post request	
+      function showDeletePost()
+      {
+          $('#pageinfo').load("/ #pageinfo");
+          $('#pageinfo').load("/ #feed_item_today_container");
+                   
+          return false;
+      }
 
-    $('#signin-link').colorbox({opacity:0.1,inline:true, href: function() {
+      $('#signin-link').colorbox({opacity:0.1,inline:true, href: function() {
                                                return $(this).attr('href');
                                                }});
 
@@ -103,10 +107,9 @@ $(document).ready(function() {
         $(this).removeClass("selected-input");
     });
 
-    $('form').submit(function () { // optional: replace "form" with whatever CSS selector you want (ex: ID or class)
+    $('#new_calendar').submit(function () { // optional: replace "form" with whatever CSS selector you want (ex: ID or class)
         $('input[type="submit"]', this).replaceWith('<p><strong>Please wait...</strong></p>'); // optional: change "Sending..." to something else
     });
-
     //Hide the error messages automatically
     setTimeout(hideFlashMessages, 10000);
     function hideFlashMessages() {

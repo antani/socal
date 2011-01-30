@@ -23,6 +23,7 @@
   <div>
     <%= f.submit "Add Event", :class=>"Museo-500" %>
   </div>
+<span id="loading" style="display: none;"><img alt="Ajax-loader" src="/images/ajax-loader.gif" /></span> 
   <div>
     <% if current_user.share_twitter==true  %>
      <img src="images/twitter.png" title="Twitter Share is enabled" class="input-tip-bottom" style="opacity: 0.3"/>
