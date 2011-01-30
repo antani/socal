@@ -6,8 +6,6 @@
 */
 
 $(document).ready(function() {
-
-
     $(".input-tip").tipTip({activation:"hover",defaultPosition:"right"});
     $(".twitter-shared").tipTip({activation:"hover",defaultPosition:"right"});
 
@@ -85,12 +83,12 @@ $(document).ready(function() {
         if (currentVal=='' || currentVal=='false')
         {
             $(this).closest('tr').attr('class','true');
-            $(this).closest('tr').fadeTo("slow", 0.4).find(".event-span").find("a").css("textDecoration","line-through");;
+            $(this).closest('tr').fadeTo("slow", 0.4).find(".event-span").find("a").css("textDecoration","line-through");
         }
         else
         {
             $(this).closest('tr').attr('class','false');
-            $(this).closest('tr').fadeTo("slow", 1).find(".event-span").find("a").css("textDecoration","none");;
+            $(this).closest('tr').fadeTo("slow", 1).find(".event-span").find("a").css("textDecoration","none");
         }
     });
 
@@ -112,7 +110,7 @@ $(document).ready(function() {
     //Hide the error messages automatically
     setTimeout(hideFlashMessages, 10000);
     function hideFlashMessages() {
-      $('#flash_alert,#flash_success,#flash_notice,#setting-error').fadeOut(2000)
+      $('#flash_alert,#flash_success,#flash_notice,#setting-error').fadeOut(2000);
     }
 
     //Add jqueryUI dialog on edit calendar form
@@ -149,7 +147,7 @@ $(document).ready(function() {
                     $.pnotify({
 						pnotify_title: 'Reminder',
 						pnotify_text: msg,
-						pnotify_opacity: .8
+						pnotify_opacity: 0.8
 					});
                 }
          });
@@ -170,7 +168,7 @@ $(document).ready(function() {
                                                return "#"+$(this).attr('rel');
                                                },
                                                onComplete: function(){
-                                                   $("#"+$(this).attr('rel')).each(function() {
+                                                               $("#"+$(this).attr('rel')).each(function() {
                                                                                         $(this).css("z-index", "1");
                                                                                         var relStr = $(this).attr('title');
                                                                                         var co_ords = relStr.split(',');
@@ -195,7 +193,7 @@ $(document).ready(function() {
                                                                                         my_marker.setInfoBubble(text);
                                                                                         // display marker
                                                                                         mapstraction.addMarker(my_marker);
-                                                                                 })
+                                                                                 });
                                                 }});
 
 

@@ -779,7 +779,7 @@ hr{
 	float: left;
 	width: 150px !important;
 }
-#search_event_or_event_location_or_category_str_contains
+#search_event_or_event_location_or_category_str_or_note_contains
 {
 	width: 150px;
 	height: 11px;
