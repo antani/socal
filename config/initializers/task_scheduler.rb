@@ -16,6 +16,8 @@ end
 
    def noise
     Rails.logger.debug "Starting to create noise---------------------------------------------------------------"
+    Rails.logger.debug Time.zone
+
     @mail_calendar_for_reminder=Calendar.where(:reminder_time => Time.now-30.seconds..Time.now+30.seconds)
     @mail_calendar_for_reminder.each do |cal_inner|
     Rails.logger.debug "Going to noise now on google etc---------------------------------------------------------"          
@@ -62,7 +64,7 @@ end
           config.oauth_token_secret = auth.secret
         end
     #    @client ||= Twitter::Client.new
-        Twitter.update("From Socal -" + calendar.event)
+        Twitter.update(calendar.event,{:lat=>calendar.latitude, :long => calendar.longitude, :display_coordinates=>true})
         calendar.twitter_shared =true
         calendar.save
 

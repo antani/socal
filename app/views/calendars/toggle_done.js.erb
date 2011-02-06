@@ -1,2 +1,12 @@
-alert('Yo);
-
+        //var currentVal = $(this).closest('tr').attr('class');
+        var currentVal = <%= @calendar.done %>
+        if (currentVal=='' || currentVal=='false')
+        {
+            $(this).closest('tr').attr('class','true');
+            $(this).closest('tr').fadeTo("slow", 0.4).find(".event-span").find("a").css("textDecoration","line-through");
+        }
+        else
+        {
+            $(this).closest('tr').attr('class','false');
+            $(this).closest('tr').fadeTo("slow", 1).find(".event-span").find("a").css("textDecoration","none");
+        }

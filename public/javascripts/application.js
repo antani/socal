@@ -81,23 +81,7 @@ $(document).ready(function() {
 
 
 
-    $('.done-icon').bind('ajax:success', function() {
-        var currentVal = $(this).closest('tr').attr('class');
-//        alert(currentVal);
-        if (currentVal=='' || currentVal=='false')
-        {
-            $(this).closest('tr').attr('class','true');
-            $(this).closest('tr').fadeTo("slow", 0.4).find(".event-span").find("a").css("textDecoration","line-through");
-        }
-        else
-        {
-            $(this).closest('tr').attr('class','false');
-            $(this).closest('tr').fadeTo("slow", 1).find(".event-span").find("a").css("textDecoration","none");
-        }
-    });
-
-
-    //Add "selected" class to any selected inputbox
+      //Add "selected" class to any selected inputbox
     $("input:text,input:password").focus(function(){
         // Select field contents
         $(this).addClass("selected-input");
@@ -112,8 +96,10 @@ $(document).ready(function() {
     });
     //Hide the error messages automatically
     setTimeout(hideFlashMessages, 10000);
+    $('#setting-user-saved').hide();
+
     function hideFlashMessages() {
-      $('#flash_alert,#flash_success,#flash_notice,#setting-error').fadeOut(2000);
+      $('#setting-user-saved,#flash_alert,#flash_success,#flash_notice,#setting-error').fadeOut(2000);
     }
 
     //Add jqueryUI dialog on edit calendar form

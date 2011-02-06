@@ -44,24 +44,21 @@ class SettingsController < ApplicationController
         sff =false
       end
       
-      
-      #        logger.debug "current password ---------------------"
-      #        logger.debug curr_pwd
-      #        logger.debug "new password ---------------------"
-      #        logger.debug new_pwd
-      #        logger.debug "new confirm password ---------------------"
-      #        logger.debug new_cnf_pwd
       if params[:user][:which_form] =='password'                                     
-        
         if new_pwd.blank? or new_cnf_pwd.blank?                                     
+          logger.debug "blank"
           flash[:error] = "New password or confirmation password is blank" 
+          @password_error = true
           format.html { redirect_to settings_home_url }        
+          format.js
         end                                                                         
+
         status= @user.update_with_password(:current_password=>curr_pwd,:password=>new_pwd,:password_confirmation =>new_cnf_pwd,:email => @user.email)                
         logger.debug 'Status------------------'
         logger.debug status
         
         if !status                                                                  
+          logger.debug "Status==false"
           format.html { 
             flash[:error] =  @user.errors.full_messages.to_sentence
             logger.debug @user.errors
@@ -71,10 +68,13 @@ class SettingsController < ApplicationController
             end
             redirect_to settings_home_url({:param_1 => param })
           }
+          @password_error=true
+          format.js
           logger.debug @user.errors
         elsif @user.save
           flash[:success] = "Password Updated"
           format.html { redirect_to settings_home_url }               	 
+          format.js
         end	                                                                     
         
       else    
@@ -94,7 +94,6 @@ class SettingsController < ApplicationController
           logger.debug "Settings failed....................................................."
           flash[:error] = "Settings can't be saved"
           format.html { redirect_to settings_home_url }
-          format.js
         end                                                                       
       end                                                                           
     end  

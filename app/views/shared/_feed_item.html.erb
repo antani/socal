@@ -11,10 +11,10 @@ curr_pri = feed_item.priority
 
           <%= link_to image_tag("toggle_up_dark.png"), 
             { :controller => :calendars, :action =>:up_priority, :id => feed_item.id },
-            { :title => "Increase Priority", :remote => true, :class =>"done-icon-1" } %>
+            { :title => "Increase Priority", :remote => true } %>
 	  <%= link_to image_tag("toggle_down_dark.png"), 
 	    { :controller => :calendars, :action =>:down_priority, :id => feed_item.id },
-            { :title => "Decrease Priority", :remote => true, :class =>"done-icon-2" } %>
+            { :title => "Decrease Priority", :remote => true } %>
 
            <input type="hidden" name="<%=feed_item.event%>" value="<%= feed_item.event_time.to_i%>">
            <a id="edit-form-link-<%=feed_item.id%>" href="#inline-edit-form-<%=feed_item.id%>"><%=feed_item.event%></a>

@@ -9,7 +9,7 @@
 
 <%= %>
 <div id="user_settings" class="Museo-300">
-<%= form_for(:user, @user, :url => settings_path, :remote=>true, :html=>{:id=>"settings-user-form"}) do |f| %>
+<%= form_for(:user, @user, :url => settings_path, :remote => true, :html=>{:id=>"settings-user-form"}) do |f| %>
 
   <p id="setting-user-saved"><p>
   <p><%= f.label :reminder_duration %><br />
@@ -50,7 +50,7 @@
 
 <div id="change_pwd" class="Museo-300">
 
- <%= form_for(:user, @user, :url => settings_path, :remote=>true, :html=>{:id=>"settings-pwd-form"}) do |f| %>
+ <%= form_for(:user, @user, :url => settings_path,  :html=>{:id=>"settings-pwd-form"}) do |f| %>
   <p><%= f.label "Current Password" %><br />
   <%= f.password_field :current_password %></p>
 
@@ -61,7 +61,6 @@
   <%= f.password_field :password_confirmation %></p>
   <%= f.hidden_field :which_form, :value => "password" %>
   <p><%= f.submit "Change my password",:class=>"Museo-300" %></p>
-<span id="loading" style="display: none;"><img alt="Ajax-loader" src="/images/ajax-loader.gif" /></span> 
 
 <% end %>
 </div>
