@@ -6,8 +6,8 @@
       <div style="display:none">
           <div id="inline-edit-form-<%=hidden_map_inline_edit.id%>" class="inline-edit-form" style="width: 540px; height: 380px">
             <%= form_for (hidden_map_inline_edit) do |f| %>
-                  <%=render :partial => 'calendars/form', :locals => { :f => f }%>
-				  <br/>
+                  <%=render :partial => 'calendars/form', :locals => { :f => f, :id=> hidden_map_inline_edit.id }%>
+		  <br/>
            <%end%>
            </div>
       </div>

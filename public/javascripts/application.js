@@ -17,11 +17,11 @@ $(document).ready(function() {
     });
     $("#tour").colorbox({iframe:true, innerWidth:425, innerHeight:344});
     $(".facebook-shared, .twitter-shared, .foursquare-shared").hide();
-	$("#search").attr("tabindex", 10);
-	$("#calendar_event").focus();
+    $("#search").attr("tabindex", 10);
+    $("#calendar_event").focus();
 
-     $("#image, #image-in").hide();
-     $("#user_email,#email-in").blur(function() {
+    $("#image, #image-in").hide();
+    $("#user_email,#email-in").blur(function() {
 
             email = $(this).val();
             if ($(this).attr('id') == "user_email")
@@ -275,20 +275,50 @@ $(document).ready(function() {
     }
   });
   /*--------------------------------------------------------------------------------------------------------------*/
-    $( "#slider" ).slider({
-            value:0,
+//div[id^="
+/*    $( 'div[id^="slider-847"]' ).slider({
+            value:0 ,
             min: 0,
             max: 5,
             step: 1,
             slide: function( event, ui ) {
-                    $( "#pri" ).val( ui.value );
+                    $( "#pri-487" ).val( ui.value );
             }
     });
-    $( "#pri" ).val(  $( "#slider" ).slider( "value" ) );
+*/
+var colors = new Array();
+colors[0] = "#99FF99"
+colors[1] = "#99FF00"
+colors[2] = "#FFCC66"
+colors[3] = "#FF6600"
+colors[4] = "#FF3300"
+colors[5] = "#FF0000"
 
+
+$('img[id^="image-down"]').bind('click',function(){
+                           elementVal = $(this).attr('id').split('-');
+                           priVal = parseInt($("#pri-"+elementVal[2]).attr('value'));
+                           priVal = priVal-1;
+                           if(priVal>0) 
+                           {  
+                              $("#pri-"+elementVal[2]).val(priVal);
+                              $("#pri-"+elementVal[2]).css("color", colors[priVal]);   
+                           }   
+                      });
+$('img[id^="image-up"]').bind('click',function(){
+                           elementVal = $(this).attr('id').split('-');
+                           priVal = parseInt($("#pri-"+elementVal[2]).attr('value'));
+                           priVal = priVal+1;
+                           if(priVal<6)
+                           {
+                              $("#pri-"+elementVal[2]).val(priVal);
+                              $("#pri-"+elementVal[2]).css("color", colors[priVal]);   
+
+                           }   
+                      });
+
+
+
+    
 
 });
-
-
-
-

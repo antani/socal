@@ -1,4 +1,4 @@
-<div id="edit-form-title"><p>Edit...</p></div> 
+<div id="edit-form-title"><p>Edit Calendar</p></div> 
 <div id="edit-form-left"> 
   <div>
     <%= f.label :event%><br />
@@ -41,8 +41,10 @@
   <div class="clear"></div>
       <div id="slider-container">
 	<%= f.label :priority %>
-	<%= f.text_field :priority, :id=>"pri" %>
-        <div id="slider"></div>
+<div class="clear"></div>
+
+	<%= f.text_field :priority, :id=>"pri-"+id.to_s ,:class=>'pri-class'%>
+           <div id="image-up-down"><img src="images/toggle_up_dark.png" id="image-up-<%= id%>" class="image-up"/><img src="images/toggle_down_dark.png" id="image-down-<%= id %>" class="image-down"/></div>
       </div>
   <div class="clear"></div>
       <div>
@@ -52,10 +54,7 @@
        <div id="edit-submit">
         <%= f.submit %>
       </div>
-
-    
    </div>
   <div class="clear"></div>
-
 </div>
 

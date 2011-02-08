@@ -84,7 +84,9 @@ class SettingsController < ApplicationController
         @user.share_facebook = sf
         @user.share_foursquare = sff
         @user.remind_before_what = remind_before
-        
+
+        @password_error=false        
+
         if @user.save                                                              
           logger.debug "Settings saved....................................................."
           flash[:success] = "Settings updated"
