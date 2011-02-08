@@ -390,8 +390,8 @@ a {
     padding-right:50px;
     color: #474747;
     font-family:  "ChunkThree","Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
-    width:550px !important;
-	text-align: right;
+    width:650px !important;
+    text-align: right;
 }
 #user_nav a
 {
@@ -995,7 +995,7 @@ h1
 }
 #search-submit-1
 {
-	-moz-border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
     background-color: #FFFFFF !important;
     background: #FFFFFF !important;    
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1006,8 +1006,8 @@ h1
     height: 25px !important;
     margin-right: 2px;
     padding: 2px 8px;
-	color: #E64B50 !important;
-	font-size: 12px;
+    color: #E64B50 !important;
+    font-size: 12px;
 }
 .event-highlight, #search-form-p-container input[type="submit"]
 {
@@ -1046,7 +1046,7 @@ h1
     overflow: hidden;
     padding: 0;
     position: absolute;
-    right: 425px;
+    right: 525px;
     text-indent: -9000px;
     top: 17px;
     width: 16px;
@@ -1133,14 +1133,17 @@ hr{
 }
 #slider-container
 {
-  padding: 10px !important;
+/*  padding: 10px !important;
+  -moz-border-radius: 5px 5px 5px 5px;
+  background: none repeat scroll 0 0 #E6EFF2;
+  border: 1px solid #C1D5DB;*/
 }
-#pri
+.pri-class
 {
-  border:0; 
-  color:#f6931f; 
-  font-weight:bold; 
-  background-color: transparent;
+  border:0 !important; 
+  font-weight:bold !important; 
+  background-color: transparent !important;
+  font-size: 20px;
 }
 #edit-cal-note
 {
@@ -1223,6 +1226,26 @@ hr{
     border: 1px solid #C1D5DB;
  
 }
+#slider-container input[type="text"]
+{
+  width: 10px;
+  padding: 0px 4px 5px 0px;
+  margin-top: 3px;
+}
+#slide-container label
+{
+  float: left;
+}
+#image-up-down
+{
+  width: 100px;
+  float: left;
+  display: block;
+}
+.image-up, .image-down
+{
+  display: block;
+}
 /*----------------------------------------------------------------------------------------------------*/
 /* dropdowns: general 88bbd4*/
 a.dropdown { text-align:left; background: transparent; padding: 4px 6px 6px; text-decoration: none; font-weight: bold; color: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
@@ -1240,12 +1263,12 @@ a.dropdown.dropdown-active span { background:url(/images/toggle_up_dark.png?1295
       *+ html .dropdown-menu { top:28px; }
 
 /* dropdowns: specific */
-#menu1      { float:left; margin-right:20px; width: 200px !important;}
+#menu1      { float:left; margin-right:20px; width: 50px !important;}
   #dropdown1  { width:150px !important; }
   #dropdown1 a  { display:block; }
 #menu2      { float:left; }
   #dropdown2  { width:150px; font-size:11px; }
-.relative   { position:absolute;right:0;left:0;  }
+.relative   { width:100px !important;position:absolute;right:10;left:10;  }
 
 /*
  * jQuery UI CSS Framework 1.8.6
