@@ -39,7 +39,7 @@ curr_pri = feed_item.priority
                 cats=get_categories(feed_item.id)
                 cats.each do |cat|
             %>
-	    <span class="event-highlight"><%= cat.cat_name %></span>
+	    <!--span class="event-highlight"><%= cat.cat_name %></span -->
 	   <%end%>
 	   </span>
   </td>
@@ -62,11 +62,12 @@ curr_pri = feed_item.priority
         end
       %>
    <td id="slide-<%=feed_item.id%>">	  
-	  <a id="inline-edit-note-link-<%=feed_item.id%>" href="#inline-edit-note-<%=feed_item.id%>"><img src="/images/note.png" /></a>
+        <a id="inline-edit-note-link-<%=feed_item.id%>" href="#inline-edit-note-<%=feed_item.id%>"><img src="/images/note.png" /></a>
         <img title="<%=title_text%>" rel="<%=feed_item.sync or feed_item.twitter_shared or feed_item.facebook_shared or feed_item.foursquare_shared%>" src="/images/Chat2.png" class="twitter-shared"/>
           <%= link_to image_tag("done.png"),
             { :controller => :calendars, :action =>:toggle_done, :id => feed_item.id },
             { :title => "Mark as done", :remote => true, :class =>"done-icon" } %>
+
           <%= link_to image_tag("delete.png"),
                       feed_item,
                      :method => :delete,

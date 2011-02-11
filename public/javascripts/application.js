@@ -17,8 +17,6 @@ $(document).ready(function() {
     });
     $("#tour").colorbox({iframe:true, innerWidth:425, innerHeight:344});
     $(".facebook-shared, .twitter-shared, .foursquare-shared").hide();
-    $("#search").attr("tabindex", 10);
-    $("#calendar_event").focus();
 
     $("#image, #image-in").hide();
     $("#user_email,#email-in").blur(function() {
