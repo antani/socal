@@ -1,13 +1,13 @@
-/*----------------Fonts------------------
+/*----------------Fonts-----------------
 @font-face {
-  font-family: Yanone;
-  src: url('/fonts/YanoneKaffeesatz-Bold.otf') format("opentype");
+  font-family: "ChunkFive";
+  src: url('Fontin_Sans_R_45b.otf') format("opentype");
 }
 @font-face {
-font-family: Miso;
+font-family: "ChunkThree";
     src: url("/fonts/miso.otf") format("opentype");
-}*/
-/*--------------------------------------------------------------------*/
+}
+/*--------------------------------------------------------------------
 @font-face {
   font-family: "ChunkFive";
   src: url("style_154926.eot");
@@ -50,7 +50,7 @@ a {
 {
     border-bottom: 2px solid #39B2E5;
     font-size: 26px;
-    font-family: "Allan","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-shadow: 0 1px 0 #FFFFFF;
 }
 #user_nav
@@ -59,7 +59,7 @@ a {
     /*text-align: right;*/
     padding-right:50px;
     color: #474747;
-    font-family:  "ChunkThree","Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:  "Droid Sans","Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
     width:650px !important;
     text-align: right;
 }
@@ -93,7 +93,7 @@ a {
 #input-form-left,#input-form-middle,#input-form-right label
 {
     font-size: 16px;
-    font-family: "ChunkThree","Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-shadow: 0 1px 0 #FFFFFF;
 }
 #input-form-left input
@@ -184,7 +184,7 @@ a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
     text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
-    font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Droid Sans",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
    /*  background: -moz-linear-gradient(-90deg,#003471,#448CCB);
      background: -webkit-gradient(linear, left top, left bottom, from(#003471), to(#448CCB));*/
 
@@ -205,7 +205,7 @@ a {
     -moz-border-radius-topright: 5px;
     -webkit-border-radius: 5px 5px 5px 5px;    
     background-color: #F9F9F9;
-    font-family:"ChunkThree",'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Droid Sans",'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
     text-shadow: 0 1px 0 white;
 
 
@@ -286,7 +286,7 @@ input[type="submit"] {
     color: #202020;
     cursor: pointer;
     display: block;
-    font-family:"ChunkThree",'Yanone Kaffeesatz', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Droid Sans",'Yanone Kaffeesatz', "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: bold !important;
     height: 31px;
     line-height: 18px;
@@ -385,22 +385,23 @@ Navigation Header
     margin-bottom: 10px;
     overflow: hidden;
     padding: 40px 0 15px 35px;
-    font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 h1
 {
-    font-family: "Yanone Kaffeesatz","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
 }
 #sign-up h1 strong {
-    font-family: "Yanone Kaffeesatz","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #202020;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
 #sign-up h1 {
-    font-family: 'Yanone Kaffeesatz',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #838383;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #sign-in
@@ -412,7 +413,7 @@ h1
   overflow: hidden;
   padding: 10px;
   position: relative;
-  font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #details
@@ -423,8 +424,8 @@ h1
   /*-moz-border-radius-bottomleft: 4px;
   -moz-border-radius-bottomright: 4px;
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);*/
-  font-size: 16px;
-  font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal; 
   text-shadow: 0 2px 0 #FFFFFF;
 
@@ -438,7 +439,7 @@ h1
 
     border: 1px solid #87B800;
     color: #FFFFFF;
-    font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:18px;
     text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
     text-align: center;
@@ -463,7 +464,7 @@ h1
     background: none repeat scroll 0 0 #E6EFF2;
     border: 1px solid #C1D5DB;
     padding-bottom: 20px;
-    font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     display: block;
     -moz-box-shadow: inset 0 0 2px #5CB3FF;
     -webkit-box-shadow: inset 0 0 2px #5CB3FF;
@@ -504,7 +505,7 @@ h1
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A7E300), to(#99D100));
     border: 1px solid #87B800;
     color: #FFFFFF;
-    font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:18px;
     text-shadow: rgba(0,0,0,0.2) 1px 0, rgba(0,0,0,0.3) 0 1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 1px 1px;
 
@@ -522,12 +523,13 @@ h1
 }
 #signin-form h1
 {
-    font-family: "Allan","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
     color:#39B2E5;
 }
 #signin-form
 {
-   font-family: "ChunkThree","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
    padding:15px;
 }
 .when
@@ -551,7 +553,7 @@ h1
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
     background-color: #F9F9F9;
-    font-family:"ChunkThree",'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Droid Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-right:10px;
     padding: 10px;
 }
@@ -568,7 +570,7 @@ h1
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
     background-color: #F9F9F9;
-    font-family:"ChunkThree",'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Droid Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
 
     padding: 10px;
 
@@ -592,7 +594,7 @@ h1
 }
 #flash_error
 {
-   font-family:"ChunkThree",'Molengo', "Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-family:"Droid Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
    padding: 10px;
 
 }
@@ -638,7 +640,7 @@ h1
     border: 1px solid #DEDEDE;
    -moz-border-radius: 5px 5px 5px 5px;
    -webkit-border-radius: 5px 5px 5px 5px;
-    font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Droid Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
         
 }
 .error-field
@@ -762,7 +764,7 @@ hr{
 }
 #note-label
 {
-	font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:"Droid Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
 	color: #39B2E5;	
 }
 #edit-submit input[type="submit"]
@@ -787,13 +789,13 @@ hr{
 }
 .event-note
 {
-    font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"Droid Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
 	color: #39B2E5;	
 
 }
 #edit-form-title
 {
-  font-family:"ChunkThree",'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family:"Droid Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
   display: block;
   text-shadow: 0 1px 0 #FFFFFF;
   font-weight: bold;

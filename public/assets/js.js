@@ -17,8 +17,6 @@ $(document).ready(function() {
     });
     $("#tour").colorbox({iframe:true, innerWidth:425, innerHeight:344});
     $(".facebook-shared, .twitter-shared, .foursquare-shared").hide();
-    $("#search").attr("tabindex", 10);
-    $("#calendar_event").focus();
 
     $("#image, #image-in").hide();
     $("#user_email,#email-in").blur(function() {
@@ -34,6 +32,18 @@ $(document).ready(function() {
             }
  
      });
+     //Autodetect timezones
+     $('#user_timezone').html( function()
+                                       {
+                                         var current_date = new Date();
+                                         var gmt_offset = current_date.getTimeoneOffset()/ 60;
+                                         alert(gmt_offset);
+                                         return gmt_offset;
+                                       }); 
+
+
+
+
      var toggleLoading = function() { $("#loading").toggle() };
 
       $("#settings-user-form").bind("ajax:loading", $("#loading").show())
