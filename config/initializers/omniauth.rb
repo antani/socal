@@ -2,12 +2,14 @@ require 'openid/store/filesystem'
 Rails.application.config.middleware.use OmniAuth::Builder do
    #Production
    provider :twitter, 'LkNRuATCSidM7rF63NnUYw', '96cdM22QKD5ZeGuI2jv7wYXm7SuT1lBdj2hxWD1kwgA'
-   provider :facebook, '181816611843055', 'eaf9afe8ad70a9626dfd488ec882c237',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+   #provider :facebook, '181816611843055', 'eaf9afe8ad70a9626dfd488ec882c237',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
    provider :open_id, nil
      use OmniAuth::Strategies::OpenID, nil, :name => "yahoo", :identifier => "https://me.yahoo.com"
      use OmniAuth::Strategies::OpenID, nil, :name => "google", :identifier => 'https://www.google.com/accounts/o8/id'
    
    provider :foursquare, 'X41NC314YUNA32IDY4TI0VHWYOWQEYX1IKPPYC0XAVHKYHGD', 'VYWPGJSQ5UOJQYR0FK2LF3SG3SEKR0WJ1OQ3E1IKK1NNA2KZ'
+   provider :facebook, '140372859359450', '05b749ae51632bdbea0d08b3aed2b979',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+
 
    #Development key
 
