@@ -32,11 +32,14 @@ $(document).ready(function() {
             }
  
      });
+
      var toggleLoading = function() { $("#loading").toggle() };
 
-      $("#settings-user-form").bind("ajax:loading", $("#loading").show())
-                        .bind("ajax:complete", $("#loading").hide())
-                        .bind("ajax:success", function() { $("#setting-user-saved").html("Settings saved.");});
+     $('.calendar_event_time').datetimepicker({timeFormat: 'hh:mm:ss', dateFormat: 'yy-mm-dd'});  
+          
+     $("#settings-user-form").bind("ajax:loading", $("#loading").show())
+                             .bind("ajax:complete", $("#loading").hide())
+                             .bind("ajax:success", function() { $("#setting-user-saved").html("Settings saved.");});
 
       //Handle the Ajax Delete post request	
       function showDeletePost()
