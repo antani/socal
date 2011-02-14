@@ -19,7 +19,7 @@ class PagesController < ApplicationController
        @calendar = Calendar.new if user_signed_in?
        @feed_items = @user.calendars.all.paginate(:page => params[:page])
        @feed_items_last_week = @user.calendars.where("whendate<?",(Time.now.to_date)).paginate(:page => params[:page])
-       @feed_items_future = @user.calendars.where(:whendate => (Date.today+2.days)..(Date.today+1.year)).paginate(:page => params[:page])
+       @feed_items_future = @user.calendars.where(:whendate => (Date.today+2.days)..(Date.today+100.years)).paginate(:page => params[:page])
        @feed_items_today = @user.calendars.where( :whendate => Date.today).paginate(:page => params[:page])
        @feed_items_tomorrow = @user.calendars.where( :whendate => Date.today+1).paginate(:page => params[:page])
        @title = @user.email
