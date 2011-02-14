@@ -3,9 +3,6 @@
  <% if !@from_outside %>
   <%= devise_error_messages! %>
  <% end %>
- <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-  <% end %>
   <p><%= f.label :email %><br />
   <%= f.text_field :email%></p>
 <% if @user.password_required? %>

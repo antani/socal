@@ -1,5 +1,4 @@
  <div id="user_nav" class="Museo-300">
-   	
    <% if user_signed_in? %>
       <% if ! current_page?(:controller => 'settings', :action => 'home') and ! current_page?(:controller => 'authentications')%>	     
           <div id="search-form">  		
@@ -29,3 +28,6 @@
   <%= link_to logo, root_path %>
  </div>
 
+   	
+   	
+   	

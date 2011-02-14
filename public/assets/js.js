@@ -1013,7 +1013,7 @@ $(document).ready(function() {
     $('#setting-user-saved').hide();
 
     function hideFlashMessages() {
-      $('#setting-user-saved,#flash_alert,#flash_success,#flash_notice,#setting-error').fadeOut(2000);
+      $('#setting-user-saved,#flash_alert,#flash_success,#setting-error').fadeOut(2000);
     }
 
     //Add jqueryUI dialog on edit calendar form
