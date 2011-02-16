@@ -1,4 +1,4 @@
-<tr class='<%=feed_item.done%>'>
+<tr id="tr-<%=feed_item.id%>" class='<%=feed_item.done%>'>
 <%
 colors = ['#99ff99','#99ff00','#ffcc66','#ff6600','#ff3300','#ff0000']
 curr_pri = feed_item.priority
@@ -61,7 +61,8 @@ curr_pri = feed_item.priority
            title_text = title_text + " <img src='/images/google.png'/>"
         end
       %>
-   <td id="slide-<%=feed_item.id%>">	  
+   <td class="button-td" id="slide-<%=feed_item.id%>">	  
+   <span>
         <a id="inline-edit-note-link-<%=feed_item.id%>" href="#inline-edit-note-<%=feed_item.id%>"><img src="/images/note.png" /></a>
         <img title="<%=title_text%>" rel="<%=feed_item.sync or feed_item.twitter_shared or feed_item.facebook_shared or feed_item.foursquare_shared%>" src="/images/Chat2.png" class="twitter-shared"/>
           <%= link_to image_tag("done.png"),
@@ -72,7 +73,8 @@ curr_pri = feed_item.priority
                       feed_item,
                      :method => :delete,
                      :title => "Delete event", :remote=> true, :class=>"delete-icon" %>
-    </td>  
+    </span>
+    </td>
   <% end %>
 
   </tr>

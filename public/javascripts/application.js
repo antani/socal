@@ -3,11 +3,26 @@
 * Contains the page.load sort of code and uses jQuery.
 * TODO: Is there a need to refactor some of the code in the js.erb ?
 *
+a[rel^="map-"]
 */
 
 $(document).ready(function() {
     $(".input-tip").tipTip({activation:"hover",defaultPosition:"right"});
     $(".twitter-shared").tipTip({activation:"hover",defaultPosition:"right"});
+    $('tr[id^="tr-"]').find('.button-td').hide();
+
+/*    $('tr[id^="tr-"]').hover(function(){
+                                       $(this).find("td[id^='slide-']").show();
+                                       });
+    
+    $('tr[id^="tr-"]').blur(function(){
+                                      $(this).find("td[id^='slide-']").hide();
+                                      });
+*/    
+    $('tr[id^="tr-"]').live({
+        mouseover: function() { $(this).find("td[id^='slide-']").show();},
+        mouseout: function() {$(this).find("td[id^='slide-']").hide();}
+    });
 
     $(".setting-icon").tipTip({activation:"hover",defaultPosition:"right"});
     $('.input-tip-bottom').tipTip({activation:"hover",defaultPosition:"bottom"});
