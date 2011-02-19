@@ -171,7 +171,7 @@ a {
 
 }
 
-.duration-h2{
+.duration-h20{
     color: #FFFFFF;
     font-size: 15px;
     font-weight: bold;
@@ -972,3 +972,40 @@ a.dropdown.dropdown-active span { background:url(/images/toggle_up_dark.png) 100
 #menu2      { float:left; }
   #dropdown2  { width:150px; font-size:11px; }
 .relative   { width:100px !important;position:absolute;right:10;left:10;  }
+/*-----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------*\
+	TYPE
+\*------------------------------------*/
+.duration-h2{
+	position:relative;
+	color:#fff;
+	/*background:#f43059;*/
+        background: -moz-linear-gradient(center top , #A7E300, #99D100) repeat scroll 0 0 transparent;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A7E300), to(#99D100));
+/*
+        background: #a7e300;*/
+	font-size:1.5em;
+	float:left;
+	clear:both;
+	padding:10px 10px 10px 20px;
+        margin-top:-10px;
+	margin-left:-10px;
+	margin-bottom:20px;
+	/*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
+	-moz-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+	-webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+	-o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+	box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+}
+h2:before{
+	content:" ";
+	background:url(/images/ribbon-1.png);
+	display:block;
+	width:10px;
+	height:10px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin-bottom:-10px;
+	z-index:-1;
+}
