@@ -7,6 +7,21 @@ a[rel^="map-"]
 */
 
 $(document).ready(function() {
+    var tz = determine_timezone().timezone;
+//    var main_olson = tz.olson_tz.toString();
+    var mod_tz="(GMT"+tz.utc_offset;
+
+    $("#user_timezone option").each(function() {
+                                          //olsons = main_olson.split("/");
+                                          //olson=olsons[1];
+                                          //alert($(this).text().substr(0,mod_tz.length));
+                                          //alert(mod_tz);    
+                                          //& ($(this).text().indexOf(olson) != 1))
+                                          if($(this).text().substr(0,mod_tz.length)===mod_tz){ 
+                                            $(this).attr('selected','selected'); //Mark this as selected.
+                                            return false;
+                                          }  
+                                        });    
     $(".input-tip").tipTip({activation:"hover",defaultPosition:"right"});
     $(".twitter-shared").tipTip({activation:"hover",defaultPosition:"right"});
     $('tr[id^="tr-"]').find('.button-td').hide();
