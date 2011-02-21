@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def registration_confirmation(user,calendar)
     @user = user
     @cal = calendar
-    mail(:to => "<#{user.email}>", :subject => "Socl - Event Reminder - <#{calendar.event}>")
+    mail(:to => "<#{user.email}>", :subject => "Socl - Event Reminder - <#{calendar.event}>", :tag=>"reminder")
   end
 
 end

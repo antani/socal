@@ -28,6 +28,7 @@ gem 'dalli'
 gem 'gdata_19'
 gem 'foursquare'
 gem 'meta_search'
+gem 'postmark-rails'
 
 
 #gem 'foursquare-api'

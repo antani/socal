@@ -1,9 +1,13 @@
 ActionMailer::Base.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
+  #:address              => "smtp.gmail.com",
+  :address              => "smtp.postmarkapp.com",
+  #:port                 => 587,
+  :port                 =>25,
   :domain               => "socl.in",
-  :user_name            => "socl.in@socl.in",
-  :password             => "upni5had",
+  #:user_name            => "socl.in@socl.in",
+  #:password             => "upni5had",
+  :user_name            =>'d0058639-61ac-42b9-be76-077c1995d964',
+  :password             =>'d0058639-61ac-42b9-be76-077c1995d964',
   :authentication       => :plain,
   :enable_starttls_auto => true
 }

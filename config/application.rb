@@ -41,6 +41,9 @@ module Socal
     #config.action_view.javascript_expansions[:defaults] = ['jquery', 'rails','humanmsg']
     config.gem "jammit"
     config.serve_static_assets = true
+    config.action_mailer.delivery_method   = :postmark
+    config.action_mailer.postmark_settings = { :api_key => "d0058639-61ac-42b9-be76-077c1995d964" }
+
   end
 end
 

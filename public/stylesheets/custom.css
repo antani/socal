@@ -190,12 +190,16 @@ a {
 
 }
 
-
+#feed_item_past_container
+{
+  padding-top: 10px;
+}
 #feed_item_today_container,#feed_item_tomorrow_container,#feed_item_future_container,#feed_item_past_container
 {
    /*-moz-box-shadow: 0 2px 5px 0 #DDDDDD;
    -webkit-box-shadow: #DDD 0px 2px 5px 0px;*/
-    margin-top:5px;
+    margin-top:10px;
+    padding-bottom:10px;
     margin-bottom:10px;
     border: 1px solid #DEDEDE;
     color: #838383;
