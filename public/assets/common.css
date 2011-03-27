@@ -1332,7 +1332,7 @@ a.dropdown.dropdown-active span { background:url(/images/toggle_up_dark.png?1295
 	box-shadow:2px 2px 0 rgba(0,0,0,0.1);
 }
 h2:before{
-	content:" ";
+        content: " ";
 	background:url(/images/ribbon-1.png?1298105260);
 	display:block;
 	width:10px;
@@ -1342,6 +1342,18 @@ h2:before{
 	left:0;
 	margin-bottom:-10px;
 	z-index:-1;
+}
+#works
+{
+       float: left;
+       width: 950px;
+       clear: both;
+       padding-top : 40px;
+}
+.gravs
+{
+      padding-left: 10px; 
+      float: left;
 }
 
 /*
