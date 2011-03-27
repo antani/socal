@@ -73,7 +73,7 @@ class CalendarsController < ApplicationController
       lat =nil
       lon =nil
     else
-      co_ords=Geocoder.fetch_coordinates(whereStr)
+      co_ords=Geocoder.coordinates(whereStr)
       if co_ords
         logger.debug co_ords[0]
         logger.debug co_ords[1]
@@ -185,14 +185,15 @@ class CalendarsController < ApplicationController
               redirect_to root_path
         }     
      
-   elsif @calendar.update_attributes(params[:calendar])
+     elsif @calendar.update_attributes(params[:calendar])
             logger.debug "update 2"
             when_s = params[:calendar][:event_time]
             when_date = when_s.to_date
             remind_what = params[:reminder_before_what]
             remind_before = params[:calendar][:remind_before]      
             reminder_time_s = when_s.to_datetime - remind_before.to_i.send(remind_what.downcase.to_sym)
-            @calendar.update_attributes(:whendate => when_date, :remind_before_what => remind_what, :reminder_time => reminder_time_s )
+
+            @calendar.update_attributes(:whendate => when_date, :remind_before_what => remind_what, :reminder_time => reminder_time_s,:sync => 'update' )
             #format.html { redirect_to(@calendar, :notice => 'Calendar was successfully updated.') }
             format.html {
             logger.debug "update 2.1"

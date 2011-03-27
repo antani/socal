@@ -14,7 +14,7 @@ gem 'faker'
 gem 'populator'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'chronic'
-gem "rails-geocoder", :require => "geocoder"
+gem "geocoder"
 gem "multi_json"
 gem "json"
 gem "rufus-scheduler"
@@ -23,14 +23,13 @@ gem 'twitter', '~> 1.0.0'
 gem "koala"
 gem "jammit"
 #, :git => "git://github.com/documentcloud/jammit.git"
-gem "mongrel"
+#gem "mongrel"
 gem 'dalli'
 gem 'gdata_19'
 gem 'foursquare'
 gem 'meta_search'
 gem 'postmark-rails'
-
-
+gem 'mini_fb'
 #gem 'foursquare-api'
 #gem 'chronic_duration'
 

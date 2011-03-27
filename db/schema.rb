@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110123154110) do
+ActiveRecord::Schema.define(:version => 20110309152401) do
 
   create_table "authentications", :force => true do |t|
     t.integer   "user_id"
@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(:version => 20110123154110) do
   end
 
   create_table "calendar_categories", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "calendar_id"
-    t.integer  "category_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "calendar_id"
+    t.integer   "category_id"
   end
 
   create_table "calendars", :force => true do |t|
@@ -41,47 +41,49 @@ ActiveRecord::Schema.define(:version => 20110123154110) do
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "done",               :default => false
-    t.boolean  "sync",               :default => false
+    t.string   "sync",               :default => "false"
     t.boolean  "twitter_shared",     :default => false
     t.boolean  "facebook_shared",    :default => false
     t.boolean  "foursquare_shared",  :default => false
     t.integer  "remind_before",      :default => 10
     t.string   "remind_before_what", :default => "Minutes"
-    t.time     "reminder_time"
+    t.text     "reminder_time"
     t.string   "category_str"
     t.text     "note"
     t.integer  "priority",           :default => 0
+    t.string   "gcal_id"
+    t.string   "invite"
   end
 
   create_table "categories", :force => true do |t|
-    t.string   "cat_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "cat_name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "",        :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "",        :null => false
-    t.string   "password_salt",                       :default => "",        :null => false
-    t.string   "reset_password_token"
-    t.string   "remember_token"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                       :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "timezone"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.integer  "reminder_duration",                   :default => 10
-    t.boolean  "share_twitter",                       :default => false
-    t.boolean  "share_facebook",                      :default => false
-    t.boolean  "share_foursquare",                    :default => false
-    t.string   "remind_before_what",   :limit => nil, :default => "Minutes"
+    t.string    "email",                               :default => "",        :null => false
+    t.string    "encrypted_password",   :limit => 128, :default => "",        :null => false
+    t.string    "password_salt",                       :default => "",        :null => false
+    t.string    "reset_password_token"
+    t.string    "remember_token"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",                       :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "timezone"
+    t.string    "confirmation_token"
+    t.timestamp "confirmed_at"
+    t.timestamp "confirmation_sent_at"
+    t.integer   "reminder_duration",                   :default => 10
+    t.boolean   "share_twitter",                       :default => false
+    t.boolean   "share_facebook",                      :default => false
+    t.boolean   "share_foursquare",                    :default => false
+    t.text      "remind_before_what",                  :default => "Minutes"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

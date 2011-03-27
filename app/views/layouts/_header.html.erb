@@ -8,7 +8,7 @@
 	        	<%= submit_tag "Search", :name => nil, :id=>"search-submit" %>
 	    	</p>
                <%end%>
-	  </div>
+               	  </div>
 	  <div id="menu1">
 	     <div class="relative">
 	     	<a href="/demos" id="dd1" class="dropdown" style="width:170px;text-decoration:none;"><span><%= current_user.email%></span></a>
@@ -18,7 +18,9 @@
 				    <a href="<%= destroy_user_session_path %>" >Logout</a>    
 	      		        </div>
 			</div>
-		  </div>
+		  </div> 
+                  <div id="gravs">
+                  </div>  
    	  <% end %>
    <% end %>
    

@@ -322,3 +322,63 @@ h1 { font-family: 'Cuprum', arial, serif; }
                             <%= link_to image_tag("refresh.png"),
        { :controller => :g_data, :method =>:index },
        { :title => "Sync with Google Calendar", :class =>"setting-icon" } %> 
+
+
+
+         #Now update
+        if current_user
+            @user = User.find(current_user.id)
+            @missing_calendar = @user.calendars.where(:sync => 'update')
+
+        end
+        @missing_calendar.each do |m|
+
+              cal_entry = "<entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>"+"<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>"+"<title type='text'>"+m.event+"</title><content type='text'>"+m.event+"</content>"+"<gd:transparency value='http://schemas.google.com/g/2005#event.opaque'></gd:transparency><gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus><gd:where valueString='"+m.event_location+"'></gd:where><gd:when startTime='"+(m.event_time).strftime("%Y-%m-%dT%H:%M:%S")+"' endTime='"+ (m.event_time+1.hour).strftime("%Y-%m-%dT%H:%M:%S")+"'><gd:reminder minutes='5'/></gd:when></entry>"
+
+            #uri =  m.gcal_id.to_s.gsub("<id>","").gsub("</id>","")
+            #uris = uri.split('/')
+            feed= @client.get(m.gcal_id).to_xml
+            if feed
+              logger.debug "Feed---------------------------------------------------------------------------------------------------------"
+              logger.debug feed
+              entry=feed.elements['entry']
+              entry.elements['title'] = m.event
+              entry.elements['content']=m.event
+              entry.elements['where']=m.event_location
+              entry.elements['startTime']=(m.event_time).strftime("%Y-%m-%dT%H:%M:%S")
+              entry.elements['endTime'] = (m.event_time+1.hour).strftime("%Y-%m-%dT%H:%M:%S")
+
+              #logger.debug uris[7]
+              response = @client.put(m.gcal_id, entry.to_s)
+              #response = @client.post("http://www.google.com/calendar/feeds/default/owncalendars/full/"+uris[7],cal_entry)
+              #logger.debug response.to_xml
+              #logger.debug cal_entry
+
+              #Once updated, we need to mark this sync complete.
+              #m.toggle!(:sync)
+              m.update_attributes(:sync => 'true')
+            end
+        end
+        #Now delete
+        if current_user
+            @user = User.find(current_user.id)
+            @missing_calendar = @user.calendars.where(:sync => 'delete')
+
+        end
+        @missing_calendar.each do |m|
+
+              cal_entry = "<entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>"+m.gcal_id+"<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>"+"<title type='text'>"+m.event+"</title><content type='text'>"+m.event+"</content>"+"<gd:transparency value='http://schemas.google.com/g/2005#event.opaque'></gd:transparency><gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus><gd:where valueString='"+m.event_location+"'></gd:where><gd:when startTime='"+(m.event_time).strftime("%Y-%m-%dT%H:%M:%S")+"' endTime='"+ (m.event_time+1.hour).strftime("%Y-%m-%dT%H:%M:%S")+"'><gd:reminder minutes='5'/></gd:when></entry>"
+
+            
+            response = @client.put(uri, cal_entry)
+            logger.debug response.to_xml
+            logger.debug cal_entry
+
+            #Once updated, we need to mark this sync complete.
+            #m.toggle!(:sync)
+            m.update_attribute(:sync => 'true')
+
+        end
+      
+      <%= gravatar_for current_user.email, :size => 32, :class => 'gravs', :alt => 'me' %>
+

@@ -84,7 +84,25 @@ end
 
         #friends = graph.get_connections("me", "friends")
         #graph.put_object("me", "feed", :message => "From Socal")
-        id=graph.put_wall_post("is.." + calendar.event)
+        #id=graph.put_wall_post("is.." + calendar.event)
+        #place_id = graph.search(calendar.event,{:latitude=>calendar.latitude, :longitude=>calendar.longitude})
+        #Rails.logger.debug "Place id---------------------------------------------------------"
+        #Rails.logger.debug place_id
+        lat = (calendar.latitude).to_s
+        lon = (calendar.longitude).to_s
+
+        coords = lat + "," + lon
+        Rails.logger.debug coords
+        places = graph.search(calendar.event_location, :type=>'place', :center=>coords, :distance=>1000)
+
+        if places.length > 0
+          Rails.logger.debug places
+          place_id = places.first['id']
+          graph.put_object("me", "checkins", :message => calendar.event, :coordinates=>{:latitude=>calendar.latitude, :longitude=>calendar.longitude}, :place=> place_id)
+        else
+          id=graph.put_wall_post("is currently at " + calendar.event_location +  " busy with " + calendar.event)
+        end  
+
         if id
           calendar.facebook_shared =true
           calendar.save

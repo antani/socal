@@ -8,13 +8,14 @@ Rails.application.config.middleware.use OmniAuth::Builder do
      use OmniAuth::Strategies::OpenID, nil, :name => "google", :identifier => 'https://www.google.com/accounts/o8/id'
    
    provider :foursquare, 'X41NC314YUNA32IDY4TI0VHWYOWQEYX1IKPPYC0XAVHKYHGD', 'VYWPGJSQ5UOJQYR0FK2LF3SG3SEKR0WJ1OQ3E1IKK1NNA2KZ'
-   provider :facebook, '140372859359450', '05b749ae51632bdbea0d08b3aed2b979',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+   #provider :facebook, '140372859359450', '05b749ae51632bdbea0d08b3aed2b979',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access,publish_checkins"}
 
+   #provider :facebook, '137278183009836','97d6f3e1ce394c8aa4f6e98cba305d85', {:scope =>"publish_stream,user_likes,friends_likes,email,offline_access,publish_checkins"}
 
    #Development key
 
    # provider :twitter, 'vm1CDPRNqXHXseMnUKHxDA', 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
-   # provider :facebook, '139636279427129', '66c2c368cb6b472e5dcf71407353261e',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access"}
+   provider :facebook, '139636279427129', '66c2c368cb6b472e5dcf71407353261e',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access,publish_checkins" }
     #provider :open_id, OpenID::Store::Filesystem.new('/tmp')
     #  use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'yahoo', :identifier => 'yahoo.com'
     #  use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
