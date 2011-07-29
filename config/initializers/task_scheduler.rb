@@ -22,6 +22,10 @@ end
     @mail_calendar_for_reminder.each do |cal_inner|
     Rails.logger.debug "Going to noise now on google etc---------------------------------------------------------"          
     UserMailer.registration_confirmation(cal_inner.user,cal_inner).deliver
+    Rails.logger.debug "Twitter share - #{cal_inner.user.share_twitter}"
+    Rails.logger.debug "FB share - #{cal_inner.user.share_facebook}"
+    Rails.logger.debug "FS share - #{cal_inner.user.share_foursquare}"
+
     Time.zone = cal_inner.user.timezone  
       if cal_inner.user.share_twitter
         twitter_noise(cal_inner.user,cal_inner)

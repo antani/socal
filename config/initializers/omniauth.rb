@@ -15,7 +15,10 @@ Rails.application.config.middleware.use OmniAuth::Builder do
    #Development key
 
    # provider :twitter, 'vm1CDPRNqXHXseMnUKHxDA', 'O08Pt86u7n8mNhWdT78ODCAxm8UJjEJEyOkF6rPho'
-   provider :facebook, '139636279427129', '66c2c368cb6b472e5dcf71407353261e',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access,publish_checkins" }
+   #provider :facebook, '139636279427129', '66c2c368cb6b472e5dcf71407353261e',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access,publish_checkins" }
+   provider :facebook, '224021050974767', '82713bc4a70eccec350986144f8a300e',{:scope =>"publish_stream,user_likes,friends_likes,email,offline_access,publish_checkins" }
+   
+   
     #provider :open_id, OpenID::Store::Filesystem.new('/tmp')
     #  use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'yahoo', :identifier => 'yahoo.com'
     #  use OmniAuth::Strategies::OpenID, OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
