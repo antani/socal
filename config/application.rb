@@ -42,7 +42,7 @@ module Socal
     config.gem "jammit"
     config.serve_static_assets = true
     config.action_mailer.delivery_method   = :postmark
-    config.action_mailer.postmark_settings = { :api_key => "d0058639-61ac-42b9-be76-077c1995d964" }
+    config.action_mailer.postmark_settings = { :api_key => "01a5de83-ef40-4313-9ccf-9e086862e96f" }
 
   end
 end
